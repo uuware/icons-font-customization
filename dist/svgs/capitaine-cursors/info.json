@@ -1,0 +1,9 @@
+{
+	"Name": "Capitaine cursors",
+	"About": "An x-cursor theme inspired by macOS and based on KDE Breeze. Designed to pair well with my icon pack, La Capitaine.",
+	"PreName": "ca",
+	"Source": "https://github.com/keeferrourke/capitaine-cursors",
+	"License": "LGPLv3",
+	"Copy License": true,
+	"License Link": "https://github.com/keeferrourke/capitaine-cursors/blob/master/COPYING"
+}

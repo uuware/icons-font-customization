@@ -1,0 +1,8 @@
+{
+	"Name": "foundation-icons",
+	"About": "Foundation Icon Font Sets",
+	"PreName": "fd",
+	"Source": "https://github.com/zurb/foundation-icons",
+	"License": "MIT",
+	"License Link": "https://github.com/zurb/foundation-icons/blob/master/MIT-LICENSE.txt"
+}

@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description"
+    content="icons-font-customization: A collection of free svg icons and tools for generating icon font.">
+  <title>icons-font-customization</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      font-family: Sentinel SSm A, Sentinel SSm B, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .link {
+      font-size: 13px;
+    }
+
+    /* right panel */
+    .navigation-icon {
+      display: inline-block;
+      position: fixed;
+      top: 6px;
+      right: 6px;
+      z-index: 102;
+      border: solid 1px #00f;
+      box-shadow: 13px 5px 5px 1px #ccc;
+      border-right-style: solid;
+      border-right-width: 16px;
+      border-top: 12px solid transparent;
+      border-left: 0 solid transparent;
+      border-bottom: 12px solid transparent;
+    }
+
+    .panel {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 101;
+      background-color: #fff;
+      padding: 2px;
+      font-size: .8rem;
+      width: 320px;
+    }
+
+    .panel.show {
+      display: inline-block;
+    }
+
+    .panel input[type=range] {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 8px;
+      background: #aaa;
+      outline: none;
+      margin: 5px 0;
+    }
+
+    #red,
+    #b-red {
+      background: #ff0000;
+    }
+
+    #green,
+    #b-green {
+      background: #00ff00;
+    }
+
+    #blue,
+    #b-blue {
+      background: #0000ff;
+    }
+
+    .panel-row {
+      border: solid 1px #00f;
+      border-radius: 3px;
+    }
+
+    .control-box.color,
+    .control-box.back {
+      display: inline-block;
+      width: 49%;
+    }
+
+    .control-box {
+      padding: 10px;
+    }
+
+    .control-box .title {
+      display: inline-block;
+      width: 80px;
+    }
+
+    .f-size .value {
+      padding: 0 10px;
+    }
+
+    #search-container {
+      width: 100%;
+      padding-bottom: 10px;
+    }
+
+    #search-container.hide {
+      display: none;
+    }
+
+    .icon-wrap {
+      font-size: .8rem;
+      margin: 3px;
+      display: inline-block;
+      position: relative;
+      padding-bottom: 20px;
+    }
+
+    .ifc-box .icon-name {
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+      display: inline-block;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 17px;
+    }
+
+    .info .name {
+      font-size: 120%;
+      font-weight: 600;
+    }
+
+    .license {
+      font-weight: 600;
+    }
+
+    .icon-group.hide .icons {
+      display: none;
+    }
+
+    .icon-wrap .chk {
+      display: none;
+      position: absolute;
+      right: 3px;
+      top: 0;
+      z-index: 0;
+    }
+
+    .icon-wrap.selected .chk {
+      display: inline-block;
+    }
+
+    .icon-wrap .opt {
+      display: none;
+      position: absolute;
+      right: 22px;
+      top: 2px;
+      z-index: 3;
+      width: 13px;
+      height: 13px;
+      background-color: #0075ff;
+      font-size: 7px;
+      color: #fff;
+      text-align: center;
+      vertical-align: middle;
+      padding-bottom: 0px;
+      cursor: pointer;
+    }
+
+    .icon-wrap:hover .opt {
+      display: inline-block;
+    }
+
+    .option {
+      display: none;
+      border: solid 1px #00f;
+      border-radius: 3px;
+      background-color: #fff;
+      padding: 2px;
+      box-shadow: 3px 3px 5px 1px #ccc;
+      position: relative;
+      text-align: left;
+    }
+
+    .option .name,
+    .option .code {
+      white-space: nowrap;
+      padding-bottom: 1px;
+    }
+
+    .option .name .title,
+    .option .code .title {
+      width: 31px;
+      display: inline-block;
+    }
+
+    .option .name input,
+    .option .code input {
+      width: 100px;
+      padding: 0;
+      margin: 0 10px 0 0;
+    }
+
+    .option .close,
+    #search-container .close {
+      cursor: pointer;
+      font-size: 9px;
+    }
+
+    .option .close {
+      position: absolute;
+      top: -1px;
+      right: 2px;
+    }
+
+    .option .close:hover,
+    #search-container .close:hover {
+      color: blue;
+      font-weight: bold;
+    }
+
+    /* when show option in icon-wrap */
+    .icon-wrap .option {
+      display: inline-block;
+      position: absolute;
+      left: 1px;
+      bottom: -68px;
+      z-index: 3;
+      font-size: 9px;
+      overflow: hidden;
+    }
+
+    .cfg {
+      width: 100%;
+      height: 200px;
+      width: -webkit-fill-available;
+    }
+
+    @font-face {
+      font-family: 'i-font';
+      src: url('index.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .ifc-box {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -moz-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      position: relative;
+      width: 80px;
+      height: 80px;
+      border-radius: 3px;
+      text-align: center;
+      vertical-align: middle;
+      border: solid 1px #00f;
+    }
+
+    .ifc-icon {
+      font-size: inherit;
+      display: inline-block;
+      font-family: 'i-font';
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      text-rendering: auto;
+      line-height: 1em;
+      vertical-align: middle;
+      text-align: center;
+      text-decoration: inherit;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      margin: auto;
+    }
+
+    /* Animation for spinners */
+    .ifc-spin {
+      animation: ifc-spin-f 2s infinite linear;
+      display: inline-block;
+    }
+
+    /* @keyframes for IE10~ and major browsers */
+    @keyframes ifc-spin-f {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(359deg);
+      }
+    }
+  </style>
+  <style id="css-size">
+    .icon-wrap .ifc-icon {
+      font-size: 48px;
+    }
+  </style>
+  <style id="css-color">
+    .icon-wrap {
+      color: blue;
+    }
+  </style>
+  <style id="b-css-color"></style>
+  <style id="css-icons">
+  </style>
+  <script>
+    /*ICONS-JSON*/
+  </script>
+  <script>
+    var iconsSrc = JSON.parse(localStorage.getItem('iconsSrc') || '{}');
+    var iconsSrcSave = localStorage.getItem('iconsSrcSave') == '1';
+    function combineSrc() {
+      var css = '';
+      var cnt = 0;
+      for (var key in iconsJSON) {
+        for (var groupKey in iconsJSON[key].sub) {
+          var iList = iconsJSON[key].sub[groupKey];
+          for (var i = 0, len = iList.length; i < len; i++) {
+            var src = iList[i].s || (iList[i].n + '.svg');
+            iList[i].s = key + '/' + groupKey + '/' + src;
+            if (iconsSrc[iList[i].s]) {
+              iList[i]._selected = true;
+              cnt++;
+            }
+
+            var unicode16 = iList[i].c.toString(16);
+            css += '.i' + iList[i].c + ':before{content:"\\' + unicode16 + '";}';
+          }
+        }
+      }
+      document.getElementById('css-icons').innerHTML = css;
+      return cnt;
+    }
+    window.onload = function () {
+      setTimeout(function () {
+        var cnt = combineSrc();
+        document.getElementById('saveSelected').checked = iconsSrcSave;
+        if (cnt > 0) {
+          onShowSelected();
+        }
+      }, 100);
+    }
+    function populateOneIcon(iconData, preName, isMain) {
+      var oneIcon = '<div class="icon-wrap" onclick="onImg(this)" title="' + preName + '-' + iconData.n + ', svg size: ' + iconData.l + ', src: ' + iconData.s + '">\n'
+        + '  <div class="opt" onclick="onOpt(event, this)" title="Options">...</div>\n'
+        + '  <input class="chk" type="checkbox" checked="true">\n'
+        + '  <div class="ifc-box">\n'
+        + '  <i class="ifc-icon i' + iconData.c + '"></i> <span class="icon-name">' + preName + '-' + iconData.n + '</span>\n'
+        + '</div></div>\n';
+      iconData.real = preName + '-' + iconData.n;
+      var el = document.createElement('span');
+      el.innerHTML = oneIcon;
+      var ret = el.children[0];
+      ret._data = iconData;
+      if (iconData._selected) {
+        ret.classList.add('selected');
+      }
+      isMain ? iconData._main = ret : iconData._top = ret;
+      return el;
+    }
+    function getData(obj) {
+      if (obj._data) {
+        return obj._data;
+      }
+      if (obj.parentNode._data) {
+        return obj.parentNode._data;
+      }
+      return null;
+    }
+    function onGroup(id) {
+      var el = document.getElementById(id);
+      el.classList.contains('hide') ? el.classList.remove('hide') : el.classList.add('hide');
+
+      var groupTop = iconsJSON[id];
+      if (!groupTop._ok) {
+        groupTop._ok = 1;
+        setTimeout(function () {
+          var groups = el.querySelectorAll('.sub-icons');
+          onGroupSub(id, groupTop, groups);
+        }, 100);
+      }
+    }
+    function onGroupSub(id, groupTop, groups) {
+      for (var i = 0, len = groups.length; i < len; i++) {
+        var oneGroup = groups[i];
+        oneGroup.innerHTML = '';
+        var id2 = oneGroup.id;
+        var preName = groupTop.preName;
+        var iList = groupTop.sub[id2];
+        for (var j = 0, len2 = iList.length; j < len2; j++) {
+          var oneIcon = populateOneIcon(iList[j], preName, true);
+          oneGroup.appendChild(oneIcon);
+        }
+      }
+    }
+
+    var onSearchTimer = false;
+    function onSearch(obj) {
+      if (onSearchTimer) {
+        clearTimeout(onSearchTimer);
+      }
+      onSearchTimer = setTimeout(function () {
+        onSearchSub(obj);
+      }, 500);
+    }
+    function onSearchClose() {
+      document.getElementById('search').value = '';
+      var list = document.getElementById('search-container');
+      list.classList.add('hide');
+    }
+    function onSearchSub(obj) {
+      var option = document.querySelector('.icon-wrap #option');
+      if (option) { option.parentElement.removeChild(option); }
+
+      var list = document.getElementById('search-container');
+      var text = obj.value.trim().toLowerCase();
+      if (!text) {
+        list.classList.add('hide');
+        return;
+      }
+
+      list.classList.remove('hide');
+      list.innerHTML = 'Search for: ' + text + ' <span class="close" onclick="onSearchClose()"> X</span><br>';
+      var cnt = 0;
+      for (var key in iconsJSON) {
+        var preName = iconsJSON[key].preName;
+        for (var groupKey in iconsJSON[key].sub) {
+          var iList = iconsJSON[key].sub[groupKey];
+          for (var i = 0, len = iList.length; i < len; i++) {
+            if (iList[i].n.indexOf(text) >= 0) {
+              var oneIcon = populateOneIcon(iList[i], preName, false);
+              list.appendChild(oneIcon);
+              cnt++;
+              if (cnt > 200) {
+                var div = document.createElement('div');
+                div.innerHTML = '(too many to show...)';
+                list.appendChild(div);
+                break;
+              }
+            }
+          }
+          if (cnt > 200) { break; }
+        }
+        if (cnt > 200) { break; }
+      }
+      if (cnt === 0) {
+        list.innerHTML += '(no related icons)';
+      }
+    }
+
+    function onShowSelected() {
+      var option = document.querySelector('.icon-wrap #option');
+      if (option) { option.parentElement.removeChild(option); }
+
+      document.getElementById('search').value = '';
+      var list = document.getElementById('search-container');
+      list.innerHTML = 'Selected Icons: <span class="close" onclick="onSearchClose()"> X</span><br>';
+      list.classList.remove('hide');
+
+      var cnt = 0;
+      for (var key in iconsJSON) {
+        var preName = iconsJSON[key].preName;
+        for (var groupKey in iconsJSON[key].sub) {
+          var iList = iconsJSON[key].sub[groupKey];
+          for (var i = 0, len = iList.length; i < len; i++) {
+            if (iList[i]._selected) {
+              var oneIcon = populateOneIcon(iList[i], preName, false);
+              list.appendChild(oneIcon);
+              cnt++;
+              if (cnt > 200) {
+                var div = document.createElement('div');
+                div.innerHTML = '(too many to show...)';
+                list.appendChild(div);
+                break;
+              }
+            }
+          }
+          if (cnt > 200) { break; }
+        }
+        if (cnt > 200) { break; }
+      }
+      if (cnt === 0) {
+        list.innerHTML += '(no related icons)';
+      }
+    }
+    function onCfg() {
+      document.getElementById('search').value = '';
+      var list = document.getElementById('search-container');
+      list.innerHTML = '';
+      list.classList.remove('hide');
+
+      var nameSaved = [];
+      var cfg = '';
+      var cnt = 0;
+      for (var key in iconsJSON) {
+        for (var groupKey in iconsJSON[key].sub) {
+          var iList = iconsJSON[key].sub[groupKey];
+          for (var i = 0, len = iList.length; i < len; i++) {
+            if (iList[i]._selected) {
+              // { path: 'font-awesome/brands/apple.svg', name: 'apple', code: 'A', },
+              var name = iconsSrc[iList[i].s + '_name'] || iList[i].real;
+              if (nameSaved.includes(name)) {
+                name += i;
+              }
+              nameSaved.push(name);
+              var src = iList[i].s;
+              var savedCode = iconsSrc[iList[i].s + '_code'];
+              var code = savedCode ? ", code: " + savedCode : "";
+              cfg += "{ path: '" + src + "', name: '" + name + "'" + code + "}," + String.fromCharCode(13);
+              cnt++;
+            }
+          }
+        }
+      }
+      if (cnt === 0) {
+        list.innerHTML = '(no selected icons) <span class="close" onclick="onSearchClose()"> X</span>';
+      } else {
+        list.innerHTML = 'How to create my own icons font? Visit: <a href="">http://ssss</a> <span class="close" onclick="onSearchClose()"> X</span><br><textarea class="cfg">' + cfg + '</textarea>';
+      }
+    }
+
+    function onImg(obj) {
+      var data = getData(obj);
+      data._selected = !data._selected;
+      if (data._main) {
+        data._selected ? data._main.classList.add('selected') : data._main.classList.remove('selected');
+      }
+      if (data._top) {
+        data._selected ? data._top.classList.add('selected') : data._top.classList.remove('selected');
+      }
+      if (iconsSrcSave) {
+        data._selected ? iconsSrc[data.s] = 1 : delete iconsSrc[data.s];
+        localStorage.setItem('iconsSrc', JSON.stringify(iconsSrc));
+      }
+    }
+
+    function onOptClose() {
+      var option = document.querySelector('.icon-wrap #option');
+      option.parentElement.removeChild(option);
+    }
+    function onOptSave(event) {
+      var option = document.querySelector('.icon-wrap #option');
+      var data = option.parentElement._data;
+      if (event.srcElement.className === 'i-name') {
+        if (!event.srcElement.value || event.srcElement.value == data.real) {
+          delete iconsSrc[data.s + '_name'];
+        } else {
+          iconsSrc[data.s + '_name'] = event.srcElement.value;
+        }
+      } else {
+        if (!event.srcElement.value) {
+          delete iconsSrc[data.s + '_code'];
+        } else {
+          iconsSrc[data.s + '_code'] = event.srcElement.value;
+        }
+      }
+      if (iconsSrcSave) {
+        localStorage.setItem('iconsSrc', JSON.stringify(iconsSrc));
+      }
+    }
+    function onOpt(event, obj) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      var option = document.querySelector('.icon-wrap #option');
+      if (option) {
+        var isSelf = option.parentElement === obj.parentNode;
+        option.parentElement.removeChild(option);
+        if (isSelf) {
+          return;
+        }
+      }
+
+      option = document.querySelector('#option').cloneNode(true);
+      obj.parentNode.appendChild(option);
+      var data = option.parentElement._data;
+      option.querySelector('.i-name').value = iconsSrc[data.s + '_name'] || data.real;
+      option.querySelector('.i-code').value = iconsSrc[data.s + '_code'] || null;
+      option.querySelector('.i-name').addEventListener('blur', onOptSave);
+      option.querySelector('.i-code').addEventListener('blur', onOptSave);
+    }
+    function onSpin(obj) {
+      var list = obj.parentNode.parentNode.parentNode.querySelector('.icon-wrap .ifc-icon').classList;
+      list.contains('ifc-spin') ? list.remove('ifc-spin') : list.add('ifc-spin');
+    }
+    function onNoop(event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    function onChkSave(obj) {
+      if (obj.checked) {
+        localStorage.setItem('iconsSrcSave', '1');
+        localStorage.setItem('iconsSrc', JSON.stringify(iconsSrc));
+        iconsSrcSave = true;
+      } else {
+        localStorage.removeItem('iconsSrc');
+        localStorage.removeItem('iconsSrcSave');
+        iconsSrcSave = false;
+      }
+    }
+    function onSize(obj) {
+      var option = document.querySelector('.icon-wrap #option');
+      if (option) { option.parentElement.removeChild(option); }
+
+      var css = document.getElementById('css-size');
+      var wh = obj.value > 50 ? obj.value / 1 + 30 : 80;
+      css.innerHTML = '.icon-wrap .ifc-icon {font-size:' + obj.value + 'px;} .ifc-box{width: ' + wh + 'px;height: ' + wh + 'px;}';
+      document.querySelector('.control-box.f-size .value').innerHTML = obj.value;
+    }
+    function onChgColor(pre, el) {
+      var css = document.getElementById(pre + 'css-color');
+      var r = document.getElementById(pre + 'red').value;
+      var g = document.getElementById(pre + 'green').value;
+      var b = document.getElementById(pre + 'blue').value;
+      css.innerHTML = el + ' {' + (pre === '' ? '' : 'background-') + 'color: rgb(' + r + ', ' + g + ', ' + b + ');}';
+    }
+    function onShowPanel() {
+      var panel = document.querySelector('.panel');
+      panel.classList.contains('show') ? panel.classList.remove('show') : panel.classList.add('show');
+    }
+  </script>
+</head>
+
+<body>
+  <div class="navigation-icon" onclick="onShowPanel()"></div>
+
+  <div class="panel">
+
+    <div class="panel-row">
+      <div class="control-box color">
+        <div class="title">Icons Color:</div>
+        <input type="range" oninput="onChgColor('', '.icon-wrap')" id="red" min="0" max="255" step="1" value="0">
+        <input type="range" oninput="onChgColor('', '.icon-wrap')" id="green" min="0" max="255" step="1" value="0">
+        <input type="range" oninput="onChgColor('', '.icon-wrap')" id="blue" min="0" max="255" step="1" value="255">
+      </div>
+      <div class="control-box back">
+        <div class="title">Background:</div>
+        <input type="range" oninput="onChgColor('b-', 'body')" id="b-red" min="0" max="255" step="1" value="255">
+        <input type="range" oninput="onChgColor('b-', 'body')" id="b-green" min="0" max="255" step="1" value="255">
+        <input type="range" oninput="onChgColor('b-', 'body')" id="b-blue" min="0" max="255" step="1" value="255">
+      </div>
+    </div>
+    <div class="panel-row">
+      <div class="control-box f-size">
+        <div><span class="title">Font Size:</span><input type="range" oninput="onSize(this)" min="10" max="200" step="1"
+            value="48"><span class="value">48</span>
+        </div>
+      </div>
+    </div>
+    <div class="panel-row">
+      <div class="control-box search">
+        <div>
+          <span class="title">Search:</span><input id="search" type="text" oninput="onSearch(this)" value=""></div>
+        <div>
+          <span class="title">Icons:</span><label><input id="saveSelected" type="checkbox"
+              oninput="onChkSave(this)">(Automatically save selected)</label></div>
+        <div>
+          <span><input type="button" onclick="onShowSelected()" value="Show Selected">
+            <input type="button" onclick="onCfg()" value="Populate Configuration">
+            <input type="button" onclick="onSearchClose()" value="X"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <h1>free-icons-customization <a class="link" href="https://github.com/uuware/icons-font-customization">project</a></h1>
+  <div>A collection of free svg icons and tools for generating icon font. Click on the icon at top-right corner to
+    change color or size.</div>
+  <br>
+
+  <div id="option" class="option" onclick="onNoop(event)">
+    <div class="close" onclick="onOptClose()">X</div>
+    <div class="name" title="New name for this icon, blank for original name">
+      <span class="title">Name:</span><input class="i-name" type="text" value="">
+    </div>
+    <div class="code" title="The code indicates this icon in generated font">
+      <span class="title">Code:</span><input class="i-code" type="number" min=1 max=2000 value="1"></div>
+    <div class="name" title="Apply spinning style">
+      <span class="title"></span><input class="i-spin" type="button" value="Spin" onclick="onSpin(this)"></div>
+  </div>
+
+
+  <div class="hide" id="search-container">
+  </div>
+  <div class="icon-container">
+
+    <!-- REMOVE-S -->
+    <script>
+      var iconsJSON =
+      {
+        "ant-design-icons": {
+          "preName": "at", "sub": {
+            "filled": [
+              {
+                "c": 10000,
+                "n": "account-book",
+                "l": 765,
+              },
+              {
+                "c": 10001,
+                "n": "alert",
+                "l": 614,
+              }, {
+                "c": 10002,
+                "n": "alipay-circle",
+                "l": 706,
+                "s": "source-name.svg"
+              },
+            ]
+          }
+        }
+      };
+    </script>
+    <div class="icon-group hide" id="ant-design-icons">
+      <div class="info"><label class="name"><input type="checkbox" title="show or hide icons"
+            onclick="onGroup('ant-design-icons')">sample1</label>
+        source: <a target="_blank" href="https://github.com/ant-design/ant-design-icons">visit</a>,
+        License: <span class="license"><a target="_blank"
+            href="https://github.com/ant-design/ant-design-icons/blob/master/LICENSE">MIT License</a></span>
+      </div>
+      <div class="icons">
+        <div class="about">Ant Design SVG Icons</div>
+
+        <div class="sub">filled</div>
+        <div id="filled" class="sub-icons">
+        </div>
+      </div>
+    </div>
+    <!-- REMOVE-E -->
+
+    [#ICONS-LIST#]
+
+  </div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YN8MLGG6LY"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YN8MLGG6LY');</script>
+</body>
+
+</html>

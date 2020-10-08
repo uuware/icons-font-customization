@@ -1,0 +1,8 @@
+{
+	"Name": "Bootstrap Icons",
+	"About": "Official open source SVG icon library for Bootstrap.",
+	"PreName": "bs",
+	"Source": "https://github.com/twbs/icons",
+	"License": "MIT",
+	"License Link": "https://github.com/twbs/icons/blob/main/LICENSE.md"
+}

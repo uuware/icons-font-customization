@@ -1,0 +1,8 @@
+{
+	"Name": "material-design-icons",
+	"About": "Material Design icons by Google",
+	"PreName": "mg",
+	"Source": "https://github.com/google/material-design-icons",
+	"License": "Apache-2.0",
+	"License Link": "https://github.com/google/material-design-icons/blob/master/LICENSE"
+}

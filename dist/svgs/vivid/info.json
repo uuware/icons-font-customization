@@ -1,0 +1,8 @@
+{
+	"Name": "Vivid.JS",
+	"About": "a JavaScript library which is built to easily customize and use the SVG Icons with a blaze.",
+	"PreName": "vi",
+	"Source": "https://github.com/webkul/vivid",
+	"License": "MIT",
+	"License Link": "https://github.com/webkul/vivid/blob/master/LICENSE"
+}

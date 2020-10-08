@@ -1,0 +1,8 @@
+{
+	"Name": "evil-icons",
+	"About": "Simple and clean SVG icon pack with the code to support Rails, Sprockets, Node.js, Gulp, Grunt and CDN",
+	"PreName": "ev",
+	"Source": "https://github.com/evil-icons/evil-icons",
+	"License": "MIT",
+	"License Link": "https://github.com/evil-icons/evil-icons/blob/master/LICENSE.txt"
+}

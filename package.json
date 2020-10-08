@@ -1,0 +1,29 @@
+{
+  "name": "icons-font-customization",
+  "version": "1.0.0",
+  "description": "A collection of over 33,000 high-quality free svg icons and tools for generating customized icon font. All icons are completely free for personal or business requirements.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uuware/icons-font-customization.git"
+  },
+  "dependencies": {
+    "icons-font-command": "^1.0.0"
+  },
+  "keywords": [
+    "svg",
+    "woff",
+    "eot",
+    "icon",
+    "font",
+    "customization"
+  ],
+  "author": "uuware@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uuware/icons-font-customization/issues"
+  },
+  "homepage": "https://github.com/uuware/icons-font-customization#readme"
+}

@@ -1,0 +1,8 @@
+{
+	"Name": "octicons",
+	"About": "A scalable set of icons handcrafted with <3 by GitHub",
+	"PreName": "oc",
+	"Source": "https://github.com/primer/octicons",
+	"License": "MIT",
+	"License Link": "https://github.com/primer/octicons/blob/master/LICENSE"
+}
