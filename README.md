@@ -4,8 +4,9 @@ Open [See all icons](https://uuware.github.io/icons-font-customization/dist/), t
 
 ---
 
-All icons collected here are completely free for your personal or business requirements.<br>
-You can use this tool to combine / generate your own icon webfonts for your project from different sources.
+&#x1F536;All icons collected here are completely free for your personal or business requirements.&#x1F536;<br>
+You can use this tool to combine / generate your own icon webfonts for your project from different sources.<br>
+This relevant license information is included in generated css file automatically.<br>
 
 # How to use
 (If you haven't install Node.js, go here: [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))<br>
