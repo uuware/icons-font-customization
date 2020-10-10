@@ -8,5 +8,5 @@ See detail information at icons-font-customization: https://github.com/uuware/ic
 author: uuware@gmail.com
 license: MIT
 */
-var IconsFontLite = require('icons-font-command');
+var { IconsFontLite } = require('icons-font-command');
 IconsFontLite.cmd();
