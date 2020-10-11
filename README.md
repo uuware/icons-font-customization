@@ -130,7 +130,7 @@ How to add an new wonderful svg icons project?<br>
 -  6. Then you can use your new svg icons as same as all others.<br>
 
 # License
-- All code (all files, except svgs, fonts) is distributed under MIT license.<br>
+- All code (all files, except svgs, fonts) is distributed under CC0-1.0 License.<br>
 - All svgs and fonts are distributed under their primary licenses.<br>
 See information for credits & links to homepages in individual folders under /dist/svgs. This information is also included in generated css file.<br>
 All used trademarks, brands and/or names are the property of their respectiveowners. The use of these trademarks, brands and/or names does not indicateendorsement of the property holder by us, nor vice versa.<br>
