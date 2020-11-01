@@ -163,7 +163,7 @@ module.exports = {
 - Or: 2, use WOFF for major browsers and IE 9~, Edge 12~<br>
 - Or: 3, combine WOFF2 with TTF for IE8~<br>
      *All 1, 2, 3 needs this code in HTML: `<i class="ifc-icon icon_name"></i>`*<br>
- - Or: 4, IE6-7 requires alternate CSS: Because '.css_class_name:before (not double-colon){ content: "" }' in css is only supported from IE8, so it needs different code in html: <i class="icon ifc-icon">&#x66;(icons code)</i><br>
+- Or: 4, combine WOFF2 with TTF and plus alternate CSS to support IE6-7, IE8~ and major browsers. Because '.css_class_name:before (not double-colon){ content: "" }' in css is only supported from IE8, so for IE6-7 it needs different code in html (this code is also supported by other mentioned browsers): *`<i class="icon ifc-icon">&#x66;(icons code)</i>`*<br>
 
 # Contacts
 Bug reports & Questions & Suggestion: [Issue tracker](https://github.com/uuware/icons-font-customization/issues)
@@ -309,7 +309,7 @@ module.exports = {
 - 或者 2, 使用 WOFF 来支持所有主流浏览器和 IE 9及以上, Edge 12及以上<br>
 - 或者 3, 同时使用 WOFF2 和 TTF 来支持所有主流浏览器和 IE 8及以上<br>
      *所有1、2、3都需要这样的HTML代码：`<i class="ifc-icon icon_name"></i>`*<br>
- - 或者 4, 同时使用 WOFF2 和 TTF 和不同的 CSS 代码来支持IE6-7，和所有主流浏览器和 IE 8及以上。因为从IE8开始支持 '.css_class_name:before (注意不是两个冒号){ content: "" } CSS 代码。所以IE6-7需要不同CSS代码：<i class="icon ifc-icon">&#x66;(icons code)</i><br>
+ - 或者 4, 同时使用 WOFF2 和 TTF 和不同的 CSS 代码来支持IE6-7，和所有主流浏览器和 IE 8及以上。因为从IE8开始支持 '.css_class_name:before (注意不是两个冒号){ content: "" } CSS 代码。所以IE6-7需要不同CSS代码：*`<i class="icon ifc-icon">&#x66;(icons code)</i>`*<br>
 
 # 联系
 缺陷报告、问题和建议：[Issue tracker](https://github.com/uuware/icons-font-customization/issues)
