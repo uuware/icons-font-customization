@@ -1,6 +1,6 @@
 {
   "name": "icons-font-customization",
-  "version": "1.0.4",
+  "version": "1.1.6",
   "description": "A collection of over 33,000 high-quality free svg icons and tools for generating customized icon font. All icons are completely free for personal or business requirements.",
   "main": "index.js",
   "scripts": {
