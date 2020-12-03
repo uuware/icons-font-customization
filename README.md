@@ -1,6 +1,7 @@
 # icons-font-customization
 A collection of over 33,000 high-quality free svg icons and tools for generating customized icon font. All icons are completely free for personal or business requirements.<br>
 Open [See all icons](https://uuware.github.io/icons-font-customization/dist/), to view all icons. You can change color, background color, size for icons and can search or cache selected results.<br>
+Update: Now you can download PNG and JPG image files directly from online.<br>
 （中文说明请参考后半部分）
 
 ---
@@ -198,6 +199,7 @@ The main contribution belongs to the elites who created these elves. Please enco
 # icons-font-customization
 一个包含超过 33,000 高品质免费 svg 图标的集合和生成自己图标字体的工具。所有图标都适合于私人或商业项目。<br>
 请打开链接 [所有图标](https://uuware.github.io/icons-font-customization/dist/), 去确认这些精灵。在这个链接，可以更改图标颜色，背景色和大小。还可以根据关键字检索，保存图标是否选中的状态，或输出选中图标的列表字符串，用于下面介绍的生成自己的图标字体。<br>
+更新：现在可以直接online下载PNG和JPG格式的图片文件了。<br>
 
 ---
 
