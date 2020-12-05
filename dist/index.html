@@ -29,6 +29,9 @@
       font-family: Sentinel SSm A, Sentinel SSm B, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     }
 
+    .app-title {
+      font-size: 14px;
+    }
     .link {
       font-size: 13px;
     }
@@ -221,8 +224,8 @@
       padding: 0;
       margin: 0 10px 0 0;
     }
-    .option .i-size {
-      width: 55px;
+    .option .i-sizeW, .option .i-sizeH {
+      width: 45px;
     }
     .option input[type=button] {
       margin: 1px;
@@ -251,7 +254,7 @@
       display: inline-block;
       position: absolute;
       left: 1px;
-      bottom: -45px;
+      bottom: -85px;
       z-index: 3;
       font-size: 9px;
       overflow: hidden;
@@ -32924,7 +32927,9 @@
   <script>
     var iconsSrc = JSON.parse(localStorage.getItem('iconsSrc') || '{}');
     var iconsSrcSave = localStorage.getItem('iconsSrcSave') == '1';
-    var imagesizeWH = localStorage.getItem('imagesizeWH') || 32;
+    var imageSizeW = localStorage.getItem('imageSizeW') || 32;
+    var imageSizeH = localStorage.getItem('imageSizeH') || 32;
+    var imageTransparent = localStorage.getItem('imageTransparent') !== 'false';
     var fontSize = localStorage.getItem('fontSize') || 48;
     var frontColor = (localStorage.getItem('color') || '0,0,255').split(',');
     var backColor = (localStorage.getItem('b-color') || '255,255,255').split(',');
@@ -33089,7 +33094,7 @@
       document.getElementById('search').value = '';
       document.getElementById('fonts-container').classList.add('hide');
       var list = document.getElementById('search-container');
-      var downTxt = typeof(showFontspanel) === 'function' ? '  <input type="button" onclick="showFontspanel()" value="Generate Fonts"> ' : '';
+      var downTxt = typeof(showFontsPanelHtml) === 'function' ? showFontsPanelHtml() : '';
       list.innerHTML = 'Selected Icons: <span class="close" onclick="onSearchClose()"> X</span>' + downTxt + '<br>';
       list.classList.remove('hide');
 
@@ -33190,11 +33195,19 @@
     function onOptSave(event) {
       var option = document.querySelector('.icon-wrap #option');
       var data = option.parentElement._data;
-      if (event.srcElement.className === 'i-size') {
-        imagesizeWH = parseInt(event.srcElement.value || 32);
-        if (imagesizeWH < 1) { imagesizeWH = 1; }
+      if (event.srcElement.className === 'i-sizeW') {
+        imageSizeW = parseInt(event.srcElement.value || 32);
+        if (imageSizeW < 1) { imageSizeW = 1; }
         if (iconsSrcSave) {
-          localStorage.setItem('imagesizeWH', imagesizeWH);
+          localStorage.setItem('imageSizeW', imageSizeW);
+        }
+        return;
+      }
+      if (event.srcElement.className === 'i-sizeH') {
+        imageSizeH = parseInt(event.srcElement.value || 32);
+        if (imageSizeH < 1) { imageSizeH = 1; }
+        if (iconsSrcSave) {
+          localStorage.setItem('imageSizeH', imageSizeH);
         }
         return;
       }
@@ -33237,13 +33250,29 @@
       option.querySelector('.i-name').addEventListener('blur', onOptSave);
       option.querySelector('.i-code').addEventListener('blur', onOptSave);
 
-      option.querySelector('.i-size').value = imagesizeWH;
-      option.querySelector('.i-size').addEventListener('input', onOptSave);
-      option.querySelector('.i-size').addEventListener('blur', onOptSave);
+      const sizeW = option.querySelector('.i-sizeW');
+      sizeW.value = imageSizeW;
+      sizeW.addEventListener('input', onOptSave);
+      sizeW.addEventListener('blur', onOptSave);
+      const sizeH = option.querySelector('.i-sizeH');
+      sizeH.value = imageSizeH;
+      sizeH.addEventListener('input', onOptSave);
+      sizeH.addEventListener('blur', onOptSave);
+      option.querySelector('.i-no-back').checked = imageTransparent;
     }
     function onSpin(obj) {
       var list = obj.parentNode.parentNode.parentNode.querySelector('.icon-wrap .ifc-icon').classList;
       list.contains('ifc-spin') ? list.remove('ifc-spin') : list.add('ifc-spin');
+    }
+    function onImageBack(obj) {
+      imageTransparent = !imageTransparent;
+      setTimeout(function() {
+        obj.checked = imageTransparent;
+      }, 100);
+      if (iconsSrcSave) {
+        localStorage.setItem('imageTransparent', imageTransparent);
+      }
+      return;
     }
 
     function getImageData(image, rgbColor, rgbBackColor, imageFormat) {
@@ -33260,8 +33289,10 @@
       canvas.width = image.width;
       canvas.height = image.height;
       var ctx = canvas.getContext('2d');
-      ctx.fillStyle = rgbBackColor;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      if (rgbBackColor !== '') {
+        ctx.fillStyle = rgbBackColor;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
       ctx.drawImage(canvas2, 0, 0);
       try {
         var imgData = canvas.toDataURL('image/' + imageFormat);
@@ -33285,7 +33316,7 @@
       var img = document.createElement('img');
       img.onload = function() {
         var rgbColor = getUserColor('');
-        var rgbBackColor = getUserColor('b-');
+        var rgbBackColor = fmt === 'png' && imageTransparent ? '' : getUserColor('b-');
         var imgData = getImageData(img, rgbColor, rgbBackColor, fmt);
         hidingBox.removeChild(img);
         if (!imgData) {
@@ -33299,8 +33330,8 @@
         a.click();
         hidingBox.removeChild(a);
       }
-      img.width = imagesizeWH;
-      img.height = imagesizeWH;
+      img.width = imageSizeW;
+      img.height = imageSizeH;
       img.src = src;
       var hidingBox = document.getElementById('hiding-box');
       hidingBox.innerHTML = '';
@@ -33403,9 +33434,9 @@
   <div class="hide" id="hiding-box">
   </div>
 
-  <h1>free-icons-customization <a class="link" href="https://github.com/uuware/icons-font-customization">project</a>
+  <h1 id="app-title">free-icons-customization <span class="app-title">By uuware</span> <a class="link" href="https://github.com/uuware/icons-font-customization">project</a>
   </h1>
-  <div>A collection of free svg icons and tools for generating icon font. Click on the icon at top-right corner to
+  <div id="app-description">A collection of free svg icons and tools for generating icon font. Click on the icon at top-right corner to
     change color or size.<br>
     (The font used by this page is about 3.8 MB, so depending on your internet, it may be slow to load the font to show
     icons properly)
@@ -33424,7 +33455,10 @@
       <input type="button" value="JPG" onclick="onJPG(this)" title="Download JPG">
       <input type="button" value="Spin" onclick="onSpin(this)" title="Apply spinning style">
       <br>
-      <span class="title"></span>Size: <input class="i-size" type="number" value="32" title="">(width or height)
+      <span class="title"></span>Width: <input class="i-sizeW" type="number" value="32">, Height: <input class="i-sizeH" type="number" value="32">
+      <br>
+      <span class="title"></span><span title="If not checked then use current background color">PNG Background Transparent:
+        <input onclick="onImageBack(this)" class="i-no-back" type="checkbox"></span>
     </div>
   </div>
 
@@ -33436,7 +33470,7 @@
     
     
 <div class="icon-group close" id="ant-design-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('ant-design-icons')">ant-design-icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('ant-design-icons')">ant-design-icons</label>,
 Source: <a target="_blank" href="https://github.com/ant-design/ant-design-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/ant-design/ant-design-icons/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -33454,7 +33488,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/ant-d
 
 
 <div class="icon-group close" id="bootstrap-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('bootstrap-icons')">Bootstrap Icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('bootstrap-icons')">Bootstrap Icons</label>,
 Source: <a target="_blank" href="https://github.com/twbs/icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/twbs/icons/blob/main/LICENSE.md">MIT</a></span>
 </div>
@@ -33468,7 +33502,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/twbs/
 
 
 <div class="icon-group close" id="boxicons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('boxicons')">BoxIcons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('boxicons')">BoxIcons</label>,
 Source: <a target="_blank" href="https://github.com/atisawd/boxicons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">CC 4.0</a></span>
 </div>
@@ -33486,7 +33520,7 @@ License: <span class="license"><a target="_blank" href="https://creativecommons.
 
 
 <div class="icon-group close" id="bytesize-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('bytesize-icons')">Bytesize Icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('bytesize-icons')">Bytesize Icons</label>,
 Source: <a target="_blank" href="https://github.com/danklammer/bytesize-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/danklammer/bytesize-icons/blob/master/LICENSE.md">MIT</a></span>
 </div>
@@ -33500,7 +33534,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/dankl
 
 
 <div class="icon-group close" id="capitaine-cursors">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('capitaine-cursors')">Capitaine cursors</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('capitaine-cursors')">Capitaine cursors</label>,
 Source: <a target="_blank" href="https://github.com/keeferrourke/capitaine-cursors">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/keeferrourke/capitaine-cursors/blob/master/COPYING">LGPLv3 (Copy License File)</a></span>
 </div>
@@ -33514,7 +33548,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/keefe
 
 
 <div class="icon-group close" id="carbon-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('carbon-icons')">carbon-icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('carbon-icons')">carbon-icons</label>,
 Source: <a target="_blank" href="https://github.com/carbon-design-system/carbon-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/carbon-design-system/carbon-icons/blob/master/LICENSE.md">Apache-2.0 (Copy License File)</a></span>
 </div>
@@ -33528,7 +33562,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/carbo
 
 
 <div class="icon-group close" id="core-ui-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('core-ui-icons')">CoreUI Icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('core-ui-icons')">CoreUI Icons</label>,
 Source: <a target="_blank" href="https://github.com/coreui/coreui-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/coreui/coreui-icons/blob/master/LICENSE">CoreUI Icons Free</a></span>
 </div>
@@ -33546,7 +33580,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/coreu
 
 
 <div class="icon-group close" id="crypto-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('crypto-icons')">crypto-icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('crypto-icons')">crypto-icons</label>,
 Source: <a target="_blank" href="https://github.com/guardaco/crypto-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/guardaco/crypto-icons/blob/master/LICENSE.md">MIT</a></span>
 </div>
@@ -33560,7 +33594,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/guard
 
 
 <div class="icon-group close" id="cryptocurrency-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('cryptocurrency-icons')">Cryptocurrency Icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('cryptocurrency-icons')">Cryptocurrency Icons</label>,
 Source: <a target="_blank" href="https://github.com/spothq/cryptocurrency-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/spothq/cryptocurrency-icons/blob/master/LICENSE.md">CC0</a></span>
 </div>
@@ -33574,7 +33608,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/spoth
 
 
 <div class="icon-group close" id="css-social-buttons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('css-social-buttons')">css-social-buttons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('css-social-buttons')">css-social-buttons</label>,
 Source: <a target="_blank" href="https://github.com/smcllns/css-social-buttons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/smcllns/css-social-buttons/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -33588,7 +33622,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/smcll
 
 
 <div class="icon-group close" id="css.gg">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('css.gg')">css.gg</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('css.gg')">css.gg</label>,
 Source: <a target="_blank" href="https://github.com/astrit/css.gg">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/astrit/css.gg/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -33602,7 +33636,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/astri
 
 
 <div class="icon-group close" id="devicons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('devicons')">devicons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('devicons')">devicons</label>,
 Source: <a target="_blank" href="https://github.com/vorillaz/devicons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://opensource.org/licenses/MIT">MIT</a></span>
 </div>
@@ -33616,7 +33650,7 @@ License: <span class="license"><a target="_blank" href="https://opensource.org/l
 
 
 <div class="icon-group close" id="devui-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('devui-icons')">DevUI</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('devui-icons')">DevUI</label>,
 Source: <a target="_blank" href="https://github.com/DevCloudFE/devui-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/DevCloudFE/devui-icons/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -33638,7 +33672,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/DevCl
 
 
 <div class="icon-group close" id="elusive-iconfont">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('elusive-iconfont')">elusive-iconfont</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('elusive-iconfont')">elusive-iconfont</label>,
 Source: <a target="_blank" href="https://github.com/reduxframework/elusive-iconfont">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL">OFL</a></span>
 </div>
@@ -33652,7 +33686,7 @@ License: <span class="license"><a target="_blank" href="https://scripts.sil.org/
 
 
 <div class="icon-group close" id="entypo">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('entypo')">entypo</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('entypo')">entypo</label>,
 Source: <a target="_blank" href="https://github.com/danielbruce/entypo">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA</a></span>
 </div>
@@ -33666,7 +33700,7 @@ License: <span class="license"><a target="_blank" href="https://creativecommons.
 
 
 <div class="icon-group close" id="evil-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('evil-icons')">evil-icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('evil-icons')">evil-icons</label>,
 Source: <a target="_blank" href="https://github.com/evil-icons/evil-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/evil-icons/evil-icons/blob/master/LICENSE.txt">MIT</a></span>
 </div>
@@ -33680,7 +33714,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/evil-
 
 
 <div class="icon-group close" id="feather">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('feather')">feather</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('feather')">feather</label>,
 Source: <a target="_blank" href="https://github.com/feathericons/feather">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/feathericons/feather/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -33694,7 +33728,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/feath
 
 
 <div class="icon-group close" id="feathericon">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('feathericon')">feathericon</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('feathericon')">feathericon</label>,
 Source: <a target="_blank" href="https://github.com/feathericon/feathericon">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/feathericon/feathericon/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -33708,7 +33742,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/feath
 
 
 <div class="icon-group close" id="file-icon-vectors">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('file-icon-vectors')">File Icon Images</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('file-icon-vectors')">File Icon Images</label>,
 Source: <a target="_blank" href="https://github.com/dmhendricks/file-icon-vectors">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/dmhendricks/file-icon-vectors/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -33730,7 +33764,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/dmhen
 
 
 <div class="icon-group close" id="flat-ui">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('flat-ui')">Flat-UI</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('flat-ui')">Flat-UI</label>,
 Source: <a target="_blank" href="https://github.com/designmodo/Flat-UI">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/designmodo/Flat-UI/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -33744,7 +33778,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/desig
 
 
 <div class="icon-group close" id="font-awesome">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('font-awesome')">Font Awesome Free</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('font-awesome')">Font Awesome Free</label>,
 Source: <a target="_blank" href="https://github.com/FortAwesome/Font-Awesome">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt">Font Awesome Free</a></span>
 </div>
@@ -33762,7 +33796,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/FortA
 
 
 <div class="icon-group close" id="foundation-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('foundation-icons')">foundation-icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('foundation-icons')">foundation-icons</label>,
 Source: <a target="_blank" href="https://github.com/zurb/foundation-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/zurb/foundation-icons/blob/master/MIT-LICENSE.txt">MIT</a></span>
 </div>
@@ -33776,7 +33810,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/zurb/
 
 
 <div class="icon-group close" id="free-minimal-icon-pack">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('free-minimal-icon-pack')">1800 Free Minimal Icon Pack [20x20]</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('free-minimal-icon-pack')">1800 Free Minimal Icon Pack [20x20]</label>,
 Source: <a target="_blank" href="https://dribbble.com/shots/2888226-1800-Free-Minimal-Icon-Pack-20x20">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://dribbble.com/shots/2888226-1800-Free-Minimal-Icon-Pack-20x20">Free</a></span>
 </div>
@@ -33790,7 +33824,7 @@ License: <span class="license"><a target="_blank" href="https://dribbble.com/sho
 
 
 <div class="icon-group close" id="geomicons-open">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('geomicons-open')">geomicons-open</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('geomicons-open')">geomicons-open</label>,
 Source: <a target="_blank" href="https://github.com/jxnblk/geomicons-open">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://opensource.org/licenses/MIT">MIT</a></span>
 </div>
@@ -33804,7 +33838,7 @@ License: <span class="license"><a target="_blank" href="https://opensource.org/l
 
 
 <div class="icon-group close" id="icomoon-free">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('icomoon-free')">IcoMoon-Free</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('icomoon-free')">IcoMoon-Free</label>,
 Source: <a target="_blank" href="https://github.com/Keyamoon/IcoMoon-Free">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/Keyamoon/IcoMoon-Free/blob/master/License.txt">CC BY 4.0 or GPL</a></span>
 </div>
@@ -33818,7 +33852,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/Keyam
 
 
 <div class="icon-group close" id="ionicons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('ionicons')">ionicons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('ionicons')">ionicons</label>,
 Source: <a target="_blank" href="https://github.com/ionic-team/ionicons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/ionic-team/ionicons/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -33832,7 +33866,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/ionic
 
 
 <div class="icon-group close" id="jam">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('jam')">JAM</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('jam')">JAM</label>,
 Source: <a target="_blank" href="https://github.com/michaelampr/jam">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/michaelampr/jam/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -33846,7 +33880,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/micha
 
 
 <div class="icon-group close" id="linea-icon">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('linea-icon')">Linea Icon</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('linea-icon')">Linea Icon</label>,
 Source: <a target="_blank" href="https://linea.io/">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">CCBY</a></span>
 </div>
@@ -33872,7 +33906,7 @@ License: <span class="license"><a target="_blank" href="https://creativecommons.
 
 
 <div class="icon-group close" id="maki">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('maki')">maki</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('maki')">maki</label>,
 Source: <a target="_blank" href="https://github.com/mapbox/maki">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/mapbox/maki/blob/master/LICENSE.txt">CC0-1.0</a></span>
 </div>
@@ -33886,7 +33920,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/mapbo
 
 
 <div class="icon-group close" id="map-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('map-icons')">map-icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('map-icons')">map-icons</label>,
 Source: <a target="_blank" href="https://github.com/scottdejonge/map-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/scottdejonge/map-icons/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -33900,7 +33934,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/scott
 
 
 <div class="icon-group close" id="material-design">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('material-design')">Material Design</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('material-design')">Material Design</label>,
 Source: <a target="_blank" href="https://github.com/Templarian/MaterialDesign">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/Templarian/MaterialDesign/blob/master/LICENSE">Pictogrammers Free (Copy License File)</a></span>
 </div>
@@ -33914,7 +33948,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/Templ
 
 
 <div class="icon-group close" id="material-design-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('material-design-icons')">material-design-icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('material-design-icons')">material-design-icons</label>,
 Source: <a target="_blank" href="https://github.com/google/material-design-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/google/material-design-icons/blob/master/LICENSE">Apache-2.0</a></span>
 </div>
@@ -33928,7 +33962,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/googl
 
 
 <div class="icon-group close" id="metro-ui-css">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('metro-ui-css')">Metro-UI-CSS</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('metro-ui-css')">Metro-UI-CSS</label>,
 Source: <a target="_blank" href="https://github.com/olton/Metro-UI-CSS">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/olton/Metro-UI-CSS/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -33946,7 +33980,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/olton
 
 
 <div class="icon-group close" id="mono-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('mono-icons')">Mono Icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('mono-icons')">Mono Icons</label>,
 Source: <a target="_blank" href="https://github.com/mono-company/mono-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/mono-company/mono-icons/blob/master/LICENSE.md">MIT</a></span>
 </div>
@@ -33960,7 +33994,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/mono-
 
 
 <div class="icon-group close" id="octicons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('octicons')">octicons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('octicons')">octicons</label>,
 Source: <a target="_blank" href="https://github.com/primer/octicons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/primer/octicons/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -33974,7 +34008,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/prime
 
 
 <div class="icon-group close" id="open-iconic">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('open-iconic')">open-iconic</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('open-iconic')">open-iconic</label>,
 Source: <a target="_blank" href="https://github.com/iconic/open-iconic">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://opensource.org/licenses/MIT">MIT</a></span>
 </div>
@@ -33988,7 +34022,7 @@ License: <span class="license"><a target="_blank" href="https://opensource.org/l
 
 
 <div class="icon-group close" id="simple-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('simple-icons')">simple-icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('simple-icons')">simple-icons</label>,
 Source: <a target="_blank" href="https://github.com/simple-icons/simple-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md">CC0-1.0</a></span>
 </div>
@@ -34002,7 +34036,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/simpl
 
 
 <div class="icon-group close" id="small-n-flat">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('small-n-flat')">small-n-flat</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('small-n-flat')">small-n-flat</label>,
 Source: <a target="_blank" href="https://github.com/paomedia/small-n-flat">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/paomedia/small-n-flat/blob/master/LICENSE">CC0-1.0</a></span>
 </div>
@@ -34016,7 +34050,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/paome
 
 
 <div class="icon-group close" id="subway">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('subway')">subway</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('subway')">subway</label>,
 Source: <a target="_blank" href="https://github.com/mariuszostrowski/subway">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/mariuszostrowski/subway/blob/master/LICENSE.md">CC BY 4.0</a></span>
 </div>
@@ -34030,7 +34064,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/mariu
 
 
 <div class="icon-group close" id="tabler-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('tabler-icons')">tabler-icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('tabler-icons')">tabler-icons</label>,
 Source: <a target="_blank" href="https://github.com/tabler/tabler-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/tabler/tabler-icons/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -34044,7 +34078,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/table
 
 
 <div class="icon-group close" id="teenyicons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('teenyicons')">Teenyicons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('teenyicons')">Teenyicons</label>,
 Source: <a target="_blank" href="https://github.com/teenyicons/teenyicons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/teenyicons/teenyicons/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -34060,7 +34094,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/teeny
 
 
 <div class="icon-group close" id="typicons.font">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('typicons.font')">typicons.font</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('typicons.font')">typicons.font</label>,
 Source: <a target="_blank" href="https://github.com/stephenhutchings/typicons.font">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></span>
 </div>
@@ -34074,7 +34108,7 @@ License: <span class="license"><a target="_blank" href="https://creativecommons.
 
 
 <div class="icon-group close" id="uiwjs-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('uiwjs-icons')">uiw-icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('uiwjs-icons')">uiw-icons</label>,
 Source: <a target="_blank" href="https://github.com/uiwjs/icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/uiwjs/icons/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -34088,7 +34122,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/uiwjs
 
 
 <div class="icon-group close" id="unicons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('unicons')">Unicons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('unicons')">Unicons</label>,
 Source: <a target="_blank" href="https://github.com/Iconscout/unicons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/Iconscout/unicons/blob/master/LICENSE">Apache-2.0 (Copy License File)</a></span>
 </div>
@@ -34106,7 +34140,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/Icons
 
 
 <div class="icon-group close" id="vaadin-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('vaadin-icons')">Vaadin Icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('vaadin-icons')">Vaadin Icons</label>,
 Source: <a target="_blank" href="https://github.com/vaadin/vaadin-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></span>
 </div>
@@ -34120,7 +34154,7 @@ License: <span class="license"><a target="_blank" href="https://creativecommons.
 
 
 <div class="icon-group close" id="vivid">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('vivid')">Vivid.JS</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('vivid')">Vivid.JS</label>,
 Source: <a target="_blank" href="https://github.com/webkul/vivid">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/webkul/vivid/blob/master/LICENSE">MIT</a></span>
 </div>
@@ -34134,7 +34168,7 @@ License: <span class="license"><a target="_blank" href="https://github.com/webku
 
 
 <div class="icon-group close" id="weather-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('weather-icons')">weather-icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('weather-icons')">weather-icons</label>,
 Source: <a target="_blank" href="https://github.com/erikflowers/weather-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL">SIL OFL 1.1</a></span>
 </div>
@@ -34148,7 +34182,7 @@ License: <span class="license"><a target="_blank" href="https://scripts.sil.org/
 
 
 <div class="icon-group close" id="weather-underground-icons">
-<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('weather-underground-icons')">Weather Underground Icons</label>
+<div class="info"><label class="name"><input type="checkbox" title="show or hide icons" onclick="onGroup('weather-underground-icons')">Weather Underground Icons</label>,
 Source: <a target="_blank" href="https://github.com/manifestinteractive/weather-underground-icons">visit</a>, 
 License: <span class="license"><a target="_blank" href="https://github.com/manifestinteractive/weather-underground-icons/blob/master/LICENSE">MIT and GPL (Copy License File)</a></span>
 </div>

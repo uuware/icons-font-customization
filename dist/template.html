@@ -29,6 +29,9 @@
       font-family: Sentinel SSm A, Sentinel SSm B, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     }
 
+    .app-title {
+      font-size: 14px;
+    }
     .link {
       font-size: 13px;
     }
@@ -221,8 +224,8 @@
       padding: 0;
       margin: 0 10px 0 0;
     }
-    .option .i-size {
-      width: 55px;
+    .option .i-sizeW, .option .i-sizeH {
+      width: 45px;
     }
     .option input[type=button] {
       margin: 1px;
@@ -251,7 +254,7 @@
       display: inline-block;
       position: absolute;
       left: 1px;
-      bottom: -45px;
+      bottom: -85px;
       z-index: 3;
       font-size: 9px;
       overflow: hidden;
@@ -332,7 +335,9 @@
   <script>
     var iconsSrc = JSON.parse(localStorage.getItem('iconsSrc') || '{}');
     var iconsSrcSave = localStorage.getItem('iconsSrcSave') == '1';
-    var imagesizeWH = localStorage.getItem('imagesizeWH') || 32;
+    var imageSizeW = localStorage.getItem('imageSizeW') || 32;
+    var imageSizeH = localStorage.getItem('imageSizeH') || 32;
+    var imageTransparent = localStorage.getItem('imageTransparent') !== 'false';
     var fontSize = localStorage.getItem('fontSize') || 48;
     var frontColor = (localStorage.getItem('color') || '0,0,255').split(',');
     var backColor = (localStorage.getItem('b-color') || '255,255,255').split(',');
@@ -497,7 +502,7 @@
       document.getElementById('search').value = '';
       document.getElementById('fonts-container').classList.add('hide');
       var list = document.getElementById('search-container');
-      var downTxt = typeof(showFontspanel) === 'function' ? '  <input type="button" onclick="showFontspanel()" value="Generate Fonts"> ' : '';
+      var downTxt = typeof(showFontsPanelHtml) === 'function' ? showFontsPanelHtml() : '';
       list.innerHTML = 'Selected Icons: <span class="close" onclick="onSearchClose()"> X</span>' + downTxt + '<br>';
       list.classList.remove('hide');
 
@@ -598,11 +603,19 @@
     function onOptSave(event) {
       var option = document.querySelector('.icon-wrap #option');
       var data = option.parentElement._data;
-      if (event.srcElement.className === 'i-size') {
-        imagesizeWH = parseInt(event.srcElement.value || 32);
-        if (imagesizeWH < 1) { imagesizeWH = 1; }
+      if (event.srcElement.className === 'i-sizeW') {
+        imageSizeW = parseInt(event.srcElement.value || 32);
+        if (imageSizeW < 1) { imageSizeW = 1; }
         if (iconsSrcSave) {
-          localStorage.setItem('imagesizeWH', imagesizeWH);
+          localStorage.setItem('imageSizeW', imageSizeW);
+        }
+        return;
+      }
+      if (event.srcElement.className === 'i-sizeH') {
+        imageSizeH = parseInt(event.srcElement.value || 32);
+        if (imageSizeH < 1) { imageSizeH = 1; }
+        if (iconsSrcSave) {
+          localStorage.setItem('imageSizeH', imageSizeH);
         }
         return;
       }
@@ -645,13 +658,29 @@
       option.querySelector('.i-name').addEventListener('blur', onOptSave);
       option.querySelector('.i-code').addEventListener('blur', onOptSave);
 
-      option.querySelector('.i-size').value = imagesizeWH;
-      option.querySelector('.i-size').addEventListener('input', onOptSave);
-      option.querySelector('.i-size').addEventListener('blur', onOptSave);
+      const sizeW = option.querySelector('.i-sizeW');
+      sizeW.value = imageSizeW;
+      sizeW.addEventListener('input', onOptSave);
+      sizeW.addEventListener('blur', onOptSave);
+      const sizeH = option.querySelector('.i-sizeH');
+      sizeH.value = imageSizeH;
+      sizeH.addEventListener('input', onOptSave);
+      sizeH.addEventListener('blur', onOptSave);
+      option.querySelector('.i-no-back').checked = imageTransparent;
     }
     function onSpin(obj) {
       var list = obj.parentNode.parentNode.parentNode.querySelector('.icon-wrap .ifc-icon').classList;
       list.contains('ifc-spin') ? list.remove('ifc-spin') : list.add('ifc-spin');
+    }
+    function onImageBack(obj) {
+      imageTransparent = !imageTransparent;
+      setTimeout(function() {
+        obj.checked = imageTransparent;
+      }, 100);
+      if (iconsSrcSave) {
+        localStorage.setItem('imageTransparent', imageTransparent);
+      }
+      return;
     }
 
     function getImageData(image, rgbColor, rgbBackColor, imageFormat) {
@@ -668,8 +697,10 @@
       canvas.width = image.width;
       canvas.height = image.height;
       var ctx = canvas.getContext('2d');
-      ctx.fillStyle = rgbBackColor;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      if (rgbBackColor !== '') {
+        ctx.fillStyle = rgbBackColor;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
       ctx.drawImage(canvas2, 0, 0);
       try {
         var imgData = canvas.toDataURL('image/' + imageFormat);
@@ -693,7 +724,7 @@
       var img = document.createElement('img');
       img.onload = function() {
         var rgbColor = getUserColor('');
-        var rgbBackColor = getUserColor('b-');
+        var rgbBackColor = fmt === 'png' && imageTransparent ? '' : getUserColor('b-');
         var imgData = getImageData(img, rgbColor, rgbBackColor, fmt);
         hidingBox.removeChild(img);
         if (!imgData) {
@@ -707,8 +738,8 @@
         a.click();
         hidingBox.removeChild(a);
       }
-      img.width = imagesizeWH;
-      img.height = imagesizeWH;
+      img.width = imageSizeW;
+      img.height = imageSizeH;
       img.src = src;
       var hidingBox = document.getElementById('hiding-box');
       hidingBox.innerHTML = '';
@@ -811,9 +842,9 @@
   <div class="hide" id="hiding-box">
   </div>
 
-  <h1>free-icons-customization <a class="link" href="https://github.com/uuware/icons-font-customization">project</a>
+  <h1 id="app-title">free-icons-customization <span class="app-title">By uuware</span> <a class="link" href="https://github.com/uuware/icons-font-customization">project</a>
   </h1>
-  <div>A collection of free svg icons and tools for generating icon font. Click on the icon at top-right corner to
+  <div id="app-description">A collection of free svg icons and tools for generating icon font. Click on the icon at top-right corner to
     change color or size.<br>
     (The font used by this page is about 3.8 MB, so depending on your internet, it may be slow to load the font to show
     icons properly)
@@ -832,7 +863,10 @@
       <input type="button" value="JPG" onclick="onJPG(this)" title="Download JPG">
       <input type="button" value="Spin" onclick="onSpin(this)" title="Apply spinning style">
       <br>
-      <span class="title"></span>Size: <input class="i-size" type="number" value="32" title="">(width or height)
+      <span class="title"></span>Width: <input class="i-sizeW" type="number" value="32">, Height: <input class="i-sizeH" type="number" value="32">
+      <br>
+      <span class="title"></span><span title="If not checked then use current background color">PNG Background Transparent:
+        <input onclick="onImageBack(this)" class="i-no-back" type="checkbox"></span>
     </div>
   </div>
 
