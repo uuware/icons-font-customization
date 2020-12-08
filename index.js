@@ -6,7 +6,7 @@ See all icons at: https://uuware.github.io/icons-font-customization/dist/
 See detail information at icons-font-customization: https://github.com/uuware/icons-font-customization
 
 author: uuware@gmail.com
-license: MIT
+license: Creative Commons Zero v1.0 Universal
 */
 var { IconsFontLite } = require('icons-font-command');
 IconsFontLite.cmd();
