@@ -13,7 +13,7 @@
     "url": "git+https://github.com/uuware/icons-font-customization.git"
   },
   "dependencies": {
-    "icons-font-command": "^1.0.0"
+    "icons-font-command": "^1.1.7"
   },
   "keywords": [
     "svg",
