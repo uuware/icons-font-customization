@@ -706,7 +706,8 @@
         var imgData = canvas.toDataURL('image/' + imageFormat);
         return imgData;
       } catch (e) {
-        alert('For security reason, this page cann\'t run locally. Error: ' + e.message);
+        alert('For security reason, this page can\'t run locally. Error: ' + e.message);
+        return null;
       }
     }
     function onPNG(obj) {
@@ -715,6 +716,10 @@
     function onJPG(obj) {
       onDownloadImage(obj, 'jpeg');
     }
+    function onICO(obj) {
+      onDownloadImage(obj, 'x-icon');
+    }
+
     function onDownloadImage(obj, fmt) {
       var data = obj.parentNode.parentNode.parentNode._data;
       var isElectron = window && window.sendCommand;
@@ -724,7 +729,7 @@
       var img = document.createElement('img');
       img.onload = function() {
         var rgbColor = getUserColor('');
-        var rgbBackColor = fmt === 'png' && imageTransparent ? '' : getUserColor('b-');
+        var rgbBackColor = (fmt === 'png' || fmt === 'x-icon') && imageTransparent ? '' : getUserColor('b-');
         var imgData = getImageData(img, rgbColor, rgbBackColor, fmt);
         hidingBox.removeChild(img);
         if (!imgData) {
@@ -732,6 +737,10 @@
         }
 
         var a = document.createElement('a');
+        if (fmt === 'x-icon') {
+          fmt = 'ico';
+          a.type = 'image/x-icon';
+        }
         a.download = name + '.' + fmt;
         a.href = imgData;
         hidingBox.appendChild(a);
@@ -861,11 +870,12 @@
     <div class="name">
       <span class="title"></span><input type="button" value="PNG" onclick="onPNG(this)" title="Download PNG">
       <input type="button" value="JPG" onclick="onJPG(this)" title="Download JPG">
+      <input type="button" value="ICO" onclick="onICO(this)" title="Download ICON Format">
       <input type="button" value="Spin" onclick="onSpin(this)" title="Apply spinning style">
       <br>
       <span class="title"></span>Width: <input class="i-sizeW" type="number" value="32">, Height: <input class="i-sizeH" type="number" value="32">
       <br>
-      <span class="title"></span><span title="If not checked then use current background color">PNG Background Transparent:
+      <span class="title"></span><span title="If not checked then use current background color">PNG/ICO Background Transparent:
         <input onclick="onImageBack(this)" class="i-no-back" type="checkbox"></span>
     </div>
   </div>

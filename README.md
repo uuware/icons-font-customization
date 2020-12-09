@@ -186,11 +186,11 @@ How to add an new wonderful svg icons project?<br>
 - All code (all files, except svgs, fonts) is distributed under CC0-1.0 License.<br>
 - All svgs and fonts are distributed under their primary licenses.<br>
 See information for credits & links to homepages in individual folders under /dist/svgs. This information is also included in generated css file.<br>
-All used trademarks, brands and/or names are the property of their respectiveowners. The use of these trademarks, brands and/or names does not indicateendorsement of the property holder by us, nor vice versa.<br>
+All used trademarks, brands and/or names are the property of their respective owners. The use of these trademarks, brands and/or names does not indicate endorsement of the property holder by us, nor vice versa.<br>
 
 # Known issues:
 - 1, It seems that svgs with fill-rule="evenodd" do not work correctly<br>
-Currently if svgs have fill-rule="evenodd" then they lose some shapes when change to font. I havn't found any way to do so easily. So if a icon seems weird, just skip to use it.
+Currently if svgs have fill-rule="evenodd" then they lose some shapes when change to font. I haven't found any way to do so easily. So if a icon seems weird, just skip to use it.
 - 2, Some icons are reduplicated.<br>
 
 # Donation
