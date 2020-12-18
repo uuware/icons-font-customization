@@ -683,6 +683,73 @@
       return;
     }
 
+    function dataURLtoArray(dataurl) {
+        var arr = dataurl.split(','), bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+        while(n--){
+            u8arr[n] = bstr.charCodeAt(n);
+        }
+        return u8arr;
+    }
+    function generateIco(dataurl, imageSizeW, imageSizeH) {
+      var buff;
+      var data = dataURLtoArray(dataurl);
+      var sBuf = '';
+      function addBuffer(uintArray) {
+        var buffer = new Uint8Array(uintArray);
+        var i = 0, l = buffer.length;
+        while (i < l) sBuf += String.fromCharCode(buffer[i++]);
+      }
+
+      // .ico header
+      // Reserved space [00, 00]
+      buff = new Uint8Array([0, 0]).buffer;
+      addBuffer(buff);
+
+      // Indiciate ico file [01, 00]
+      buff = new Uint8Array([1, 0]).buffer;
+      addBuffer(buff);
+
+      // Indiciate 1 image [01, 00]
+      buff = new Uint8Array([1, 0]).buffer;
+      addBuffer(buff);
+
+      // Image px width [32]
+      buff = new Uint8Array([imageSizeW < 256 ? imageSizeW : 0]).buffer;
+      addBuffer(buff);
+
+      // Image px height [32]
+      buff = new Uint8Array([imageSizeH < 256 ? imageSizeH : 0]).buffer;
+      addBuffer(buff);
+
+      // no color palette [00]
+      buff = new Uint8Array([0]).buffer;
+      addBuffer(buff);
+
+      // Reserved space [00]
+      buff = new Uint8Array([0]).buffer;
+      addBuffer(buff);
+
+      // 1 color plane [01, 00]
+      buff = new Uint8Array([1, 0]).buffer;
+      addBuffer(buff);
+
+      // 32 bits per pixel (bit depth) [20, 00]
+      buff = new Uint8Array([32, 0]).buffer;
+      addBuffer(buff);
+
+      // image size in bytes
+      buff = new Uint32Array([data.length]).buffer;
+      addBuffer(buff);
+
+      // image offset in bytes
+      buff = new Uint32Array([22]).buffer;
+      addBuffer(buff);
+
+      // add .png data
+      addBuffer(data);
+
+      return 'data:image/vnd.microsoft.icon;base64,' + btoa(sBuf);
+    }
     function getImageData(image, rgbColor, rgbBackColor, imageFormat) {
       var canvas2 = document.createElement('canvas');
       canvas2.width = image.width;
@@ -726,20 +793,22 @@
       var src = (isElectron ? '../node_modules/icons-font-customization/dist/' : '') + 'svgs/' + data.s;
       var name = iconsSrc[data.s + '_name'] || data.real;
 
+      var hidingBox = document.getElementById('hiding-box');
       var img = document.createElement('img');
       img.onload = function() {
         var rgbColor = getUserColor('');
         var rgbBackColor = (fmt === 'png' || fmt === 'x-icon') && imageTransparent ? '' : getUserColor('b-');
         var imgData = getImageData(img, rgbColor, rgbBackColor, fmt);
         hidingBox.removeChild(img);
-        if (!imgData) {
-          return;
-        }
 
+        if (!imgData) {
+            return;
+        }
         var a = document.createElement('a');
         if (fmt === 'x-icon') {
           fmt = 'ico';
           a.type = 'image/x-icon';
+          imgData = generateIco(imgData, imageSizeW, imageSizeH);
         }
         a.download = name + '.' + fmt;
         a.href = imgData;
@@ -750,7 +819,6 @@
       img.width = imageSizeW;
       img.height = imageSizeH;
       img.src = src;
-      var hidingBox = document.getElementById('hiding-box');
       hidingBox.innerHTML = '';
       hidingBox.appendChild(img);
     }
