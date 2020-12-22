@@ -32,6 +32,7 @@
     .app-title {
       font-size: 14px;
     }
+
     .link {
       font-size: 13px;
     }
@@ -112,7 +113,7 @@
       width: 80px;
     }
 
-    .control-box.search > div {
+    .control-box.search>div {
       padding-bottom: 2px;
     }
 
@@ -230,9 +231,12 @@
       padding: 0;
       margin: 0 10px 0 0;
     }
-    .option .i-sizeW, .option .i-sizeH {
+
+    .option .i-sizeW,
+    .option .i-sizeH {
       width: 45px;
     }
+
     .option input[type=button] {
       margin: 1px;
     }
@@ -508,7 +512,7 @@
       document.getElementById('search').value = '';
       document.getElementById('fonts-container').classList.add('hide');
       var list = document.getElementById('search-container');
-      var downTxt = typeof(showFontsPanelHtml) === 'function' ? showFontsPanelHtml() : '';
+      var downTxt = typeof (showFontsPanelHtml) === 'function' ? showFontsPanelHtml() : '';
       list.innerHTML = 'Selected Icons: <span class="close" onclick="onSearchClose()"> X</span>' + downTxt + '<br>';
       list.classList.remove('hide');
 
@@ -578,7 +582,7 @@
       list.innerHTML = '';
       list.classList.remove('hide');
 
-      var paraObj = {icons: [], cfg: '', cnt: 0};
+      var paraObj = { icons: [], cfg: '', cnt: 0 };
       getCfgStr(paraObj);
       if (paraObj.cnt === 0) {
         list.innerHTML = '(no selected icons) <span class="close" onclick="onSearchClose()"> X</span>';
@@ -673,6 +677,15 @@
       sizeH.addEventListener('input', onOptSave);
       sizeH.addEventListener('blur', onOptSave);
       option.querySelector('.i-no-back').checked = imageTransparent;
+      var fmt = localStorage.getItem('imgDownType') || 'png';
+      option.querySelector('.img-type').value = fmt;
+      onOptShowSize(option, fmt);
+      restoreClickSize(option);
+    }
+    function onOptShowSize(pObj, fmt) {
+      pObj.querySelector('.size-w-h').style.display = (fmt == 'x-icon' || fmt == 'icns') ? 'none' : 'inline-block';
+      pObj.querySelector('.size-wh').style.display = (fmt == 'x-icon' || fmt == 'icns') ? 'inline-block' : 'none';
+      pObj.querySelector('.i-size-512').disabled = fmt == 'x-icon';
     }
     function onSpin(obj) {
       var list = obj.parentNode.parentNode.parentNode.querySelector('.icon-wrap .ifc-icon').classList;
@@ -680,7 +693,7 @@
     }
     function onImageBack(obj) {
       imageTransparent = !imageTransparent;
-      setTimeout(function() {
+      setTimeout(function () {
         obj.checked = imageTransparent;
       }, 100);
       if (iconsSrcSave) {
@@ -689,73 +702,106 @@
       return;
     }
 
-    function dataURLtoArray(dataurl) {
-        var arr = dataurl.split(','), bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
-        while(n--){
-            u8arr[n] = bstr.charCodeAt(n);
-        }
-        return u8arr;
-    }
-    function generateIco(dataurl, imageSizeW, imageSizeH) {
-      var buff;
-      var data = dataURLtoArray(dataurl);
+    function generateIco() {
       var sBuf = '';
+      var imgs = [];
       function addBuffer(uintArray) {
         var buffer = new Uint8Array(uintArray);
         var i = 0, l = buffer.length;
         while (i < l) sBuf += String.fromCharCode(buffer[i++]);
       }
+      function addU8(u) { addBuffer(new Uint8Array([u]).buffer); }
+      function addU16(u) { addBuffer(new Uint16Array([u]).buffer); }
+      function addU32(u) { addBuffer(new Uint32Array([u]).buffer); }
 
-      // .ico header
-      // Reserved space [00, 00]
-      buff = new Uint8Array([0, 0]).buffer;
-      addBuffer(buff);
+      function addIconHeader(imgCount) {
+        // .ico header
+        addU16(0);        // Reserved space [00, 00]
+        addU16(1);        // Indiciate ico file [01, 00]
+        addU16(imgCount); // Indiciate imgCount image [01, 00]
+      }
 
-      // Indiciate ico file [01, 00]
-      buff = new Uint8Array([1, 0]).buffer;
-      addBuffer(buff);
+      function addDirectoryHeader(wh, dataLength, dataOffset) {
+        addU8(wh < 256 ? wh : 0); // Image px width [32]
+        addU8(wh < 256 ? wh : 0); // Image px height [32]
+        addU8(0);                 // no color palette [00]
+        addU8(0);                 // Reserved space [00]
+        addU16(1);                // 1 color plane [01, 00]
+        addU16(32);               // 32 bits per pixel (bit depth) [20, 00]
+        addU32(dataLength + 40);  // image size in bytes
+        addU32(dataOffset);       // offset of BMP or PNG data from the beginning of the ICO/CUR file
+      }
+      function addDibHeader(w, dataLength) {
+        // DIB header
+        addU32(40);          // header size
+        addU32(w);
+        addU32(w * 2);       // negative = top-to-bottom
+        addU16(1);           // 1 plane
+        addU16(32);          // 32-bits (RGBA)
+        addU32(0);           // no compression (BI_BITFIELDS, 3)
+        addU32(dataLength);  // bitmap size incl. padding (stride x height)
+        addU32(0);
+        addU32(0);
+        addU32(0);
+        addU32(0);
+      }
+      function addDibData(data, w, dataLength) {
+        var h = w;
+        var file = new ArrayBuffer(dataLength); // raw byte buffer (returned)
+        var view = new DataView(file);          // handle endian, reg. width etc.
 
-      // Indiciate 1 image [01, 00]
-      buff = new Uint8Array([1, 0]).buffer;
-      addBuffer(buff);
+        var cols = w * 4;
+        var rows = h * cols;
+        var end = rows - cols;
+        var bpp = 4;
 
-      // Image px width [32]
-      buff = new Uint8Array([imageSizeW < 256 ? imageSizeW : 0]).buffer;
-      addBuffer(buff);
+        for (let row = 0; row < rows; row += cols) {
+          for (let col = 0; col < cols; col += bpp) {
+            let tPos = row + col;
+            var r = data[tPos];
+            var g = data[tPos + 1];
+            var b = data[tPos + 2];
+            var a = data[tPos + 3];
 
-      // Image px height [32]
-      buff = new Uint8Array([imageSizeH < 256 ? imageSizeH : 0]).buffer;
-      addBuffer(buff);
+            tPos = (end - row) + col;
+            view.setUint8(tPos, b);
+            view.setUint8(tPos + 1, g);
+            view.setUint8(tPos + 2, r);
+            view.setUint8(tPos + 3, a);
+          }
+        }
+        addBuffer(file);
+      }
 
-      // no color palette [00]
-      buff = new Uint8Array([0]).buffer;
-      addBuffer(buff);
+      function addImgData(data, wh) {
+        imgs.push({d:data, wh:wh});
+      }
+      this.addImgData = addImgData;
 
-      // Reserved space [00]
-      buff = new Uint8Array([0]).buffer;
-      addBuffer(buff);
+      function getUrlData() {
+        if (imgs.length < 1) { return null; }
+        sBuf = '';
+        var dataOffset = 6 + (16 * imgs.length);
+        addIconHeader(imgs.length);
+        for (var i = 0; i < imgs.length; i++) {
+          // pixelSize should be same with data.buffer.byteLength
+          var stride = Math.floor((32 * imgs[i].wh + 31) / 32) * 4; // row length incl. padding
+          imgs[i].pixelSize = stride * imgs[i].wh;                 // total bitmap size
 
-      // 1 color plane [01, 00]
-      buff = new Uint8Array([1, 0]).buffer;
-      addBuffer(buff);
+          addDirectoryHeader(imgs[i].wh, imgs[i].pixelSize, dataOffset);
+          dataOffset += 40 + imgs[i].pixelSize;
+        }
+        for (var i = 0; i < imgs.length; i++) {
+          addDibHeader(imgs[i].wh, imgs[i].pixelSize);
+          addDibData(imgs[i].d.data, imgs[i].wh, imgs[i].pixelSize);
+        }
+        return 'data:image/vnd.microsoft.icon;base64,' + btoa(sBuf);
+      }
+      this.getUrlData = getUrlData;
 
-      // 32 bits per pixel (bit depth) [20, 00]
-      buff = new Uint8Array([32, 0]).buffer;
-      addBuffer(buff);
-
-      // image size in bytes
-      buff = new Uint32Array([data.length]).buffer;
-      addBuffer(buff);
-
-      // image offset in bytes
-      buff = new Uint32Array([22]).buffer;
-      addBuffer(buff);
-
-      // add .png data
-      addBuffer(data);
-
-      return 'data:image/vnd.microsoft.icon;base64,' + btoa(sBuf);
+      return this;
     }
+
     function getImageData(image, rgbColor, rgbBackColor, imageFormat) {
       var canvas2 = document.createElement('canvas');
       canvas2.width = image.width;
@@ -776,6 +822,10 @@
       }
       ctx.drawImage(canvas2, 0, 0);
       try {
+        if (imageFormat == 'x-icon') {
+          var pixelData = ctx.getImageData(0, 0, image.width, image.height);
+          return pixelData;
+        }
         var imgData = canvas.toDataURL('image/' + imageFormat);
         return imgData;
       } catch (e) {
@@ -783,38 +833,113 @@
         return null;
       }
     }
-    function onPNG(obj) {
-      onDownloadImage(obj, 'png');
+    var iconSizeArray = [16, 24, 32, 48, 64, 96, 128, 256, 512];
+    function onClickSize(obj) {
+      var pObj = obj.parentNode;
+      for (var i = 0; i < iconSizeArray.length; i++) {
+        var chk = pObj.querySelector('.i-size-' + iconSizeArray[i]).checked;
+        localStorage.setItem('imgSizeChk-' + iconSizeArray[i], chk);
+      }
+
+      setTimeout(function () {
+        restoreClickSize(pObj);
+      }, 100);
     }
-    function onJPG(obj) {
-      onDownloadImage(obj, 'jpeg');
+    function restoreClickSize(pObj) {
+      for (var i = 0; i < iconSizeArray.length; i++) {
+        var chk = localStorage.getItem('imgSizeChk-' + iconSizeArray[i]) == 'true';
+        pObj.querySelector('.i-size-' + iconSizeArray[i]).checked = chk;
+      }
     }
-    function onICO(obj) {
-      onDownloadImage(obj, 'x-icon');
+    function onTypeChanged(obj) {
+      var fmt = obj.value;
+      localStorage.setItem('imgDownType', fmt);
+      onOptShowSize(obj.parentNode, fmt);
+    }
+    function onDownloadClick(obj) {
+      var type = obj.parentNode.querySelector('.img-type').value;
+      if (type == '') {
+        alert('Select a format first.');
+        return;
+      }
+      onDownloadImage(obj, type);
     }
 
     function onDownloadImage(obj, fmt) {
-      var data = obj.parentNode.parentNode.parentNode._data;
+      var setData = obj.parentNode.parentNode.parentNode._data;
+      var iconSizeObjs = [];
+      if (fmt != 'x-icon' && fmt != 'icns') {
+        // for png or jpg, download it directly
+        addOneImage(setData, fmt, imageSizeW, imageSizeH, null);
+        return;
+      }
+
+      for (var i = 0; i < iconSizeArray.length; i++) {
+        var chk = localStorage.getItem('imgSizeChk-' + iconSizeArray[i]) == 'true';
+        if (chk && (fmt != 'x-icon' || iconSizeArray[i] < 512)) {
+          iconSizeObjs.push({
+            'size': iconSizeArray[i],
+            'data': null
+          });
+        }
+      }
+      if (iconSizeObjs.length < 1) {
+        alert('Check on sizes first.');
+        return;
+      }
+      var saveIconFn = function (imgData, size) {
+        // collect data for all size
+        var collectedAll = true;
+        for (var i = 0; i < iconSizeObjs.length; i++) {
+          if (iconSizeObjs[i].size == size) {
+            iconSizeObjs[i].data = imgData;
+          }
+          if (!iconSizeObjs[i].data) {
+            collectedAll = false;
+          }
+        }
+        if (!collectedAll) {
+          return false;
+        }
+        // if clooected all data for all sizes, then start to generate icon
+        var genIconFn = new generateIco();
+        for (var i = 0; i < iconSizeObjs.length; i++) {
+          genIconFn.addImgData(iconSizeObjs[i].data, iconSizeObjs[i].size);
+        }
+        var genData = genIconFn.getUrlData();
+        return genData;
+      };
+      for (var i = 0; i < iconSizeObjs.length; i++) {
+        addOneImage(setData, fmt, iconSizeObjs[i].size, iconSizeObjs[i].size, saveIconFn);
+      }
+    }
+    function addOneImage(setData, fmt, width, height, fn) {
       var isElectron = window && window.sendCommand;
-      var src = (isElectron ? '../node_modules/icons-font-customization/dist/' : '') + 'svgs/' + data.s;
-      var name = iconsSrc[data.s + '_name'] || data.real;
+      var src = (isElectron ? '../node_modules/icons-font-customization/dist/' : '') + 'svgs/' + setData.s;
+      var name = iconsSrc[setData.s + '_name'] || setData.real;
 
       var hidingBox = document.getElementById('hiding-box');
       var img = document.createElement('img');
-      img.onload = function() {
+      img.onload = function () {
         var rgbColor = getUserColor('');
-        var rgbBackColor = (fmt === 'png' || fmt === 'x-icon') && imageTransparent ? '' : getUserColor('b-');
+        var rgbBackColor = (fmt == 'png' || fmt == 'x-icon' || fmt == 'icns') && imageTransparent ? '' : getUserColor('b-');
         var imgData = getImageData(img, rgbColor, rgbBackColor, fmt);
         hidingBox.removeChild(img);
 
         if (!imgData) {
+          return;
+        }
+        if (fmt === 'x-icon' || fmt === 'icns') {
+          imgData = fn(imgData, width);
+          if (!imgData) {
             return;
+          }
         }
         var a = document.createElement('a');
         if (fmt === 'x-icon') {
           fmt = 'ico';
           a.type = 'image/x-icon';
-          imgData = generateIco(imgData, imageSizeW, imageSizeH);
+          // imgData = generateIco(imgData, width, height);
         }
         a.download = name + '.' + fmt;
         a.href = imgData;
@@ -822,10 +947,9 @@
         a.click();
         hidingBox.removeChild(a);
       }
-      img.width = imageSizeW;
-      img.height = imageSizeH;
+      img.width = width;
+      img.height = height;
       img.src = src;
-      hidingBox.innerHTML = '';
       hidingBox.appendChild(img);
     }
 
@@ -861,12 +985,13 @@
       css.innerHTML = '.icon-wrap .ifc-icon {font-size:' + value + 'px;} .ifc-box{width: ' + wh + 'px;height: ' + wh + 'px;}';
       document.querySelector('.control-box.f-size .value').innerHTML = value;
     }
+    // get color from scroll bar
     function getUserColor(pre) {
       var r = document.getElementById(pre + 'red').value;
       var g = document.getElementById(pre + 'green').value;
       var b = document.getElementById(pre + 'blue').value;
 
-      const rgb = r + ',' + g + ',' + b;
+      var rgb = r + ',' + g + ',' + b;
       if (iconsSrcSave) {
         localStorage.setItem(pre + 'color', rgb);
       }
@@ -891,6 +1016,7 @@
       var inputColor = document.getElementById(pre + 'iconColor');
       inputColor.value = getUserColor16(pre);
     }
+
     function onChgColor2(pre, el) {
       var inputColor = document.getElementById(pre + 'iconColor').value.trim();
       if (inputColor[0] == '#' && inputColor.length == 7) {
@@ -951,22 +1077,25 @@
     </div>
     <div class="panel-row">
       <div class="control-box f-size">
-        <div><span class="title">Font Size:</span><input id="fontSize" type="range" oninput="onSize(this)" min="10" max="200" step="1"
-            value="48"><span class="value">48</span>
+        <div><span class="title">Font Size:</span><input id="fontSize" type="range" oninput="onSize(this)" min="10"
+            max="200" step="1" value="48"><span class="value">48</span>
         </div>
       </div>
     </div>
     <div class="panel-row">
       <div class="control-box search">
         <div>
-          <span class="title">Search:</span><input id="search" type="text" oninput="onSearch(this)" value=""></div>
+          <span class="title">Search:</span><input id="search" type="text" oninput="onSearch(this)" value="">
+        </div>
         <div class="auto-save">
           <span class="title">Icons:</span><label><input id="saveSelected" type="checkbox"
-              oninput="onChkSave(this)">(Automatically save settings)</label></div>
+              oninput="onChkSave(this)">(Automatically save settings)</label>
+        </div>
         <div>
           <span><input id="show-selected" type="button" onclick="onShowSelected()" value="Show Selected">
             <input type="button" onclick="onCfg()" value="Populate Configuration">
-            <input type="button" onclick="onSearchClose()" value="X"></span></div>
+            <input type="button" onclick="onSearchClose()" value="X"></span>
+        </div>
       </div>
     </div>
   </div>
@@ -974,9 +1103,11 @@
   <div class="hide" id="hiding-box">
   </div>
 
-  <h1 id="app-title">free-icons-customization <span class="app-title">By uuware</span> <a class="link" href="https://github.com/uuware/icons-font-customization">project</a>
+  <h1 id="app-title">free-icons-customization <span class="app-title">By uuware</span> <a class="link"
+      href="https://github.com/uuware/icons-font-customization">project</a>
   </h1>
-  <div id="app-description">A collection of free svg icons and tools for generating icon font. Click on the icon at top-right corner to
+  <div id="app-description">A collection of free svg icons and tools for generating icon font. Click on the icon at
+    top-right corner to
     change color or size.<br>
     (The font used by this page is about 3.8 MB, so depending on your internet, it may be slow to load the font to show
     icons properly)
@@ -989,16 +1120,35 @@
       <span class="title">Name:</span><input class="i-name" type="text" value="">
     </div>
     <div class="code" title="The code indicates this icon in generated font">
-      <span class="title">Code:</span><input class="i-code" type="number" min=1 max=2000 value="1"></div>
+      <span class="title">Code:</span><input class="i-code" type="number" min=1 max=2000 value="1">
+    </div>
     <div class="name">
-      <span class="title"></span><input type="button" value="PNG" onclick="onPNG(this)" title="Download PNG">
-      <input type="button" value="JPG" onclick="onJPG(this)" title="Download JPG">
-      <input type="button" value="ICO" onclick="onICO(this)" title="Download ICON Format">
+      <span class="title"></span><select class="img-type" onchange="onTypeChanged(this)">
+        <option value="png" title="Download PNG format">PNG</option>
+        <option value="jpg" title="Download JPEG format">JPG</option>
+        <option value="x-icon" title="Download Windows Ico format">ICO</option>
+        <option value="icns" title="Download Apple Icns format">ICNS</option>
+      </select><input type="button" onclick="onDownloadClick(this)" value="Download Image"
+        title="Download Image of selected type">
       <input type="button" value="Spin" onclick="onSpin(this)" title="Apply spinning style">
       <br>
-      <span class="title"></span>Width: <input class="i-sizeW" type="number" value="32">, Height: <input class="i-sizeH" type="number" value="32">
+      <span class="title"></span>
+      <span class="size-w-h">Width: <input class="i-sizeW" type="number" value="32">, Height: <input class="i-sizeH"
+          type="number" value="32"></span>
+      <span class="size-wh">Size(px):
+        16<input onclick="onClickSize(this)" class="i-size-16" type="checkbox" title="size: 16x16">
+        24<input onclick="onClickSize(this)" class="i-size-24" type="checkbox" title="size: 24x25">,
+        32<input onclick="onClickSize(this)" class="i-size-32" type="checkbox" title="size: 32x32">,
+        48<input onclick="onClickSize(this)" class="i-size-48" type="checkbox" title="size: 48x48">,
+        64<input onclick="onClickSize(this)" class="i-size-64" type="checkbox" title="size: 64x64">,
+        96<input onclick="onClickSize(this)" class="i-size-96" type="checkbox" title="size: 96x96">,
+        128<input onclick="onClickSize(this)" class="i-size-128" type="checkbox" title="size: 128x128">,
+        256<input onclick="onClickSize(this)" class="i-size-256" type="checkbox" title="size: 256x256">,
+        512<input onclick="onClickSize(this)" class="i-size-512" type="checkbox" title="size: 512x512">,
+      </span>
       <br>
-      <span class="title"></span><span title="If not checked then use current background color">PNG/ICO Background Transparent:
+      <span class="title"></span><span title="If not checked then use current background color">PNG/ICO Background
+        Transparent:
         <input onclick="onImageBack(this)" class="i-no-back" type="checkbox"></span>
     </div>
   </div>
