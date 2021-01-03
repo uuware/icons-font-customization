@@ -33381,7 +33381,11 @@
     function onOptShowSize(pObj, fmt) {
       pObj.querySelector('.size-w-h').style.display = (fmt == 'x-icon' || fmt == 'icns') ? 'none' : 'inline-block';
       pObj.querySelector('.size-wh').style.display = (fmt == 'x-icon' || fmt == 'icns') ? 'inline-block' : 'none';
-      pObj.querySelector('.i-size-512').disabled = fmt == 'x-icon';
+      pObj.querySelector('.i-size-24p').style.display = fmt == 'icns' ? 'none' : '';
+      pObj.querySelector('.i-size-48p').style.display = fmt == 'icns' ? 'none' : '';
+      pObj.querySelector('.i-size-96p').style.display = fmt == 'icns' ? 'none' : '';
+      pObj.querySelector('.i-size-512p').style.display = fmt == 'x-icon' ? 'none' : '';
+      pObj.querySelector('.i-size-1024p').style.display = fmt == 'x-icon' ? 'none' : '';
     }
     function onSpin(obj) {
       var list = obj.parentNode.parentNode.parentNode.querySelector('.icon-wrap .ifc-icon').classList;
@@ -33398,53 +33402,85 @@
       return;
     }
 
-    function generateIco() {
+    function BufUtil() {
       var sBuf = '';
-      var imgs = [];
-      function addBuffer(uintArray) {
+      this.size = function() { return sBuf.length; }
+      this.reset = function() { sBuf = ''; return this; }
+      this.addBuffer = function addBuffer(uintArray, offset) {
         var buffer = new Uint8Array(uintArray);
         var i = 0, l = buffer.length;
-        while (i < l) sBuf += String.fromCharCode(buffer[i++]);
+        var sBuf2 = '';
+        while (i < l) sBuf2 += String.fromCharCode(buffer[i++]);
+        if (typeof(offset) == 'number' && offset >= 0) {
+          sBuf = sBuf.substring(0, offset) + sBuf2 + sBuf.substring(offset + sBuf2.length);
+        } else {
+          sBuf += sBuf2;
+        }
+        return this;
       }
-      function addU8(u) { addBuffer(new Uint8Array([u]).buffer); }
-      function addU16(u) { addBuffer(new Uint16Array([u]).buffer); }
-      function addU32(u) { addBuffer(new Uint32Array([u]).buffer); }
+      this.getBigEndian = function(buf) {
+        var buffer = new Uint8Array(buf);
+        var bufferBE = new Uint8Array(buf.byteLength);
+        for(var i = buffer.length - 1; i >= 0; i--) bufferBE[buffer.length - 1 - i] = buffer[i];
+        return bufferBE;
+      }
+      this.addString = function(s) { sBuf += s; return this; }
+      this.addU8 = function(u, offset) { this.addBuffer(new Uint8Array([u]).buffer, offset); return this; }
+      this.addU16 = function(u, offset, isBigEndian) {
+        var buf = new Uint16Array([u]).buffer;
+        buf = isBigEndian ? this.getBigEndian(buf) : buf;
+        this.addBuffer(buf, offset);
+      }
+      this.addU32 = function(u, offset, isBigEndian) {
+        var buf = new Uint32Array([u]).buffer;
+        buf = isBigEndian ? this.getBigEndian(buf) : buf;
+        this.addBuffer(buf, offset);
+        return this;
+      }
 
-      function addIconHeader(imgCount) {
+      this.getUrlData = function() { return 'data:image/vnd.microsoft.icon;base64,' + btoa(sBuf); }
+      return this;
+    }
+
+    // create the Microsoft ICO format
+    function generateIco() {
+      var bufUtil = new BufUtil();
+      var imgs = [];
+
+      function addFileHeader(imgCount) {
         // .ico header
-        addU16(0);        // Reserved space [00, 00]
-        addU16(1);        // Indiciate ico file [01, 00]
-        addU16(imgCount); // Indiciate imgCount image [01, 00]
+        bufUtil.addU16(0);        // Reserved space [00, 00]
+        bufUtil.addU16(1);        // Indiciate ico file [01, 00]
+        bufUtil.addU16(imgCount); // Indiciate imgCount image [01, 00]
       }
 
       function addDirectoryHeader(wh, dataLength, dataOffset) {
-        addU8(wh < 256 ? wh : 0); // Image px width [32]
-        addU8(wh < 256 ? wh : 0); // Image px height [32]
-        addU8(0);                 // no color palette [00]
-        addU8(0);                 // Reserved space [00]
-        addU16(1);                // 1 color plane [01, 00]
-        addU16(32);               // 32 bits per pixel (bit depth) [20, 00]
-        addU32(dataLength + 40);  // image size in bytes
-        addU32(dataOffset);       // offset of BMP or PNG data from the beginning of the ICO/CUR file
+        bufUtil.addU8(wh < 256 ? wh : 0); // Image px width [32]
+        bufUtil.addU8(wh < 256 ? wh : 0); // Image px height [32]
+        bufUtil.addU8(0);                 // no color palette [00]
+        bufUtil.addU8(0);                 // Reserved space [00]
+        bufUtil.addU16(1);                // 1 color plane [01, 00]
+        bufUtil.addU16(32);               // 32 bits per pixel (bit depth) [20, 00]
+        bufUtil.addU32(dataLength + 40);  // image size in bytes
+        bufUtil.addU32(dataOffset);       // offset of BMP or PNG data from the beginning of the ICO/CUR file
       }
       function addDibHeader(w, dataLength) {
         // DIB header
-        addU32(40);          // header size
-        addU32(w);
-        addU32(w * 2);       // negative = top-to-bottom
-        addU16(1);           // 1 plane
-        addU16(32);          // 32-bits (RGBA)
-        addU32(0);           // no compression (BI_BITFIELDS, 3)
-        addU32(dataLength);  // bitmap size incl. padding (stride x height)
-        addU32(0);
-        addU32(0);
-        addU32(0);
-        addU32(0);
+        bufUtil.addU32(40);          // header size
+        bufUtil.addU32(w);
+        bufUtil.addU32(w * 2);       // negative = top-to-bottom
+        bufUtil.addU16(1);           // 1 plane
+        bufUtil.addU16(32);          // 32-bits (RGBA)
+        bufUtil.addU32(0);           // no compression (BI_BITFIELDS, 3)
+        bufUtil.addU32(dataLength);  // bitmap size incl. padding (stride x height)
+        bufUtil.addU32(0);
+        bufUtil.addU32(0);
+        bufUtil.addU32(0);
+        bufUtil.addU32(0);
       }
       function addDibData(data, w, dataLength) {
         var h = w;
-        var file = new ArrayBuffer(dataLength); // raw byte buffer (returned)
-        var view = new DataView(file);          // handle endian, reg. width etc.
+        var buf = new Uint8Array(dataLength); // raw byte buffer (returned)
 
         var cols = w * 4;
         var rows = h * cols;
@@ -33460,25 +33496,25 @@
             var a = data[tPos + 3];
 
             tPos = (end - row) + col;
-            view.setUint8(tPos, b);
-            view.setUint8(tPos + 1, g);
-            view.setUint8(tPos + 2, r);
-            view.setUint8(tPos + 3, a);
+            buf[tPos] = b;
+            buf[tPos + 1] = g;
+            buf[tPos + 2] = r;
+            buf[tPos + 3] = a;
           }
         }
-        addBuffer(file);
+        bufUtil.addBuffer(buf);
       }
 
-      function addImgData(data, wh) {
+      function addImgData(data, wh, pngData) {
         imgs.push({d:data, wh:wh});
       }
       this.addImgData = addImgData;
 
       function getUrlData() {
         if (imgs.length < 1) { return null; }
-        sBuf = '';
+        bufUtil.reset();
         var dataOffset = 6 + (16 * imgs.length);
-        addIconHeader(imgs.length);
+        addFileHeader(imgs.length);
         for (var i = 0; i < imgs.length; i++) {
           // pixelSize should be same with data.buffer.byteLength
           var stride = Math.floor((32 * imgs[i].wh + 31) / 32) * 4; // row length incl. padding
@@ -33491,7 +33527,207 @@
           addDibHeader(imgs[i].wh, imgs[i].pixelSize);
           addDibData(imgs[i].d.data, imgs[i].wh, imgs[i].pixelSize);
         }
-        return 'data:image/vnd.microsoft.icon;base64,' + btoa(sBuf);
+        return bufUtil.getUrlData();
+      }
+      this.getUrlData = getUrlData;
+
+      return this;
+    }
+
+    function dataURLtoArray(dataurl) {
+      var arr = dataurl.split(','), bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+      while (n--) {
+        u8arr[n] = bstr.charCodeAt(n);
+      }
+      return u8arr;
+    }
+
+    // Create the Apple ICNS format.
+    function generateIcns() {
+      var bufUtil = new BufUtil();
+      var imgs = [];
+
+      function addImgData(data, wh, pngData) {
+        imgs.push({d:data, wh:wh, pngData:pngData});
+      }
+      this.addImgData = addImgData;
+
+      function getChannelData(image, channelIndex) {
+        var bpp = 4;
+        var length = image.length;
+        var buf = new Uint8Array(length / bpp);
+        var outPos = 0;
+        for (var i = channelIndex; i < length; i += bpp) {
+          buf[outPos++] = image[i];
+        }
+        return buf;
+      }
+      function concatUintArray(arrays) {
+        // sum of individual array lengths
+        if (!arrays.length) return null;
+        var totalLength = arrays.reduce((acc, value) => acc + value.length, 0);
+        var result = new Uint8Array(totalLength);
+
+        var offset = 0;
+        for (var array of arrays) {
+          result.set(array, offset);
+          offset += array.length;
+        }
+        return result;
+      }
+      function packBits(buffer) {
+        var bufs = [];
+        let i = 0;
+        while (i < buffer.length) {
+          var byte = buffer[i];
+          if (i + 2 >= buffer.length) {
+            var buf = new Uint8Array(1);
+            buf[0] = buffer.length - i;
+            bufs.push(buf);
+            bufs.push(buffer.slice(i, buffer.length));
+            break;
+          }
+          var repeat = byte === buffer[i + 1] && byte === buffer[i + 2];
+          if (repeat) {
+            var j = i + 2;
+            var length = 3;
+            while (++j < buffer.length && byte === buffer[j] && length < 130) {
+              length++;
+            }
+            var buf = new Uint8Array(2);;
+            buf[0] = length + 128 - 3;
+            buf[1] = byte;
+            bufs.push(buf);
+            i = j;
+          } else {
+            var j = i + 2;
+            var length = 3;
+            var prev = buffer[j];
+            var repeatLength = 1;
+            while (++j < buffer.length && length < 128) {
+              if (prev === buffer[j]) {
+                if (++repeatLength > 2) {
+                  break;
+                }
+              } else {
+                prev = buffer[j];
+                repeatLength = 1;
+              }
+              length++;
+            }
+            if (repeatLength > 2) {
+              j -= 2;
+              length -= 2;
+            }
+            var buf = new Uint8Array(1);;
+            buf[0] = length - 1;
+            bufs.push(buf);
+            bufs.push(buffer.slice(i, j));
+            i = j;
+          }
+        }
+        return concatUintArray(bufs);
+      }
+      function packAllBits(image, withAlpha) {
+        const R = packBits(getChannelData(image, 0));
+        const G = packBits(getChannelData(image, 1));
+        const B = packBits(getChannelData(image, 2));
+        // if (withAlpha) {
+        //   var headId = 'ARGB';
+        //   var header = new Uint8Array(headId.length);
+        //   for (var i = 0; i < headId.length; ++i) {
+        //     header[i] = headId.charCodeAt(i);
+        //   }
+        //   const A = packBits(getChannelData(image, 3));
+        //   return concatUintArray([header, A, R, G, B]);
+        // } else {
+          return concatUintArray([R, G, B]);
+        // }
+      }
+
+      function addChunk(icnsChunk, img) {
+        // img.d.data, img.pngData, img.wh, img.pixelSize
+        var buf = 0;
+        switch (icnsChunk.format) {
+          case 'png':
+            buf = img.pngData;
+            break;
+          // case 'PackBitsARGB':
+          //   if (!img.d.argb) {
+          //     img.d.argb = packAllBits(img.d.data, true);
+          //   }
+          //   buf = img.d.argb;
+          //   break;
+
+          case 'PackBitsRGB':
+            if (!img.d.rgb) {
+              img.d.rgb = packAllBits(img.d.data, false);
+            }
+            buf = img.d.rgb;
+            break;
+
+          case 'Alpha':
+            // Aplpha is the data of channel 3.
+            if (!img.d.alpha) {
+              img.d.alpha = getChannelData(img.d.data, 3);
+            }
+            buf = img.d.alpha;
+            break;
+        }
+        // Write icon header, eg 'ic10' + (length of icon + icon header length)
+        bufUtil.addString(icnsChunk.type);
+        bufUtil.addU32(buf.length + 8, false, true);
+        bufUtil.addBuffer(buf);
+      }
+
+      function getUrlData() {
+        // tested on https://offdrive.com/convert/ico/png
+        // To ensure a icon looks great in Finder, the Dock, Launchpad, and the App Store, provide it in the following sizes:
+        // 512x512 pt (512x512 px @1x, 1024x1024 px @2x)
+        // 256x256 pt (256x256 px @1x, 512x512 px @2x)
+        // 128x128 pt (128x128 px @1x, 256x256 px @2x)
+        // 32x32 pt (32x32 px @1x, 64x64 px @2x)
+        // 16x16 pt (16x16 px @1x, 32x32 px @2x)
+       const icnsChunks = [
+          // ic04 and ic05 are supported on versions 10.14 and newer
+          // png2icons uses is32 and il32 for better support on older versions.
+          // The following order is the same of that created by iconutil on 10.14.
+          { type: "ic12", format: 'png', size: 64,  Info: "32x32@2  " },
+          { type: "icp6", format: 'png', size: 64,  Info: "64x64    " },
+          { type: "ic07", format: 'png', size: 128, Info: "128x128  " },
+          { type: "ic13", format: 'png', size: 256, Info: "128x128@2" },
+          { type: "ic08", format: 'png', size: 256, Info: "256x256  " },
+          // { type: "ic04", format: 'PackBitsARGB', size: 16,   Info: "16x16    " },
+          { type: "ic14", format: 'png', size: 512, Info: "256x256@2" },
+          { type: "ic09", format: 'png', size: 512, Info: "512x512  " },
+          // { type: "ic05", format: 'PackBitsARGB', size: 32,   Info: "32x32    " },
+          { type: "ic10", format: 'png', size: 1024, Info: "512x512@2" },
+          { type: "ic11", format: 'png', size: 32, Info: "16x16@2  " },
+          { type: "il32", format: 'PackBitsRGB', size: 32, Info: "32x32    " },
+          { type: "l8mk", format: 'Alpha', size: 32, Info: "32x32    " },
+          { type: "is32", format: 'PackBitsRGB', size: 16, Info: "16x16    " },
+          { type: "s8mk", format: 'Alpha', size: 16, Info: "16x16    " },
+          // icp5 and icp4 may not work in Finder in older versions (e. g. 10.12).
+          // { type: "icp5", format: 'png',     size: 32,   Info: "32x32    " },
+          // { type: "icp4", format: 'png',     size: 16,   Info: "16x16    " },
+        ];
+
+        if (imgs.length < 1) { return null; }
+        bufUtil.reset();
+
+        // ICNS header, "icns" + length of file (written later)
+        bufUtil.addString('icns');
+        bufUtil.addU32(0);
+
+        for (var j = 0; j < icnsChunks.length; j++) {
+          for (var i = 0; i < imgs.length; i++) {
+            if (imgs[i].wh === icnsChunks[j].size) {
+              addChunk(icnsChunks[j], imgs[i]);
+            }
+          }
+        }
+        bufUtil.addU32(bufUtil.size(), 4, true);
+        return bufUtil.getUrlData();
       }
       this.getUrlData = getUrlData;
 
@@ -33518,9 +33754,11 @@
       }
       ctx.drawImage(canvas2, 0, 0);
       try {
-        if (imageFormat == 'x-icon') {
+        if (imageFormat == 'x-icon' || imageFormat == 'icns') {
+          // x-icon or icns needs both data
+          var pngData = canvas.toDataURL('image/png');
           var pixelData = ctx.getImageData(0, 0, image.width, image.height);
-          return pixelData;
+          return {pngData: pngData, pixelData: pixelData};
         }
         var imgData = canvas.toDataURL('image/' + imageFormat);
         return imgData;
@@ -33529,7 +33767,7 @@
         return null;
       }
     }
-    var iconSizeArray = [16, 24, 32, 48, 64, 96, 128, 256, 512];
+    var iconSizeArray = [16, 24, 32, 48, 64, 96, 128, 256, 512, 1024];
     function onClickSize(obj) {
       var pObj = obj.parentNode;
       for (var i = 0; i < iconSizeArray.length; i++) {
@@ -33565,14 +33803,14 @@
       var setData = obj.parentNode.parentNode.parentNode._data;
       var iconSizeObjs = [];
       if (fmt != 'x-icon' && fmt != 'icns') {
-        // for png or jpg, download it directly
+        // for png or jpeg, download it directly
         addOneImage(setData, fmt, imageSizeW, imageSizeH, null);
         return;
       }
 
       for (var i = 0; i < iconSizeArray.length; i++) {
         var chk = localStorage.getItem('imgSizeChk-' + iconSizeArray[i]) == 'true';
-        if (chk && (fmt != 'x-icon' || iconSizeArray[i] < 512)) {
+        if (chk && ((fmt == 'x-icon' && iconSizeArray[i] < 512) || (fmt == 'icns' && iconSizeArray[i] != 24 && iconSizeArray[i] != 48 && iconSizeArray[i] != 96))) {
           iconSizeObjs.push({
             'size': iconSizeArray[i],
             'data': null
@@ -33583,12 +33821,14 @@
         alert('Check on sizes first.');
         return;
       }
-      var saveIconFn = function (imgData, size) {
-        // collect data for all size
+
+      // to collect all size of png and pixel data for x-icon or icns
+      var saveIconFn = function (imgObject, size) {
         var collectedAll = true;
         for (var i = 0; i < iconSizeObjs.length; i++) {
           if (iconSizeObjs[i].size == size) {
-            iconSizeObjs[i].data = imgData;
+            iconSizeObjs[i].data = imgObject.pixelData;
+            iconSizeObjs[i].pngData = dataURLtoArray(imgObject.pngData);
           }
           if (!iconSizeObjs[i].data) {
             collectedAll = false;
@@ -33597,10 +33837,10 @@
         if (!collectedAll) {
           return false;
         }
-        // if clooected all data for all sizes, then start to generate icon
-        var genIconFn = new generateIco();
+        // if collected all data for all sizes, then start to generate icon
+        var genIconFn = fmt != 'icns' ? new generateIco() : new generateIcns();
         for (var i = 0; i < iconSizeObjs.length; i++) {
-          genIconFn.addImgData(iconSizeObjs[i].data, iconSizeObjs[i].size);
+          genIconFn.addImgData(iconSizeObjs[i].data, iconSizeObjs[i].size, iconSizeObjs[i].pngData);
         }
         var genData = genIconFn.getUrlData();
         return genData;
@@ -33636,6 +33876,8 @@
           fmt = 'ico';
           a.type = 'image/x-icon';
           // imgData = generateIco(imgData, width, height);
+        } else if (fmt === 'jpeg') {
+          fmt = 'jpg';
         }
         a.download = name + '.' + fmt;
         a.href = imgData;
@@ -33821,7 +34063,7 @@
     <div class="name">
       <span class="title"></span><select class="img-type" onchange="onTypeChanged(this)">
         <option value="png" title="Download PNG format">PNG</option>
-        <option value="jpg" title="Download JPEG format">JPG</option>
+        <option value="jpeg" title="Download JPEG format">JPG</option>
         <option value="x-icon" title="Download Windows Ico format">ICO</option>
         <option value="icns" title="Download Apple Icns format">ICNS</option>
       </select><input type="button" onclick="onDownloadClick(this)" value="Download Image"
@@ -33833,14 +34075,15 @@
           type="number" value="32"></span>
       <span class="size-wh">Size(px):
         16<input onclick="onClickSize(this)" class="i-size-16" type="checkbox" title="size: 16x16">
-        24<input onclick="onClickSize(this)" class="i-size-24" type="checkbox" title="size: 24x25">,
-        32<input onclick="onClickSize(this)" class="i-size-32" type="checkbox" title="size: 32x32">,
-        48<input onclick="onClickSize(this)" class="i-size-48" type="checkbox" title="size: 48x48">,
-        64<input onclick="onClickSize(this)" class="i-size-64" type="checkbox" title="size: 64x64">,
-        96<input onclick="onClickSize(this)" class="i-size-96" type="checkbox" title="size: 96x96">,
-        128<input onclick="onClickSize(this)" class="i-size-128" type="checkbox" title="size: 128x128">,
-        256<input onclick="onClickSize(this)" class="i-size-256" type="checkbox" title="size: 256x256">,
-        512<input onclick="onClickSize(this)" class="i-size-512" type="checkbox" title="size: 512x512">,
+        <span class="i-size-24p" onclick="onClickSize(this)">24<input class="i-size-24" type="checkbox" title="size: 24x25"></span>
+        32<input onclick="onClickSize(this)" class="i-size-32" type="checkbox" title="size: 32x32">
+        <span class="i-size-48p" onclick="onClickSize(this)">48<input class="i-size-48" type="checkbox" title="size: 48x48"></span>
+        64<input onclick="onClickSize(this)" class="i-size-64" type="checkbox" title="size: 64x64">
+        <span class="i-size-96p" onclick="onClickSize(this)">96<input class="i-size-96" type="checkbox" title="size: 96x96"></span>
+        128<input onclick="onClickSize(this)" class="i-size-128" type="checkbox" title="size: 128x128">
+        256<input onclick="onClickSize(this)" class="i-size-256" type="checkbox" title="size: 256x256">
+        <span class="i-size-512p" onclick="onClickSize(this)">512<input class="i-size-512" type="checkbox" title="size: 512x512"></span>
+        <span class="i-size-1024p" onclick="onClickSize(this)">1024<input class="i-size-1024" type="checkbox" title="size: 1024x1024"></span>
       </span>
       <br>
       <span class="title"></span><span title="If not checked then use current background color">PNG/ICO Background
