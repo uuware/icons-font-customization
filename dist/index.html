@@ -7,6 +7,7 @@
   <meta name="description"
     content="icons-font-customization: A collection of free svg icons and tools for generating icon font.">
   <title>icons-font-customization</title>
+  <link rel="preload" href="index.woff" as="font" type="font/woff" crossorigin>
 </head>
 
 <body>
@@ -34044,9 +34045,38 @@
   <h1 id="app-title">free-icons-customization <span class="app-title">By uuware</span> <a class="link"
       href="https://github.com/uuware/icons-font-customization">project</a>
   </h1>
+  <!-- load font immediately -->
+  <style>
+    .loading-font {
+      color: blue;
+    }
+    .loading-font i:before {
+      content: "\2710";
+      font-size: 11px;
+    }
+  </style>
+  <div class="loading-font"><span class="text">Loading Font</span><i class="ifc-icon i10000"></i></div>
+  <script>
+    function webfontReady() {
+      var fontBox = document.querySelector('.loading-font .ifc-icon');
+      var fontText = document.querySelector('.loading-font .text');
+      // tested on Chrome, Firefox, Safari
+      if (fontBox.offsetWidth == 11 && fontBox.offsetHeight == 19) {
+        document.querySelector('.loading-font').style.display = 'none';
+        document.querySelector('.icon-container').style.display = '';
+        return;
+      }
+        
+      fontText.innerHTML += ' .';
+      if (fontText.innerHTML.endsWith('. . . . .')) {
+        fontText.innerHTML = 'Loading Font';
+      }
+      setTimeout(webfontReady, 300);
+    }
+    webfontReady();
+  </script>
   <div id="app-description">A collection of free svg icons and tools for generating icon font. Click on the icon at
-    top-right corner to
-    change color or size.<br>
+    top-right corner to change color or size.<br>
     (The font used by this page is about 3.8 MB, so depending on your internet, it may be slow to load the font to show
     icons properly)
   </div>
