@@ -376,6 +376,12 @@
     }
     window.onload = function () {
       setTimeout(function () {
+        // on Firefox, when checkbox is checked and refresh it again, the status is kept
+        var chkes = document.querySelectorAll('.icon-group .info .name input[type=checkbox]');
+        for (var i = 0, len = chkes.length; i < len; i++) {
+          chkes[i].checked = false;
+        }
+
         var cnt = combineSrc();
         document.getElementById('saveSelected').checked = iconsSrcSave;
         if (iconsSrcSave) {
