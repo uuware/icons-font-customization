@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M14 15V9.371h1V16H1V2h9.195v1H2v12h12zm.453-12.513a.75.75 0 011.094 1.026l-7.087 7.57-3.994-4.057a.75.75 0 111.068-1.052l2.899 2.943 6.02-6.43z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>edit icon/task list</title>
+    <desc>Created with Sketch.</desc>
+    <g id="edit-icon/task-list" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M14,15 L14,9.37100497 L15,9.37100497 L15,16 L1,16 L1,2 L10.1946467,2 L10.1946467,3 L2,3 L2,15 L14,15 Z M14.4525049,2.48740937 C14.7356009,2.1850362 15.2102174,2.16940895 15.5125906,2.45250493 C15.8149638,2.73560092 15.8305911,3.21021745 15.5474951,3.51259063 L8.45990379,11.0828057 L4.46558382,7.02621226 C4.17496481,6.73106236 4.17863783,6.25620283 4.47378774,5.96558382 C4.76893764,5.67496481 5.24379717,5.67863783 5.53441618,5.97378774 L8.43263799,8.91719429 L14.4525049,2.48740937 Z" id="形状结合" fill="#293040" fill-rule="nonzero"></path>
+    </g>
+</svg>

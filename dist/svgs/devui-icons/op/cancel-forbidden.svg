@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 16A8 8 0 118 0a8 8 0 010 16zm0-2A6 6 0 108 2a6 6 0 000 12zM6 4l6 4-6 4V4z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>cancel_forbidden</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="图标" transform="translate(-1065.000000, -1068.000000)" fill="#293040" fill-rule="nonzero">
+            <path d="M1073,1084 C1068.58172,1084 1065,1080.41828 1065,1076 C1065,1071.58172 1068.58172,1068 1073,1068 C1077.41828,1068 1081,1071.58172 1081,1076 C1081,1080.41828 1077.41828,1084 1073,1084 Z M1073,1082 C1076.31371,1082 1079,1079.31371 1079,1076 C1079,1072.68629 1076.31371,1070 1073,1070 C1069.68629,1070 1067,1072.68629 1067,1076 C1067,1079.31371 1069.68629,1082 1073,1082 Z M1071,1072 L1077,1076 L1071,1080 L1071,1072 Z" id="cancel_forbidden"></path>
+        </g>
+    </g>
+</svg>

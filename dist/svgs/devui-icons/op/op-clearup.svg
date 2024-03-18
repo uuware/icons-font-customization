@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 6v9h-2v-3h-2v3H9v-3H7v3H5v-3H3v3H1V6h6V1h2v5h6zM3 8v2h10V8H3z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/clear</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/clear" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M15,6 L15,15 L13,15 L13,12 L11,12 L11,15 L9,15 L9,12 L7,12 L7,15 L5,15 L5,12 L3,12 L3,15 L1,15 L1,6 L7,6 L7,1 L9,1 L9,6 L15,6 Z M3,8 L3,10 L13,10 L13,8 L3,8 Z" id="形状" fill="#293040"></path>
+    </g>
+</svg>

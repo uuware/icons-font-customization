@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g fill-rule="evenodd"><path fill-rule="nonzero" d="M7.268 8L10.396.875h4.175v11H16l-3.03 4-3.195-4h1.564V3.858L8 11.923H6.474L3.232 5.996l-.057.01v5.917H0V.875h3.48z"/><path d="M0 12.875h3.2v2H0z"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>markdown</title>
+    <desc>Created with Sketch.</desc>
+    <g id="markdown" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="M" fill="#293040" fill-rule="nonzero" points="7.26803385 8 10.396224 0.875 14.5707287 0.875 14.5707287 11.875 16 11.875 12.9701562 15.875 9.775 11.875 11.3390519 11.875 11.3390519 3.8579417 8 11.9225834 6.47384886 11.9225834 3.23167677 5.99610588 3.17531032 6.00575014 3.17531032 11.9225834 0 11.9225834 1.03531254e-13 0.875 3.48007812 0.875"></polygon>
+        <polygon id="Rectangle" fill="#5170FF" points="0 12.875 3.2 12.875 3.2 14.875 0 14.875"></polygon>
+    </g>
+</svg>

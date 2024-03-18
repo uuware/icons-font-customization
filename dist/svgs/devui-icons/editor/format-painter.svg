@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 8v2h1v6H6v-6h1V7h8V3h-1v2H1V0h13v2h2v6H8zm5-7H2v3h11V1z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>edit icon/Format Painter</title>
+    <desc>Created with Sketch.</desc>
+    <g id="edit-icon/Format-Painter" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M8,8 L8,10 L9,10 L9,16 L6,16 L6,10 L7,10 L7,7 L15,7 L15,3 L14,3 L14,5 L1,5 L1,0 L14,0 L14,2 L16,2 L16,8 L8,8 Z M13,1 L2,1 L2,4 L13,4 L13,1 Z" id="形状" fill="#293040"></path>
+    </g>
+</svg>

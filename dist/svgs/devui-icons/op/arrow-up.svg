@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7 4.95l-2.5 2.5L3 5.95 7.95 1l4.95 4.95-1.5 1.5L9 5.05v9.85H7z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/aveicon-arrow-up</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/aveicon-arrow-up" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="路径" fill="#293040" points="7 4.94974747 4.5 7.44974747 3 5.94974747 7.94974747 1 12.8994949 5.94974747 11.3994949 7.44974747 9 5.05025253 9 14.8994949 7 14.8994949"></polygon>
+    </g>
+</svg>

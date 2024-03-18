@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M12 0v2h2V0h2v16H1V0h2v2h2V0h7zM2 5v10h13V5H2zm1 7h2v2H3v-2zm3 0h2v2H6v-2zm3 0h2v2H9v-2zM3 9h2v2H3V9zm3 0h2v2H6V9zm3 0h2v2H9V9zm3 0h2v2h-2V9zM6 6h2v2H6V6zm3 0h2v2H9V6zm3 0h2v2h-2V6z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>操作/avelcon-calendar</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/avelcon-calendar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M3,2 L3,4 L2,4 L2,13 L14,13 L14,4 L13,4 L13,2 L15,2 C15.5522847,2 16,2.44771525 16,3 L16,14 C16,14.5522847 15.5522847,15 15,15 L1,15 C0.44771525,15 0,14.5522847 0,14 L0,3 C0,2.44771525 0.44771525,2 1,2 L3,2 Z M6,9 L6,11 L4,11 L4,9 L6,9 Z M9,9 L9,11 L7,11 L7,9 L9,9 Z M12,9 L12,11 L10,11 L10,9 L12,9 Z M6,6 L6,8 L4,8 L4,6 L6,6 Z M9,6 L9,8 L7,8 L7,6 L9,6 Z M12,6 L12,8 L10,8 L10,6 L12,6 Z M9,2 L9,4 L7,4 L7,2 L9,2 Z M6,1 L6,4 L4,4 L4,1 L6,1 Z M12,1 L12,4 L10,4 L10,1 L12,1 Z" id="形状" fill="#575D6C"></path>
+    </g>
+</svg>

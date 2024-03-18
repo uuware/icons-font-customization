@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M10 14v2l-4-3 4-3v2a4 4 0 00.606-7.954L12 3l-1.276-.957A6.001 6.001 0 0110 14zM7 4H6a4 4 0 100 8h.333L5 13l1.333 1H6A6 6 0 116 2h1V0l4 3-4 3V4z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/循环</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/循环" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill-rule="nonzero">
+            <path d="M10,14 L10,16 L6,13 L10,10 L10,12 C12.209139,12 14,10.209139 14,8 C14,5.99682804 12.5275103,4.33757448 10.605881,4.04558928 L12,3 L10.7243743,2.04328076 C13.6965037,2.40093454 16,4.93146207 16,8 C16,11.3137085 13.3137085,14 10,14 Z M7,4 L6,4 C3.790861,4 2,5.790861 2,8 C2,10.209139 3.790861,12 6,12 L6.33333333,12 L5,13 L6.33333333,14 L6,14 C2.6862915,14 4.05812251e-16,11.3137085 0,8 C-4.05812251e-16,4.6862915 2.6862915,2 6,2 L7,2 L7,0 L11,3 L7,6 L7,4 Z" id="形状" fill="#293040"></path>
+        </g>
+    </g>
+</svg>

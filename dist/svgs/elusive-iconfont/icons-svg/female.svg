@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: IcoMoon.io -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   data-tags="remove-circle, cancel, close, remove, delete"
+   height="1200"
+   width="1200"
+   data-du=""
+   viewBox="0 0 1200 1200"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="female.svg">
+  <defs
+     id="defs32" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1535"
+     inkscape:window-height="876"
+     id="namedview30"
+     showgrid="false"
+     inkscape:zoom="0.52678571"
+     inkscape:cx="712.39682"
+     inkscape:cy="669.02953"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata62">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     inkscape:connector-curvature="0"
+     d="M 600,0 C 387.13546,0 214.53773,172.59773 214.53773,385.46226 c 0,187.75031 134.30978,344.18085 312.05507,378.47813 l 0,124.07905 -165.31475,0 0,146.74006 165.31475,0 0,165.2405 146.74009,0 0,-165.2405 165.31477,0 0,-146.74006 -165.31477,0 0,-124.07905 C 851.1136,729.67148 985.46226,573.23789 985.46226,385.46226 985.46226,172.59773 812.86453,0 600,0 z m 0,153.27844 c 128.23124,0 232.18382,103.95256 232.18382,232.18382 0,128.23125 -103.95258,232.18383 -232.18382,232.18383 -128.23125,0 -232.18383,-103.95258 -232.18383,-232.18383 C 367.81617,257.231 471.76875,153.27844 600,153.27844 z"
+     id="path7189" />
+</svg>

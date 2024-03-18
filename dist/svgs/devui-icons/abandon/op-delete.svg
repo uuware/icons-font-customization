@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>op-delete</title>
+    <desc>Created with Sketch.</desc>
+    <g id="op-delete" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(2.000000, 1.000000)" fill="#293040" fill-rule="nonzero" id="Mask">
+            <path d="M1,12.17 C1,13.1806811 1.81931891,14 2.83,14 L9.16,14 C10.1739312,13.9945339 10.9945339,13.1739312 11,12.16 L11,5 L1,5 L1,12.17 Z M12,2 L10,2 L9,0 L3,0 L2,2 L0,2 L0,4 L12,4 L12,2 Z"></path>
+        </g>
+    </g>
+</svg>

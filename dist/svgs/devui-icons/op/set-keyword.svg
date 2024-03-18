@@ -1,1 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M10 13h3V3h-3V1h5v14h-5v-2zm-4 0v2H1V1h5v2H3v10h3zm.375-2L6 12H4l3-8h2l3 8h-2l-.375-1h-3.25zm.75-2h1.75L8 6.667 7.125 9z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/设置关键字</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/设置关键字" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="操作/设置关键字-copy">
+            <g>
+                <g id="设置关键字">
+                    <path d="M10,13 L13,13 L13,3 L10,3 L10,1 L15,1 L15,15 L10,15 L10,13 Z M6,13 L6,15 L1,15 L1,1 L6,1 L6,3 L3,3 L3,13 L6,13 Z M6.375,11 L6,12 L4,12 L7,4 L9,4 L12,12 L10,12 L9.625,11 L6.375,11 Z M7.125,9 L8.875,9 L8,6.66666667 L7.125,9 Z" id="形状" fill="#293040" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

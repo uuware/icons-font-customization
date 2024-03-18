@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>释义/property</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M15,1 C15.5522847,1 16,1.44771525 16,2 L16,14 C16,14.5522847 15.5522847,15 15,15 L1,15 C0.44771525,15 0,14.5522847 0,14 L0,2 C0,1.44771525 0.44771525,1 1,1 L15,1 Z M14,3 L2,3 L2,13 L14,13 L14,3 Z M10,9 L10,11 L3,11 L3,9 L10,9 Z M13,5 L13,7 L3,7 L3,5 L13,5 Z" id="path-1"></path>
+    </defs>
+    <g id="释义/property" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Combined-Shape" fill="#293040" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

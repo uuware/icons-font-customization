@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>终止</title>
+    <desc>Created with Sketch.</desc>
+    <g id="终止" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 Z M5.5,5 C5.22385763,5 5,5.22385763 5,5.5 L5,10.5 C5,10.7761424 5.22385763,11 5.5,11 L10.5,11 C10.7761424,11 11,10.7761424 11,10.5 L11,5.5 C11,5.22385763 10.7761424,5 10.5,5 L5.5,5 Z" id="形状" fill="#959EB2" fill-rule="nonzero"></path>
+    </g>
+</svg>

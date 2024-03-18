@@ -1,0 +1,8 @@
+{
+	"Name": "line-awesome",
+	"About": "Replace Font Awesome with modern line icons",
+	"PreName": "la",
+	"Source": "https://github.com/icons8/line-awesome",
+	"License": "MIT or the Good Boy License",
+	"License Link": "https://github.com/icons8/line-awesome/blob/master/LICENSE.md"
+}

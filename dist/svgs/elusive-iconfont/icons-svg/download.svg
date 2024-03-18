@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: IcoMoon.io -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   data-tags="remove-circle, cancel, close, remove, delete"
+   height="1200"
+   width="1200"
+   data-du=""
+   viewBox="0 0 1200 1200"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="download.svg">
+  <defs
+     id="defs32" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1535"
+     inkscape:window-height="876"
+     id="namedview30"
+     showgrid="false"
+     inkscape:zoom="0.37249375"
+     inkscape:cx="267.61708"
+     inkscape:cy="398.31694"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata62">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     inkscape:connector-curvature="0"
+     d="M 600.00001,-3.4999999e-6 C 268.63055,-3.4999999e-6 2.395e-6,268.6303 2.395e-6,599.99999 2.395e-6,931.36968 268.63032,1200 600.00001,1200 931.36947,1200 1200,931.36945 1200,599.99999 1200,268.6303 931.36947,-3.4999999e-6 600.00001,-3.4999999e-6 z M 600.00001,1069.5651 c -259.36946,0 -469.56516,-210.26082 -469.56516,-469.56511 0,-259.30429 210.1957,-469.56516 469.56516,-469.56516 259.36946,0 469.56539,210.26087 469.56539,469.56516 0,259.30429 -210.19593,469.56511 -469.56539,469.56511 z m 117.39116,-720.65223 -234.78258,0 0,266.73914 -146.73913,0 264.13031,248.4783 264.13031,-248.4783 -146.73914,0 0,-266.73914 z"
+     id="path5643" />
+</svg>

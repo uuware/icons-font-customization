@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7 7V2h2v5h5v2H9v5H7V9H2V7z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/添加</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/添加" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="路径" fill="#293040" points="7 7 7 2 9 2 9 7 14 7 14 9 9 9 9 14 7 14 7 9 2 9 2 7"></polygon>
+    </g>
+</svg>

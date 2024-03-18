@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 0v7a4 4 0 108 0V0h1v7A5 5 0 013 7V0h1zM2 14h12v2H2v-2z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>edit icon/underline</title>
+    <desc>Created with Sketch.</desc>
+    <g id="edit-icon/underline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="释义_富文本编辑/unordered-16x16" fill="#293040">
+            <path d="M4,0 L4,7 C4,9.209139 5.790861,11 8,11 C10.209139,11 12,9.209139 12,7 L12,0 L13,0 L13,7 C13,9.76142375 10.7614237,12 8,12 C5.23857625,12 3,9.76142375 3,7 L3,0 L4,0 Z M2,14 L14,14 L14,16 L2,16 L2,14 Z" id="形状"></path>
+        </g>
+    </g>
+</svg>

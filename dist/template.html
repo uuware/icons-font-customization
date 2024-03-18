@@ -7,14 +7,30 @@
   <meta name="description"
     content="icons-font-customization: A collection of free svg icons and tools for generating icon font.">
   <title>icons-font-customization</title>
-  <link rel="preload" href="index.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="index0.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="index1.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="index2.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body>
   <style>
     @font-face {
-      font-family: 'i-font';
-      src: url('index.woff') format('woff');
+      font-family: 'i-font0';
+      src: url('index0.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'i-font1';
+      src: url('index1.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'i-font2';
+      src: url('index2.woff2') format('woff2');
       font-weight: 400;
       font-style: normal;
     }
@@ -39,19 +55,57 @@
     }
 
     /* right panel */
-    .navigation-icon {
-      display: inline-block;
+    .menu-toggle {
       position: fixed;
       top: 6px;
-      right: 6px;
+      right: 5px;
       z-index: 102;
-      border: solid 1px #00f;
-      box-shadow: 13px 5px 5px 1px #ccc;
-      border-right-style: solid;
-      border-right-width: 16px;
-      border-top: 12px solid transparent;
-      border-left: 0 solid transparent;
-      border-bottom: 12px solid transparent;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+    }
+
+    .menu-toggle span {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 5px;
+      width: 20px;
+      background: #028bd6;
+      position: absolute;
+      display: block;
+      transition: all 300ms ease-in-out;
+      top: 7px;
+    }
+
+    .menu-toggle.on span {
+      background-color: transparent;
+    }
+
+    .menu-toggle span:before,
+    .menu-toggle span:after {
+      border-radius: 1px;
+      height: 5px;
+      width: 20px;
+      background: #028bd6;
+      position: absolute;
+      display: block;
+      content: "";
+      transition: all 300ms ease-in-out;
+      top: 14px;
+    }
+
+    .menu-toggle.on span::after {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+
+    .menu-toggle.on span::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+
+    .menu-toggle span:before {
+      top: 7px;
     }
 
     .panel {
@@ -77,6 +131,10 @@
       background: #aaa;
       outline: none;
       margin: 5px 0;
+    }
+
+    .info-more.hide {
+      display: none;
     }
 
     #red,
@@ -144,6 +202,16 @@
       position: relative;
       padding-bottom: 20px;
     }
+
+    /* .icon-wrap .svg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 23px;
+      height: 23px;
+      z-index: 2;
+      cursor: pointer;
+    } */
 
     .ifc-box .icon-name {
       position: absolute;
@@ -235,7 +303,11 @@
 
     .option .i-sizeW,
     .option .i-sizeH {
-      width: 45px;
+      width: 60px;
+    }
+
+    .option .size-list {
+      width: 40px;
     }
 
     .option input[type=button] {
@@ -258,6 +330,18 @@
     #search-container .close:hover {
       color: blue;
       font-weight: bold;
+    }
+
+    .option .svg-box {
+      position: absolute;
+      top: -1px;
+      right: 10px;
+    }
+
+    .option .svg-box .svg-img {
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
     }
 
     /* when show option in icon-wrap */
@@ -291,11 +375,14 @@
       vertical-align: middle;
       border: solid 1px #00f;
     }
+    .ifc-box:hover {
+      box-shadow: 0 0 2px 0 #3498db inset, 0 0 5px 1px #3498db;
+    }
 
     .ifc-icon {
       font-size: inherit;
       display: inline-block;
-      font-family: 'i-font';
+      font-family: 'i-font0';
       font-style: normal;
       font-weight: 400;
       font-variant: normal;
@@ -308,6 +395,18 @@
       -moz-osx-font-smoothing: grayscale;
       -webkit-font-smoothing: antialiased;
       margin: auto;
+    }
+
+    .ifc-icon.font-0 {
+      font-family: 'i-font0';
+    }
+
+    .ifc-icon.font-1 {
+      font-family: 'i-font1';
+    }
+
+    .ifc-icon.font-2 {
+      font-family: 'i-font2';
     }
 
     /* Animation for spinners */
@@ -344,6 +443,9 @@
     /*ICONS-JSON*/
   </script>
   <script>
+    var iconsRoot = './svgs/';
+    var START_CODE = 10000;
+    var MAX_CODE = /*MAX_CODE*/ 300;
     var iconsSrc = JSON.parse(localStorage.getItem('iconsSrc') || '{}');
     var iconsSrcSave = localStorage.getItem('iconsSrcSave') == '1';
     var imageSizeW = localStorage.getItem('imageSizeW') || 32;
@@ -366,7 +468,8 @@
               cnt++;
             }
 
-            var unicode16 = iList[i].c.toString(16);
+            // for each new font-file, the code starts from 0 + START_CODE
+            var unicode16 = (iList[i].c % MAX_CODE + START_CODE).toString(16);
             css += '.i' + iList[i].c + ':before{content:"\\' + unicode16 + '";}';
           }
         }
@@ -375,6 +478,9 @@
       return cnt;
     }
     window.onload = function () {
+      setTimeout(function () {
+        onMenuToggle(document.querySelector('.menu-toggle'));
+      }, 3000);
       setTimeout(function () {
         // on Firefox, when checkbox is checked and refresh it again, the status is kept
         var chkes = document.querySelectorAll('.icon-group .info .name input[type=checkbox]');
@@ -403,11 +509,13 @@
       }, 100);
     }
     function populateOneIcon(iconData, preName, isMain) {
+      const fontIndex = parseInt(iconData.c / MAX_CODE);
       var oneIcon = '<div class="icon-wrap" onclick="onImg(this)" title="' + preName + '-' + iconData.n + ', svg size: ' + iconData.l + ', src: ' + iconData.s + '">\n'
         + '  <div class="opt" onclick="onOpt(event, this)" title="Options">...</div>\n'
         + '  <input class="chk" type="checkbox" checked="true">\n'
+        // + '  <img class="svg-img" src="' + iconsRoot + iconData.s + '" onclick="window.open(this.src)" title="Open original SVG" />\n'
         + '  <div class="ifc-box">\n'
-        + '  <i class="ifc-icon i' + iconData.c + '"></i> <span class="icon-name">' + preName + '-' + iconData.n + '</span>\n'
+        + '  <i class="ifc-icon i' + iconData.c + ' font-' + fontIndex + '"></i> <span class="icon-name">' + preName + '-' + iconData.n + '</span>\n'
         + '</div></div>\n';
       iconData.real = preName + '-' + iconData.n;
       var el = document.createElement('span');
@@ -670,6 +778,7 @@
       option = document.querySelector('#option').cloneNode(true);
       obj.parentNode.appendChild(option);
       var data = option.parentElement._data;
+      option.querySelector('.svg-img').src = iconsRoot + data.s;
       option.querySelector('.i-name').value = iconsSrc[data.s + '_name'] || data.real;
       option.querySelector('.i-code').value = iconsSrc[data.s + '_code'] || null;
       option.querySelector('.i-name').addEventListener('blur', onOptSave);
@@ -702,6 +811,15 @@
       var list = obj.parentNode.parentNode.parentNode.querySelector('.icon-wrap .ifc-icon').classList;
       list.contains('ifc-spin') ? list.remove('ifc-spin') : list.add('ifc-spin');
     }
+    function onSizeListChanged(obj) {
+      if (!obj.value) return false;
+      var w = obj.parentNode.querySelector('.i-sizeW');
+      var h = obj.parentNode.querySelector('.i-sizeH');
+      var wh = obj.value.split(' x ');
+      w.value = wh[0];
+      h.value = wh[1];
+      obj.selectedIndex = 0;
+    }
     function onImageBack(obj) {
       imageTransparent = !imageTransparent;
       setTimeout(function () {
@@ -715,41 +833,41 @@
 
     function BufUtil() {
       var sBuf = '';
-      this.size = function() { return sBuf.length; }
-      this.reset = function() { sBuf = ''; return this; }
+      this.size = function () { return sBuf.length; }
+      this.reset = function () { sBuf = ''; return this; }
       this.addBuffer = function addBuffer(uintArray, offset) {
         var buffer = new Uint8Array(uintArray);
         var i = 0, l = buffer.length;
         var sBuf2 = '';
         while (i < l) sBuf2 += String.fromCharCode(buffer[i++]);
-        if (typeof(offset) == 'number' && offset >= 0) {
+        if (typeof (offset) == 'number' && offset >= 0) {
           sBuf = sBuf.substring(0, offset) + sBuf2 + sBuf.substring(offset + sBuf2.length);
         } else {
           sBuf += sBuf2;
         }
         return this;
       }
-      this.getBigEndian = function(buf) {
+      this.getBigEndian = function (buf) {
         var buffer = new Uint8Array(buf);
         var bufferBE = new Uint8Array(buf.byteLength);
-        for(var i = buffer.length - 1; i >= 0; i--) bufferBE[buffer.length - 1 - i] = buffer[i];
+        for (var i = buffer.length - 1; i >= 0; i--) bufferBE[buffer.length - 1 - i] = buffer[i];
         return bufferBE;
       }
-      this.addString = function(s) { sBuf += s; return this; }
-      this.addU8 = function(u, offset) { this.addBuffer(new Uint8Array([u]).buffer, offset); return this; }
-      this.addU16 = function(u, offset, isBigEndian) {
+      this.addString = function (s) { sBuf += s; return this; }
+      this.addU8 = function (u, offset) { this.addBuffer(new Uint8Array([u]).buffer, offset); return this; }
+      this.addU16 = function (u, offset, isBigEndian) {
         var buf = new Uint16Array([u]).buffer;
         buf = isBigEndian ? this.getBigEndian(buf) : buf;
         this.addBuffer(buf, offset);
       }
-      this.addU32 = function(u, offset, isBigEndian) {
+      this.addU32 = function (u, offset, isBigEndian) {
         var buf = new Uint32Array([u]).buffer;
         buf = isBigEndian ? this.getBigEndian(buf) : buf;
         this.addBuffer(buf, offset);
         return this;
       }
 
-      this.getUrlData = function() { return 'data:image/vnd.microsoft.icon;base64,' + btoa(sBuf); }
+      this.getUrlData = function () { return 'data:image/vnd.microsoft.icon;base64,' + btoa(sBuf); }
       return this;
     }
 
@@ -817,7 +935,7 @@
       }
 
       function addImgData(data, wh, pngData) {
-        imgs.push({d:data, wh:wh});
+        imgs.push({ d: data, wh: wh });
       }
       this.addImgData = addImgData;
 
@@ -859,7 +977,7 @@
       var imgs = [];
 
       function addImgData(data, wh, pngData) {
-        imgs.push({d:data, wh:wh, pngData:pngData});
+        imgs.push({ d: data, wh: wh, pngData: pngData });
       }
       this.addImgData = addImgData;
 
@@ -952,7 +1070,7 @@
         //   const A = packBits(getChannelData(image, 3));
         //   return concatUintArray([header, A, R, G, B]);
         // } else {
-          return concatUintArray([R, G, B]);
+        return concatUintArray([R, G, B]);
         // }
       }
 
@@ -999,12 +1117,12 @@
         // 128x128 pt (128x128 px @1x, 256x256 px @2x)
         // 32x32 pt (32x32 px @1x, 64x64 px @2x)
         // 16x16 pt (16x16 px @1x, 32x32 px @2x)
-       const icnsChunks = [
+        const icnsChunks = [
           // ic04 and ic05 are supported on versions 10.14 and newer
           // png2icons uses is32 and il32 for better support on older versions.
           // The following order is the same of that created by iconutil on 10.14.
-          { type: "ic12", format: 'png', size: 64,  Info: "32x32@2  " },
-          { type: "icp6", format: 'png', size: 64,  Info: "64x64    " },
+          { type: "ic12", format: 'png', size: 64, Info: "32x32@2  " },
+          { type: "icp6", format: 'png', size: 64, Info: "64x64    " },
           { type: "ic07", format: 'png', size: 128, Info: "128x128  " },
           { type: "ic13", format: 'png', size: 256, Info: "128x128@2" },
           { type: "ic08", format: 'png', size: 256, Info: "256x256  " },
@@ -1069,7 +1187,7 @@
           // x-icon or icns needs both data
           var pngData = canvas.toDataURL('image/png');
           var pixelData = ctx.getImageData(0, 0, image.width, image.height);
-          return {pngData: pngData, pixelData: pixelData};
+          return { pngData: pngData, pixelData: pixelData };
         }
         var imgData = canvas.toDataURL('image/' + imageFormat);
         return imgData;
@@ -1301,10 +1419,21 @@
       var panel = document.querySelector('.panel');
       panel.classList.contains('show') ? panel.classList.remove('show') : panel.classList.add('show');
     }
+    function onMenuToggle(obj) {
+      const isOpen = obj.classList.contains('on');
+      isOpen ? obj.classList.remove('on') : obj.classList.add('on');
+      onShowPanel();
+    }
+    function showHide(selector) {
+      var el = document.querySelector(selector);
+      el.classList.contains('hide') ? el.classList.remove('hide') : el.classList.add('hide');
+    }
   </script>
-  <div class="navigation-icon" onclick="onShowPanel()"></div>
+  <div class="menu-toggle on" onclick="onMenuToggle(this)">
+    <span></span>
+  </div>
 
-  <div class="panel">
+  <div class="panel show">
 
     <div class="panel-row">
       <div class="control-box color">
@@ -1352,31 +1481,32 @@
   <div class="hide" id="hiding-box">
   </div>
 
-  <h1 id="app-title">free-icons-customization <span class="app-title">By uuware</span> <a class="link"
-      href="https://github.com/uuware/icons-font-customization">project</a>
+  <h1 id="app-title">free-icons-customization <span class="app-title">(all [#COUNT-ALL#] icons) By uuware</span> <a
+      class="link" href="https://github.com/uuware/icons-font-customization">project</a>
   </h1>
   <!-- load font immediately -->
   <style>
     .loading-font {
       color: blue;
     }
+
     .loading-font i:before {
       content: "\2710";
       font-size: 11px;
     }
   </style>
-  <div class="loading-font"><span class="text">Loading Font</span><i class="ifc-icon i10000"></i></div>
+  <div class="loading-font"><span class="text">Loading Font</span><i class="ifc-icon i10001 font-0"></i></div>
   <script>
     function webfontReady() {
       var fontBox = document.querySelector('.loading-font .ifc-icon');
       var fontText = document.querySelector('.loading-font .text');
       // tested on Chrome, Firefox, Safari
-      if (fontBox.offsetWidth == 11 && fontBox.offsetHeight == 19) {
+      if (document.querySelector('.icon-container') && fontBox.offsetWidth == 11 && fontBox.offsetHeight == 19) {
         document.querySelector('.loading-font').style.display = 'none';
         document.querySelector('.icon-container').style.display = '';
         return;
       }
-        
+
       fontText.innerHTML += ' .';
       if (fontText.innerHTML.endsWith('. . . . .')) {
         fontText.innerHTML = 'Loading Font';
@@ -1385,15 +1515,36 @@
     }
     webfontReady();
   </script>
-  <div id="app-description">A collection of free svg icons and tools for generating icon font. Click on the icon at
+  <div id="app-description">A collection of free svg icons and tools for generating icon font. Click on the menu at
     top-right corner to change color or size.<br>
-    (The font used by this page is about 3.8 MB, so depending on your internet, it may be slow to load the font to show
-    icons properly)
+    All icons are completely free for personal or business requirements.<br>
+    (The font used by this page is very big, so it may take a bit time to load the font properly) <br><input
+      type="button" value="more..." onclick="showHide('.info-more')">
+    <div class="info-more hide">
+      <ul>
+        <li>SVG icons with colors (fill="#color" or fill="none")<br>
+          A font icon can have only one color and a SVG icon can have multiple colors. When a SVG icon is converted to a
+          font, it loses colors so it may look weird. It's not an issue, but just those icons are not suitable to be
+          coveted to a font. You need to avoid using those icons as a font, but you can use the SVG icons directly. The
+          original SVGs are showing at the popup window when you click the option button of each icon.</li>
+        <li>The size of the icons<br>
+          For very a few icons, they have different sizes and extend out of the icon boxes. They are not suitable to be converted to a font too.</li>
+        <li>License<br>
+          All SVGs and fonts are distributed under their primary licenses. All brand icons are trademarks of their
+          respective owners. Relevant Licenses will be copied when this tool is used to generate a font.</li>
+        <li>Icon formats<br>
+          The tool is mainly used to generate a web font that contains your selected icons. You also can download
+          original SVGs, or PNG, JPG, ICO, ICNS formats.</li>
+        <li>Please refer the <a href="https://github.com/uuware/icons-font-customization">project</a> for more
+          information.</li>
+      </ul>
+    </div>
   </div>
   <br>
 
   <div id="option" class="option" onclick="onNoop(event)">
     <div class="close" onclick="onOptClose()">X</div>
+    <div class="svg-box"><img onclick="window.open(this.src)" class="svg-img" src="" title="Open original SVG" /></div>
     <div class="name" title="New name for this icon, blank for original name">
       <span class="title">Name:</span><input class="i-name" type="text" value="">
     </div>
@@ -1411,19 +1562,38 @@
       <input type="button" value="Spin" onclick="onSpin(this)" title="Apply spinning style">
       <br>
       <span class="title"></span>
-      <span class="size-w-h">Width: <input class="i-sizeW" type="number" value="32">, Height: <input class="i-sizeH"
-          type="number" value="32"></span>
+      <span class="size-w-h">W: <input class="i-sizeW" type="number" value="32" title="Width">, H: <input
+          class="i-sizeH" type="number" value="32" title="" Height>, <select class="size-list"
+          onchange="onSizeListChanged(this)">
+          <option value=""> - </option>
+          <option value="16 x 16">16 x 16 px</option>
+          <option value="24 x 24">24 x 24 px</option>
+          <option value="32 x 32">32 x 32 px</option>
+          <option value="64 x 64">64 x 64 px</option>
+          <option value="80 x 80">80 x 80 px</option>
+          <option value="128 x 128">128 x 128 px</option>
+          <option value="256 x 256">256 x 256 px</option>
+          <option value="600 x 600">600 x 600 px</option>
+          <option value="800 x 800">800 x 800 px</option>
+          <option value="1000 x 1000">1000 x 1000 px</option>
+          <option value="1024 x 1024">1024 x 1024 px</option>
+        </select></span>
       <span class="size-wh">Size(px):
         16<input onclick="onClickSize(this)" class="i-size-16" type="checkbox" title="size: 16x16">
-        <span class="i-size-24p" onclick="onClickSize(this)">24<input class="i-size-24" type="checkbox" title="size: 24x25"></span>
+        <span class="i-size-24p" onclick="onClickSize(this)">24<input class="i-size-24" type="checkbox"
+            title="size: 24x25"></span>
         32<input onclick="onClickSize(this)" class="i-size-32" type="checkbox" title="size: 32x32">
-        <span class="i-size-48p" onclick="onClickSize(this)">48<input class="i-size-48" type="checkbox" title="size: 48x48"></span>
+        <span class="i-size-48p" onclick="onClickSize(this)">48<input class="i-size-48" type="checkbox"
+            title="size: 48x48"></span>
         64<input onclick="onClickSize(this)" class="i-size-64" type="checkbox" title="size: 64x64">
-        <span class="i-size-96p" onclick="onClickSize(this)">96<input class="i-size-96" type="checkbox" title="size: 96x96"></span>
+        <span class="i-size-96p" onclick="onClickSize(this)">96<input class="i-size-96" type="checkbox"
+            title="size: 96x96"></span>
         128<input onclick="onClickSize(this)" class="i-size-128" type="checkbox" title="size: 128x128">
         256<input onclick="onClickSize(this)" class="i-size-256" type="checkbox" title="size: 256x256">
-        <span class="i-size-512p" onclick="onClickSize(this)">512<input class="i-size-512" type="checkbox" title="size: 512x512"></span>
-        <span class="i-size-1024p" onclick="onClickSize(this)">1024<input class="i-size-1024" type="checkbox" title="size: 1024x1024"></span>
+        <span class="i-size-512p" onclick="onClickSize(this)">512<input class="i-size-512" type="checkbox"
+            title="size: 512x512"></span>
+        <span class="i-size-1024p" onclick="onClickSize(this)">1024<input class="i-size-1024" type="checkbox"
+            title="size: 1024x1024"></span>
       </span>
       <br>
       <span class="title"></span><span title="If not checked then use current background color">PNG/ICO Background
@@ -1442,19 +1612,19 @@
       var iconsJSON =
       {
         "ant-design-icons": {
-          "preName": "at", "sub": {
+          preName: "at", sub: {
             "filled": [
               {
-                "c": 10000,
+                "c": 0,
                 "n": "account-book",
                 "l": 765,
               },
               {
-                "c": 10001,
+                "c": 1,
                 "n": "alert",
                 "l": 614,
               }, {
-                "c": 10002,
+                "c": 2,
                 "n": "alipay-circle",
                 "l": 706,
                 "s": "source-name.svg"

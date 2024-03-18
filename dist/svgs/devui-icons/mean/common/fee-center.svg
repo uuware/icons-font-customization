@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>@1x释义图标/费用中心</title>
+    <desc>Created with Sketch.</desc>
+    <g id="释义图标/费用中心" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="费用中心">
+            <path d="M8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 Z M8,15 C11.8659932,15 15,11.8659932 15,8 C15,4.13400675 11.8659932,1 8,1 C4.13400675,1 1,4.13400675 1,8 C1,11.8659932 4.13400675,15 8,15 Z M7.5,8 L5,8 L5,7 L7.39907479,7 L5.58397485,4.2773501 L6.41602515,3.7226499 L8,6.09861218 L9.58397485,3.7226499 L10.4160251,4.2773501 L8.60092521,7 L11,7 L11,8 L8.5,8 L8.5,9 L11,9 L11,10 L8.5,10 L8.5,12 L7.5,12 L7.5,10 L5,10 L5,9 L7.5,9 L7.5,8 Z" id="Combined-Shape" fill="#293040" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

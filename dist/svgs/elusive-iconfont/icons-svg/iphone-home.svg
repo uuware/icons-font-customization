@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: IcoMoon.io -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   data-tags="remove-circle, cancel, close, remove, delete"
+   height="1200"
+   width="1200"
+   data-du=""
+   viewBox="0 0 1200 1200"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="iphone-home.svg">
+  <defs
+     id="defs32" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1535"
+     inkscape:window-height="876"
+     id="namedview30"
+     showgrid="false"
+     inkscape:zoom="0.26339286"
+     inkscape:cx="395.94967"
+     inkscape:cy="190.70572"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata62">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     id="path12770"
+     d="M 600,0 C 268.62914,0 0,268.62914 0,600 c 0,331.37086 268.62914,600 600,600 331.37086,0 600,-268.62914 600,-600 C 1200,268.62914 931.37086,0 600,0 z m -207.78797,342.84657 415.50282,0 c 27.96562,1.89374 49.06735,22.24265 49.43858,48.04686 l 0,416.89454 c -1.98234,29.05898 -23.12202,49.0118 -49.43858,49.36546 l -415.50282,0 C 363.17226,855.17249 343.2,834.07899 342.84657,807.78797 l 0,-416.89454 c 1.60218,-27.82992 24.77132,-47.7164 49.36546,-48.04686 z m 69.94617,94.62889 c -14.91116,0.37008 -24.52641,11.84602 -24.68274,24.7561 l 0,274.21875 c 0.38649,14.88539 11.80805,24.59977 24.68274,24.75563 l 275.61024,0 c 14.91797,-0.38672 24.60211,-11.85235 24.7561,-24.75563 l 0,-274.21875 c -0.36564,-14.94539 -11.81603,-24.60164 -24.7561,-24.7561 l -275.61024,0 z"
+     inkscape:connector-curvature="0" />
+</svg>

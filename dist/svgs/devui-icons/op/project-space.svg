@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>项目空间</title>
+    <g id="项目空间" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16,1 L16,7 L15,7 L15,15 L1,15 L1,7 L0,7 L0,1 L16,1 Z M13,7 L3,7 L3,13 L13,13 L13,7 Z M12,10 L12,12 L8,12 L8,10 L12,10 Z M14,3 L2,3 L2,5 L14,5 L14,3 Z" id="形状" fill="#252B3A"></path>
+    </g>
+</svg>

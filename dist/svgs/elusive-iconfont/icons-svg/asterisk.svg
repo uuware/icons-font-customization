@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: IcoMoon.io -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   data-tags="remove-circle, cancel, close, remove, delete"
+   height="1200"
+   viewBox="0 0 1200 1200"
+   width="1200"
+   version="1.1"
+   data-du=""
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="asterisk.svg">
+  <defs
+     id="defs3177" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1535"
+     inkscape:window-height="876"
+     id="namedview3175"
+     showgrid="false"
+     inkscape:zoom="0.26339286"
+     inkscape:cx="-67.796606"
+     inkscape:cy="448"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata62">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     inkscape:connector-curvature="0"
+     d="m 489.83768,29.354354 0,443.602436 L 68.032168,335.89402 3.79935e-6,545.28506 421.82896,682.37126 161.08627,1041.247 339.30536,1170.6456 600.04806,811.84027 860.72044,1170.6456 1038.8669,1041.247 778.10075,682.46501 1200,545.37881 1131.9678,335.97605 710.06859,473.04585 V 29.443417 H 489.84002 z"
+     id="path3756" />
+</svg>

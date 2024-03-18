@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9v7H3V9H0V8h7v1H4zm7-8v15h-1V1H5V0h11v1h-5z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>edit icon/font size</title>
+    <desc>Created with Sketch.</desc>
+    <g id="edit-icon/font-size" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="释义_富文本编辑/font-size-16x16" fill="#293040">
+            <path d="M4,9 L4,16 L3,16 L3,9 L0,9 L0,8 L7,8 L7,9 L4,9 Z M11,1 L11,16 L10,16 L10,1 L5,1 L5,0 L16,0 L16,1 L11,1 Z" id="形状"></path>
+        </g>
+    </g>
+</svg>

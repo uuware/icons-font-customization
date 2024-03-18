@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M16 16h-4.571v-1h3.027l-3.45-3.774.646-.707 3.434 3.756V11H16v5zm-.836-14.456l-3.155 3.45-.591-.646 3.14-3.434H11.82V0H16v4.571h-.836V1.544zM5 15v1H0v-5h1v3.275l3.756-3.756.707.707L1.689 15H5zM4.365 4.994L.914 1.544v3.027H0V0h4.571v.914H1.578l3.433 3.434-.646.646z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>释义_富文本编辑/expand 16x16</title>
+    <desc>Created with Sketch.</desc>
+    <g id="释义_富文本编辑/expand-16x16" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16,16 L11.429,16 L11.429,15 L14.456,15 L11.006,11.226 L11.652,10.519 L15.086,14.275 L15.086,11 L16,11 L16,16 Z M15.164,1.544 L12.009,4.994 L11.418,4.348 L14.558,0.914 L11.82,0.914 L11.82,0 L16,0 L16,4.571 L15.164,4.571 L15.164,1.544 Z M5,15 L5,16 L0,16 L0,11 L1,11 L1,14.275 L4.756,10.519 L5.463,11.226 L1.689,15 L5,15 Z M4.365,4.994 L0.914,1.544 L0.914,4.571 L3.41060513e-13,4.571 L3.41060513e-13,0 L4.571,0 L4.571,0.914 L1.578,0.914 L5.011,4.348 L4.365,4.994 Z" id="形状" fill="#293040" fill-rule="nonzero"></path>
+    </g>
+</svg>

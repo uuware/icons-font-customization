@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>@1x释义图标/退出</title>
+    <desc>Created with Sketch.</desc>
+    <g id="释义图标/退出" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="退出">
+            <path d="M9,2 L2,2 C1.43380492,2 1,2.40669211 1,2.875 L1,13.125 C1,13.5933079 1.43380492,14 2,14 C6.66666667,14 9,14 9,14 C9,14 9,14.3333333 9,15 L2,15 C0.8954305,15 0,14.1605339 0,13.125 L0,2.875 C0,1.83946609 0.8954305,1 2,1 L9,1 L9,2 Z M13.7928932,8.5 L6,8.5 L6,7.5 L13.7928932,7.5 L10.6464466,4.35355339 L11.3535534,3.64644661 L15.7071068,8 L11.3535534,12.3535534 L10.6464466,11.6464466 L13.7928932,8.5 Z" id="Combined-Shape" fill="#293040"></path>
+        </g>
+    </g>
+</svg>

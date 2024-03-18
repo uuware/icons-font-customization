@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 14c-2.667 0-5.333-2-8-6 2.723-4 5.39-6 8-6 2.61 0 5.277 2 8 6-2.667 4-5.333 6-8 6zm0-2a4 4 0 100-8 4 4 0 000 8zm0-2a2 2 0 110-4 2 2 0 010 4z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/查看更多</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/查看更多" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M8,14 C5.33333333,14 2.66666667,12 0,8 C2.7229105,4 5.38957716,2 8,2 C10.6104228,2 13.2770895,4 16,8 C13.3333333,12 10.6666667,14 8,14 Z M8,12 C10.209139,12 12,10.209139 12,8 C12,5.790861 10.209139,4 8,4 C5.790861,4 4,5.790861 4,8 C4,10.209139 5.790861,12 8,12 Z M8,10 C6.8954305,10 6,9.1045695 6,8 C6,6.8954305 6.8954305,6 8,6 C9.1045695,6 10,6.8954305 10,8 C10,9.1045695 9.1045695,10 8,10 Z" id="形状" fill="#293040"></path>
+    </g>
+</svg>

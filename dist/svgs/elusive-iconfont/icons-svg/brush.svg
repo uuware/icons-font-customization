@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: IcoMoon.io -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   data-tags="remove-circle, cancel, close, remove, delete"
+   height="1200"
+   viewBox="0 0 1200 1200"
+   width="1200"
+   version="1.1"
+   data-du=""
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="brush.svg">
+  <defs
+     id="defs3273" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1535"
+     inkscape:window-height="876"
+     id="namedview3271"
+     showgrid="false"
+     inkscape:zoom="0.26339286"
+     inkscape:cx="-67.796606"
+     inkscape:cy="448"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata62">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     id="rect2998"
+     d="M 1157.6021,0.01248265 C 1110.891,2.6896326 421.12354,591.51049 364.47854,798.85078 L 495.21456,935.79494 C 868.89987,624.19931 988.91547,294.22129 1200,0.64915565 L 1157.6177,-1.3524075e-6 z M 323.26658,840.56228 C 87.089727,927.41831 235.14694,1099.2734 0,1183.3518 c 266.29389,59.9534 384.29649,-49.748 454.0026,-205.42092 L 323.26658,840.54823 z"
+     inkscape:connector-curvature="0"
+     style="fill:#000000" />
+</svg>

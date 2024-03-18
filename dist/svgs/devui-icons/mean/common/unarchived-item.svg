@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>未分类项目_默认</title>
+    <desc>Created with Sketch.</desc>
+    <g id="未分类项目_默认" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#959EB2" id="形状">
+            <g transform="translate(0.000000, 1.000000)">
+                <path d="M7,0 L9,2 L15,2 C15.5522847,2 16,2.44771525 16,3 L16,13 C16,13.5522847 15.5522847,14 15,14 L1,14 C0.44771525,14 0,13.5522847 0,13 L0,1 C0,0.44771525 0.44771525,0 1,0 L7,0 Z M15,6 L1,6 L1,13 L15,13 L15,6 Z M6.58578644,1 L1,1 L1,5 L15,5 L15,3 L8.58578644,3 L6.58578644,1 Z" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

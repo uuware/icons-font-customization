@@ -1,0 +1,8 @@
+{
+	"Name": "Circum-Icons",
+	"About": "Circum is a open source icon library following Google Material Design principles. Every icon was made using a 24x24 grid.",
+	"PreName": "ci",
+	"Source": "https://github.com/Klarr-Agency/Circum-Icons",
+	"License": "MPL-2.0 license",
+	"License Link": "https://github.com/Klarr-Agency/Circum-Icons/blob/main/LICENSE"
+}

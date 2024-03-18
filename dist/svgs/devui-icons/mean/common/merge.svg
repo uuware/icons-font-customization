@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>@1x释义图标/合并</title>
+    <desc>Created with Sketch.</desc>
+    <g id="释义图标/合并" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="合并">
+            <path d="M10,6 L6,6 L6,9 L5,9 L5,5 L15,5 L15,15 L5,15 L5,11 L1,11 L1,1 L11,1 L11,4 L10,4 L10,2 L2,2 L2,10 L10,10 L10,6 Z M11,6 L11,11 L6,11 L6,14 L14,14 L14,6 L11,6 Z" id="形状" fill="#293040" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

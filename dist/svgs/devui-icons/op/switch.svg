@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M6 11v2l-4-3V9h12v2H6zm4-7V2l4 3v1H2V4h8z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/Switch</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/Switch" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Switch">
+            <path d="M6,11 L6,13 L2,10 L2,9 L14,9 L14,11 L6,11 Z M10,4 L10,2 L14,5 L14,6 L2,6 L2,4 L10,4 Z" id="形状" fill="#293040"></path>
+        </g>
+    </g>
+</svg>

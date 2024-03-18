@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M12 14v-4h2v4a2 2 0 01-2 2H2a2 2 0 01-2-2V4a2 2 0 012-2h2v2H2v10h10zm-.714-8.5H9.714C8.93 5.5 7.357 5.5 5 7.857c0-3.143 2.357-5.5 4.714-5.5h1.572V0L16 3.929l-4.714 3.928V5.5z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/export</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/export" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M12,14 L12,10 L14,10 L14,14 C14,15.1045695 13.1045695,16 12,16 L2,16 C0.8954305,16 0,15.1045695 0,14 L0,4 C0,2.8954305 0.8954305,2 2,2 L4,2 L4,4 L2,4 L2,14 L12,14 Z M11.2857143,5.5 L9.71428571,5.5 C8.92857143,5.5 7.35714286,5.5 5,7.85714286 C5,4.71428571 7.35714286,2.35714286 9.71428571,2.35714286 L11.2857143,2.35714286 L11.2857143,0 L16,3.92857143 L11.2857143,7.85714286 L11.2857143,5.5 Z" id="形状" fill="#293040" fill-rule="nonzero"></path>
+    </g>
+</svg>

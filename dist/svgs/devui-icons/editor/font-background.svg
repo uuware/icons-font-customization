@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10.476 8H5.524L4 12H3L7.5 0h1L13 12h-1l-1.524-4zm-.38-1L8 1.5 5.905 7h4.19zM2 14h12v2H2v-2z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>edit icon/background color</title>
+    <desc>Created with Sketch.</desc>
+    <g id="edit-icon/background-color" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" fill="#293040">
+            <g id="释义_富文本编辑/文字背景色-16x16">
+                <path d="M10.4761905,8 L5.52380952,8 L4,12 L3,12 L7.5,-3.84581256e-13 L8.5,-3.84581256e-13 L13,12 L12,12 L10.4761905,8 L10.4761905,8 Z M10.0952381,7 L8,1.5 L5.9047619,7 L10.0952381,7 Z M2,14 L14,14 L14,16 L2,16 L2,14 Z" id="形状"></path>
+            </g>
+        </g>
+    </g>
+</svg>

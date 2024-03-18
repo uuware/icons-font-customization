@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: IcoMoon.io -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   data-tags="remove-circle, cancel, close, remove, delete"
+   height="1200"
+   viewBox="0 0 1200 1200"
+   width="1200"
+   version="1.1"
+   data-du=""
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="certificate.svg">
+  <defs
+     id="defs3076" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1535"
+     inkscape:window-height="876"
+     id="namedview3074"
+     showgrid="false"
+     inkscape:zoom="0.26339286"
+     inkscape:cx="-67.796606"
+     inkscape:cy="448"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata62">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g3324"
+     transform="matrix(1.5019531,0,0,1.5019531,-562.55758,274.03443)" />
+  <path
+     style="fill:#000000;fill-opacity:1;stroke:none"
+     d="M 978.22999,1066.7432 718.0776,939.4443 581.3188,1194.7506 463.8567,930.0113 194.9857,1037.6805 275.1756,759.37514 0,669.02754 240.3202,507.37838 87.5978,261.28865 375.6,291.9331 416.7912,5.24936 617.7158,213.84855 833.5468,20.71331 853.379,309.66135 1142.8602,300.44473 972.32028,534.53963 1200,713.55419 918.8856,783.26034 z"
+     id="path3042" />
+</svg>

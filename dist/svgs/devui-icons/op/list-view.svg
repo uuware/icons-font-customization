@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2 2h12v2H2V2zm0 5h12v2H2V7zm0 5h12v2H2v-2z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/aveIcon-list-view</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/aveIcon-list-view" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M2,2 L14,2 L14,4 L2,4 L2,2 Z M2,7 L14,7 L14,9 L2,9 L2,7 Z M2,12 L14,12 L14,14 L2,14 L2,12 Z" id="形状" fill="#293040" fill-rule="nonzero"></path>
+    </g>
+</svg>

@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 16c-4-3.054-6-6.054-6-9 0-4.418 3-7 6-7s6 2.582 6 7c0 2.946-2 5.946-6 9zm0-7a3 3 0 100-6 3 3 0 000 6z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/aveicon-gps</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/aveicon-gps" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M8,16 C4,12.9455187 2,9.94551867 2,7 C2,2.581722 5,0 8,0 C11,0 14,2.581722 14,7 C14,9.94551867 12,12.9455187 8,16 Z M8,9 C9.65685425,9 11,7.65685425 11,6 C11,4.34314575 9.65685425,3 8,3 C6.34314575,3 5,4.34314575 5,6 C5,7.65685425 6.34314575,9 8,9 Z" id="形状" fill="#293040"></path>
+    </g>
+</svg>

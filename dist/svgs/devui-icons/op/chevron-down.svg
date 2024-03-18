@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.5 5L8 8.77 11.5 5 13 6.615 8 12 3 6.615z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/chevron_down</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/chevron_down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="chevron_down" fill="#293040" points="4.5 5 8 8.76923077 11.5 5 13 6.61538462 8 12 3 6.61538462"></polygon>
+    </g>
+</svg>

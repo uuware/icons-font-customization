@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: IcoMoon.io -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   data-tags="remove-circle, cancel, close, remove, delete"
+   height="1200"
+   viewBox="0 0 1200 1200"
+   width="1200"
+   version="1.1"
+   data-du=""
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="camera.svg">
+  <defs
+     id="defs3146" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1535"
+     inkscape:window-height="876"
+     id="namedview3144"
+     showgrid="false"
+     inkscape:zoom="0.26339286"
+     inkscape:cx="-67.796606"
+     inkscape:cy="448"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata62">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g3324"
+     transform="matrix(1.5019531,0,0,1.5019531,-562.55758,274.03443)" />
+  <path
+     inkscape:connector-curvature="0"
+     d="m 390.7242,148.17188 -37.75547,151.82813 -352.96874948,0 0,751.82809 1200.00001948,0 0,-751.82809 -336.51565,0 -37.75546,-151.82813 -435.00001,0 z m 212.34141,151.5375 c 186.39609,0 337.45312,151.06641 337.45312,337.45313 0,186.3961 -151.06875,337.45318 -337.45312,337.45318 -186.3961,0 -337.45313,-151.0688 -337.45313,-337.45318 0,-186.39609 151.06641,-337.45313 337.45313,-337.45313 z m 395.71874,73.46251 170.12105,0 0,98.77969 -170.12105,0 0,-98.77969 z m -395.71874,26.19609 c -131.33673,0 -237.79688,106.46953 -237.79688,237.79687 0,131.33673 106.46953,237.79687 237.79688,237.79687 131.33672,0 237.79687,-106.46952 237.79687,-237.79687 0,-131.33671 -106.46953,-237.79687 -237.79687,-237.79687 z"
+     id="path3584" />
+</svg>

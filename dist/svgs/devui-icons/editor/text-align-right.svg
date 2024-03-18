@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M14.5 0H16v16h-1.5V0zM3 3h9v4H3V3zm1 1v2h7V4H4zM0 9h12v4H0V9zm1 1v2h10v-2H1z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>edit icon/align layer to right</title>
+    <desc>Created with Sketch.</desc>
+    <g id="edit-icon/align-layer-to-right" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="释义_富文本编辑/text-align-left-16x16" fill="#293040">
+            <path d="M14.5,0 L16,0 L16,16 L14.5,16 L14.5,0 Z M3,3 L12,3 L12,7 L3,7 L3,3 Z M4,4 L4,6 L11,6 L11,4 L4,4 Z M0,9 L12,9 L12,13 L0,13 L0,9 Z M1,10 L1,12 L11,12 L11,10 L1,10 Z" id="形状"></path>
+        </g>
+    </g>
+</svg>

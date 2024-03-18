@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/remove-member-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/remove-member-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M8,8 C5.790861,8 4,6.209139 4,4 C4,1.790861 5.790861,0 8,0 C10.209139,0 12,1.790861 12,4 C12,6.209139 10.209139,8 8,8 Z M8,6 C9.1045695,6 10,5.1045695 10,4 C10,2.8954305 9.1045695,2 8,2 C6.8954305,2 6,2.8954305 6,4 C6,5.1045695 6.8954305,6 8,6 Z M2.34141142,14 L15.747965,14 C15.912494,14.6392398 16,15.3094009 16,16 L0,16 C0,11.581722 3.581722,8 8,8 L8,10 C5.38756235,10 3.16508423,11.6696153 2.34141142,14 Z M9,10 L15,10 L15,12 L9,12 L9,10 Z" id="形状" fill="#293040"></path>
+    </g>
+</svg>

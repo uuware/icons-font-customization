@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.998 11.709L.704 16.004l-.708-.708 4.274-4.273L1.995 11l.01-1 3.992.04L6 14H5l-.002-2.291zM11.707 5H14v1h-3.997L10 2h1l.002 2.291 4.291-4.29.707.706L11.707 5z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>minimize</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="minimize" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M4.99841805,11.7086887 L0.703553565,16.0035532 L-0.00355340985,15.2964462 L4.26981567,11.0230772 L1.99492245,10.9999742 L2.00507755,10.0000258 L5.99726668,10.0405689 L5.99999988,13.9996548 L5.00000012,14.0003452 L4.99841805,11.7086887 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+        <path d="M11.7067904,5.00034168 L13.9999999,5.00034168 L13.9999999,6.00034168 L10.0027332,6.00034168 L10,2.00068336 L10.9999998,2 L11.0015656,4.291353 L15.292982,6.38046934e-05 L16.0000888,0.707170586 L11.7067904,5.00034168 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

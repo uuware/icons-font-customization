@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M10.586 4H8V2h6v6h-2V5.414L7.707 9.707 6.293 8.293 10.586 4zM14 10v3a1 1 0 01-1 1H3a1 1 0 01-1-1V3a1 1 0 011-1h3v2H4v8h8v-2h2z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/share</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/share" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M10.5857864,4 L8,4 L8,2 L14,2 L14,8 L12,8 L12,5.41421356 L7.70710678,9.70710678 L6.29289322,8.29289322 L10.5857864,4 Z M14,10 L14,13 C14,13.5522847 13.5522847,14 13,14 L3,14 C2.44771525,14 2,13.5522847 2,13 L2,3 C2,2.44771525 2.44771525,2 3,2 L6,2 L6,4 L4,4 L4,12 L12,12 L12,10 L14,10 Z" id="Combined-Shape" fill="#293040" fill-rule="nonzero"></path>
+    </g>
+</svg>

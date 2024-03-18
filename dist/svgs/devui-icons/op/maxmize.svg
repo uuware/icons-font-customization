@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.414 13H7v2H1V9h2v2.586l3.293-3.293 1.414 1.414L4.414 13zm7.172-10H9V1h6v6h-2V4.414L9.707 7.707 8.293 6.293 11.586 3z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/maxmize</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/maxmize" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M4.41421356,13 L7,13 L7,15 L1,15 L1,9 L3,9 L3,11.5857864 L6.29289322,8.29289322 L7.70710678,9.70710678 L4.41421356,13 Z M11.5857864,3 L9,3 L9,1 L15,1 L15,7 L13,7 L13,4.41421356 L9.70710678,7.70710678 L8.29289322,6.29289322 L11.5857864,3 Z" id="形状" fill="#293040"></path>
+    </g>
+</svg>

@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 9v-.13L16 0l-3 14-6.59-2.66L13 3l-8 8-5-2zm6 7v-4.13L7.895 13 6 16z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/release</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/release" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,9 L0,8.87 L16,0 L13,14 L6.41,11.34 L13,3 L5,11 L0,9 Z M6,16 L6,11.87 L7.895,13 L6,16 Z" id="形状" fill="#293040" fill-rule="nonzero"></path>
+    </g>
+</svg>

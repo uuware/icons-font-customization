@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: IcoMoon.io -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   data-tags="remove-circle, cancel, close, remove, delete"
+   height="1200"
+   width="1200"
+   data-du=""
+   viewBox="0 0 1200 1200"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="dashboard.svg">
+  <defs
+     id="defs32" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1535"
+     inkscape:window-height="876"
+     id="namedview30"
+     showgrid="false"
+     inkscape:zoom="0.52678571"
+     inkscape:cx="495.48269"
+     inkscape:cy="400.8742"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata62">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     inkscape:connector-curvature="0"
+     d="m 600.00001,195.3735 c -331.3711,0 -600.0000068,268.62892 -600.0000068,600 0,73.59329 13.2562498000001,144.10407 37.5000008000001,209.2528 l 164.062496,0 c -32.89733,-62.51484 -51.56249,-133.70366 -51.56249,-209.2528 0,-248.5289 201.4711,-449.99999 450,-449.99999 248.5289,0 449.99999,201.47109 449.99999,449.99999 0,75.54938 -18.6651,146.73797 -51.56248,209.2528 l 164.06248,0 c 24.2438,-65.14873 37.5,-135.65976 37.5,-209.2528 0,-331.37108 -268.62889,-600 -599.99999,-600 z m 0,235.62001 c -41.42133,0 -75,33.57867 -75,75 0,41.42132 33.57867,75 75,75 41.42133,0 75,-33.57868 75,-75 0,-41.42133 -33.57867,-75 -75,-75 z m -224.92688,73.46203 c -41.42132,0 -75,33.57867 -75,74.99999 0,41.42133 33.57868,75 75,75 41.42133,0 75,-33.57867 75,-75 0,-41.42132 -33.57867,-74.99999 -75,-74.99999 z m 449.85353,0 c -41.4218,0 -75.00001,33.57867 -75.00001,74.99999 0,41.42133 33.57821,75 75.00001,75 41.42108,0 75,-33.57867 75,-75 0,-41.42132 -33.57892,-74.99999 -75,-74.99999 z m -224.92665,147.21678 -58.81359,294.14063 0,58.81355 117.62695,0 0,-58.81355 -58.81336,-294.14063 z"
+     id="path5236" />
+</svg>

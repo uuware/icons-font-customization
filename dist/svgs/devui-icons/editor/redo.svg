@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5 5h6V1l5 4.5-5 4.5V6H5a4 4 0 100 8h4v1H5A5 5 0 015 5z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>edit icon/next</title>
+    <desc>Created with Sketch.</desc>
+    <g id="edit-icon/next" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="释义_富文本编辑/回退-16x16" fill="#293040">
+            <path d="M5,5 L11,5 L11,1 L16,5.5 L11,10 L11,6 L5,6 C2.790861,6 1,7.790861 1,10 C1,12.209139 2.790861,14 5,14 L9,14 L9,15 L5,15 C2.23857625,15 0,12.7614237 0,10 C0,7.23857625 2.23857625,5 5,5 Z" id="路径"></path>
+        </g>
+    </g>
+</svg>

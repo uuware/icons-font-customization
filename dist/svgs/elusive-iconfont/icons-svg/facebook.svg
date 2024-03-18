@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: IcoMoon.io -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   data-tags="remove-circle, cancel, close, remove, delete"
+   height="1200"
+   width="1200"
+   data-du=""
+   viewBox="0 0 1200 1200"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="facebook.svg">
+  <defs
+     id="defs32" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1535"
+     inkscape:window-height="876"
+     id="namedview30"
+     showgrid="false"
+     inkscape:zoom="0.7449875"
+     inkscape:cx="215.95744"
+     inkscape:cy="307.09894"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata62">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     id="path6796"
+     d="m 0,0 0,1200 1200,0 L 1200,0 0,0 z m 863.23244,156.59179 c 8.71523,-0.18491 17.79139,0.0982 27.17273,0.73242 34.47585,0.0467 70.48313,3.15493 106.2014,6.29883 l -3.88195,142.08985 -95.94727,0 c -44.98875,-0.99633 -61.23492,16.47305 -62.69532,67.23633 l 0,111.62109 162.52454,0 -6.44531,152.19727 -156.07923,0 0,423.70612 -158.56921,0 0,-423.70612 -110.08313,0 0,-152.19727 110.08313,0 0,-130.66406 c 0,-94.20962 39.82898,-154.17399 118.28603,-184.57032 20.14921,-7.92772 43.28765,-12.18913 69.43359,-12.74414 z"
+     inkscape:connector-curvature="0" />
+</svg>

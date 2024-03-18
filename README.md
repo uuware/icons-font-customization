@@ -1,8 +1,11 @@
 # icons-font-customization
-A collection of over 33,000 high-quality free svg icons and tools for generating customized icon font. All icons are completely free for personal or business requirements.<br>
-Open [See all icons](https://uuware.github.io/icons-font-customization/dist/), to view all icons. You can change color, background color, size for icons and can search or cache selected results.<br>
-Update: Now you can download PNG, JPG, ICO and Apple ICNS image files directly from online.<br>
-&#x1F536;[Desktop Application](https://github.com/uuware/icons-font-desktop) for Windows, Linux, MacOS is released, or goto [Download Releases](https://github.com/uuware/icons-font-desktop/releases) &#x1F536;<br>
+A collection of over 78,000 high-quality free svg icons and tools for generating customized icon font. All icons are completely free for personal or business requirements.
+
+Open [See all icons](https://uuware.github.io/icons-font-customization/dist/), to view all icons. You can change the icons color, size and background color, or search icons by a name, or save selected results.
+
+You also can download PNG, JPG, ICO and Apple ICNS image files directly from online.
+
+&#x1F536;[Desktop Application](https://github.com/uuware/icons-font-desktop) for Windows, Linux, MacOS is released, or goto [Download Releases](https://github.com/uuware/icons-font-desktop/releases) &#x1F536;
 
 （中文说明请参考后半部分）
 
@@ -14,11 +17,12 @@ This relevant license information is included in generated css file autom
 <img src="https://github.com/uuware/icons-font-customization/raw/main/dist/logo.png" alt="logo.png" width="70%">
 # Icon Collections:<br>
 - ant-design-icons&nbsp;Source:&nbsp;<a href="https://github.com/ant-design/ant-design-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/ant-design/ant-design-icons/blob/master/LICENSE" target="_blank">MIT</a>
-- Bootstrap Icons&nbsp;Source:&nbsp;<a href="https://github.com/twbs/icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/twbs/icons/blob/main/LICENSE.md" target="_blank">MIT</a>
+- Bootstrap Icons&nbsp;Source:&nbsp;<a href="https://github.com/twbs/icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/twbs/icons/blob/main/LICENSE" target="_blank">MIT</a>
 - BoxIcons&nbsp;Source:&nbsp;<a href="https://github.com/atisawd/boxicons" target="_blank">visit</a>, License:&nbsp;<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC 4.0</a>
 - Bytesize Icons&nbsp;Source:&nbsp;<a href="https://github.com/danklammer/bytesize-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/danklammer/bytesize-icons/blob/master/LICENSE.md" target="_blank">MIT</a>
 - Capitaine cursors&nbsp;Source:&nbsp;<a href="https://github.com/keeferrourke/capitaine-cursors" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/keeferrourke/capitaine-cursors/blob/master/COPYING" target="_blank">LGPLv3 </a>
 - carbon-icons&nbsp;Source:&nbsp;<a href="https://github.com/carbon-design-system/carbon-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/carbon-design-system/carbon-icons/blob/master/LICENSE.md" target="_blank">Apache-2.0 </a>
+- Circum-Icons&nbsp;Source:&nbsp;<a href="https://github.com/Klarr-Agency/Circum-Icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/Klarr-Agency/Circum-Icons/blob/main/LICENSE" target="_blank">MPL-2.0 license</a>
 - CoreUI Icons&nbsp;Source:&nbsp;<a href="https://github.com/coreui/coreui-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/coreui/coreui-icons/blob/master/LICENSE" target="_blank">CoreUI Icons Free</a>
 - crypto-icons&nbsp;Source:&nbsp;<a href="https://github.com/guardaco/crypto-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/guardaco/crypto-icons/blob/master/LICENSE.md" target="_blank">MIT</a>
 - Cryptocurrency Icons&nbsp;Source:&nbsp;<a href="https://github.com/spothq/cryptocurrency-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/spothq/cryptocurrency-icons/blob/master/LICENSE.md" target="_blank">CC0</a>
@@ -29,17 +33,18 @@ This relevant license information is included in generated css file autom
 - elusive-iconfont&nbsp;Source:&nbsp;<a href="https://github.com/reduxframework/elusive-iconfont" target="_blank">visit</a>, License:&nbsp;<a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;id=OFL" target="_blank">OFL</a>
 - entypo&nbsp;Source:&nbsp;<a href="https://github.com/danielbruce/entypo" target="_blank">visit</a>, License:&nbsp;<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA</a>
 - evil-icons&nbsp;Source:&nbsp;<a href="https://github.com/evil-icons/evil-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/evil-icons/evil-icons/blob/master/LICENSE.txt" target="_blank">MIT</a>
-- feather&nbsp;Source:&nbsp;<a href="https://github.com/feathericons/feather" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/feathericons/feather/blob/master/LICENSE" target="_blank">MIT</a>
 - feathericon&nbsp;Source:&nbsp;<a href="https://github.com/feathericon/feathericon" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/feathericon/feathericon/blob/master/LICENSE" target="_blank">MIT</a>
 - File Icon Images&nbsp;Source:&nbsp;<a href="https://github.com/dmhendricks/file-icon-vectors" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/dmhendricks/file-icon-vectors/blob/master/LICENSE" target="_blank">MIT</a>
 - Flat-UI&nbsp;Source:&nbsp;<a href="https://github.com/designmodo/Flat-UI" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/designmodo/Flat-UI/blob/master/LICENSE" target="_blank">MIT</a>
 - Font Awesome Free&nbsp;Source:&nbsp;<a href="https://github.com/FortAwesome/Font-Awesome" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt" target="_blank">Font Awesome Free</a>
 - foundation-icons&nbsp;Source:&nbsp;<a href="https://github.com/zurb/foundation-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/zurb/foundation-icons/blob/master/MIT-LICENSE.txt" target="_blank">MIT</a>
-- 1800 Free Minimal Icon Pack [20x20]&nbsp;Source:&nbsp;<a href="https://dribbble.com/shots/2888226-1800-Free-Minimal-Icon-Pack-20x20" target="_blank">visit</a>, License:&nbsp;<a href="https://dribbble.com/shots/2888226-1800-Free-Minimal-Icon-Pack-20x20" target="_blank">Free</a>
+- Free Minimal Icon Pack&nbsp;Source:&nbsp;<a href="https://dribbble.com/shots/2888226-1800-Free-Minimal-Icon-Pack-20x20" target="_blank">visit</a>, License:&nbsp;<a href="https://dribbble.com/shots/2888226-1800-Free-Minimal-Icon-Pack-20x20" target="_blank">Free</a>
 - geomicons-open&nbsp;Source:&nbsp;<a href="https://github.com/jxnblk/geomicons-open" target="_blank">visit</a>, License:&nbsp;<a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>
+- IcoFont&nbsp;Source:&nbsp;<a href="https://icofont.com/" target="_blank">visit</a>, License:&nbsp;<a href="https://icofont.com/license" target="_blank">CC 4.0</a>
 - IcoMoon-Free&nbsp;Source:&nbsp;<a href="https://github.com/Keyamoon/IcoMoon-Free" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/Keyamoon/IcoMoon-Free/blob/master/License.txt" target="_blank">CC BY 4.0 or GPL</a>
 - ionicons&nbsp;Source:&nbsp;<a href="https://github.com/ionic-team/ionicons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/ionic-team/ionicons/blob/master/LICENSE" target="_blank">MIT</a>
 - JAM&nbsp;Source:&nbsp;<a href="https://github.com/michaelampr/jam" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/michaelampr/jam/blob/master/LICENSE" target="_blank">MIT</a>
+- line-awesome&nbsp;Source:&nbsp;<a href="https://github.com/icons8/line-awesome" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/icons8/line-awesome/blob/master/LICENSE.md" target="_blank">MIT or the Good Boy License</a>
 - Linea Icon&nbsp;Source:&nbsp;<a href="https://linea.io/" target="_blank">visit</a>, License:&nbsp;<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CCBY</a>
 - maki&nbsp;Source:&nbsp;<a href="https://github.com/mapbox/maki" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/mapbox/maki/blob/master/LICENSE.txt" target="_blank">CC0-1.0</a>
 - map-icons&nbsp;Source:&nbsp;<a href="https://github.com/scottdejonge/map-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/scottdejonge/map-icons/blob/master/LICENSE" target="_blank">MIT</a>
@@ -49,8 +54,10 @@ This relevant license information is included in generated css file autom
 - Mono Icons&nbsp;Source:&nbsp;<a href="https://github.com/mono-company/mono-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/mono-company/mono-icons/blob/master/LICENSE.md" target="_blank">MIT</a>
 - octicons&nbsp;Source:&nbsp;<a href="https://github.com/primer/octicons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/primer/octicons/blob/master/LICENSE" target="_blank">MIT</a>
 - open-iconic&nbsp;Source:&nbsp;<a href="https://github.com/iconic/open-iconic" target="_blank">visit</a>, License:&nbsp;<a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>
+- radix-ui-icons&nbsp;Source:&nbsp;<a href="https://github.com/radix-ui/icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/radix-ui/icons/blob/master/LICENSE" target="_blank">Apache License Version 2.0</a>
+- RemixIcon&nbsp;Source:&nbsp;<a href="https://github.com/Remix-Design/RemixIcon" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/Remix-Design/remixicon/blob/master/License" target="_blank">Apache License Version 2.0</a>
 - simple-icons&nbsp;Source:&nbsp;<a href="https://github.com/simple-icons/simple-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md" target="_blank">CC0-1.0</a>
-- small-n-flat&nbsp;Source:&nbsp;<a href="https://github.com/paomedia/small-n-flat" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/paomedia/small-n-flat/blob/master/LICENSE" target="_blank">CC0-1.0</a>
+- simple-line-icons&nbsp;Source:&nbsp;<a href="https://github.com/thesabbir/simple-line-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/thesabbir/simple-line-icons/blob/master/LICENSE.md" target="_blank">MIT license</a>
 - subway&nbsp;Source:&nbsp;<a href="https://github.com/mariuszostrowski/subway" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/mariuszostrowski/subway/blob/master/LICENSE.md" target="_blank">CC BY 4.0</a>
 - tabler-icons&nbsp;Source:&nbsp;<a href="https://github.com/tabler/tabler-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/tabler/tabler-icons/blob/master/LICENSE" target="_blank">MIT</a>
 - Teenyicons&nbsp;Source:&nbsp;<a href="https://github.com/teenyicons/teenyicons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/teenyicons/teenyicons/blob/master/LICENSE" target="_blank">MIT</a>
@@ -60,6 +67,7 @@ This relevant license information is included in generated css file autom
 - Unicons&nbsp;Source:&nbsp;<a href="https://github.com/Iconscout/unicons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/Iconscout/unicons/blob/master/LICENSE" target="_blank">Apache-2.0 </a>
 - Vaadin Icons&nbsp;Source:&nbsp;<a href="https://github.com/vaadin/vaadin-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY 4.0</a>
 - Vivid.JS&nbsp;Source:&nbsp;<a href="https://github.com/webkul/vivid" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/webkul/vivid/blob/master/LICENSE" target="_blank">MIT</a>
+- vscode-codicons&nbsp;Source:&nbsp;<a href="https://github.com/microsoft/vscode-codicons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/microsoft/vscode-codicons/blob/main/LICENSE" target="_blank">CC-BY-4.0</a>
 - weather-icons&nbsp;Source:&nbsp;<a href="https://github.com/erikflowers/weather-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;id=OFL" target="_blank">SIL OFL 1.1</a>
 - Weather Underground Icons&nbsp;Source:&nbsp;<a href="https://github.com/manifestinteractive/weather-underground-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/manifestinteractive/weather-underground-icons/blob/master/LICENSE" target="_blank">MIT and GPL </a>
 
@@ -200,7 +208,7 @@ The main contribution belongs to the elites who created these elves. Please enco
 
 （中文说明，包含在同一个文件的原因是这种方式发布NPM的时候比较友好）
 # icons-font-customization
-一个包含超过 33,000 高品质免费 svg 图标的集合和生成自己图标字体的工具。所有图标都适合于私人或商业项目。<br>
+一个包含超过 78,000 高品质免费 svg 图标的集合和生成自己图标字体的工具。所有图标都适合于私人或商业项目。<br>
 请打开链接 [所有图标](https://uuware.github.io/icons-font-customization/dist/), 去确认这些精灵。在这个链接，可以更改图标颜色，背景色和大小。还可以根据关键字检索，保存图标是否选中的状态，或输出选中图标的列表字符串，用于下面介绍的生成自己的图标字体。<br>
 更新：现在可以直接online下载PNG和JPG, ICON, Apple ICNS格式的图片文件了。<br>
 

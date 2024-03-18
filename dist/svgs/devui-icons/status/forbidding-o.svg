@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g fill-rule="evenodd"><circle cx="8" cy="8" r="8"/><path d="M4 7h8v2H4z"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>status/initial</title>
+    <desc>Created with Sketch.</desc>
+    <g id="status/initial" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval-4-Copy-4" fill="#D3E2FC" cx="8" cy="8" r="8"></circle>
+        <rect id="Rectangle-46" fill="#FFFFFF" x="4" y="7" width="8" height="2"></rect>
+    </g>
+</svg>

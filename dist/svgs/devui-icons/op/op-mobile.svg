@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16"><path d="M10 8V2H2v6h8zm0 2H2v4h8v-4zM1 0h10a1 1 0 011 1v14a1 1 0 01-1 1H1a1 1 0 01-1-1V1a1 1 0 011-1zm4 11h2v2H5v-2z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>op-mobile</title>
+    <desc>Created with Sketch.</desc>
+    <g id="op-mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(2.000000, 0.000000)" fill="#293040" fill-rule="nonzero" id="Combined-Shape">
+            <path d="M10,8 L10,2 L2,2 L2,8 L10,8 Z M10,10 L2,10 L2,14 L10,14 L10,10 Z M1,0 L11,0 C11.5522847,0 12,0.44771525 12,1 L12,15 C12,15.5522847 11.5522847,16 11,16 L1,16 C0.44771525,16 0,15.5522847 0,15 L0,1 C0,0.44771525 0.44771525,0 1,0 Z M5,11 L7,11 L7,13 L5,13 L5,11 Z"></path>
+        </g>
+    </g>
+</svg>

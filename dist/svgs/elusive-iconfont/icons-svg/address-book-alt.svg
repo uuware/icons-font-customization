@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: IcoMoon.io -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   data-tags="remove-circle, cancel, close, remove, delete"
+   height="1200"
+   width="1200"
+   data-du=""
+   viewBox="0 0 1200 1200"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="address-book-alt.svg">
+  <defs
+     id="defs3041" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1535"
+     inkscape:window-height="876"
+     id="namedview3039"
+     showgrid="false"
+     inkscape:zoom="1.0535714"
+     inkscape:cx="738.57414"
+     inkscape:cy="529.13411"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata62">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     d="M 600,0 C 268.63459,0 0,268.63459 0,600 c 0,331.36541 268.63459,600 600,600 331.36541,0 600,-268.63459 600,-600 C 1200,268.63459 931.36541,0 600,0 z m -336.3125,263.6875 524.1875,0 75.21875,0 73.21875,0 0,119.0625 -73.21875,0 0,65.5 73.21875,0 0,119 -73.21875,0 0,65.5 73.21875,0 0,119 -73.21875,0 0,65.5 73.21875,0 0,119.09375 -73.21875,0 -75.21875,0 -524.1875,0 z M 563.375,381.15625 c -53.69259,0 -97.1875,43.55741 -97.1875,97.25 0,38.05045 21.84147,70.97079 53.6875,86.9375 l -124.4375,74.5 -1.53125,0 0,0.65625 0,104.4375 166.09374,0 172.84376,0 0,-104.4375 0,-0.65625 -1.53125,0 -124.4375,-74.5 c 31.84604,-15.96671 53.6875,-48.88705 53.6875,-86.9375 0,-53.69259 -43.49491,-97.25 -97.1875,-97.25 z"
+     id="path2986"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ssssscccccccccccccccccccccsscccccccccccss" />
+</svg>

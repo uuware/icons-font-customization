@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M6 11h1v2H3V9h2v1l2-2 1 1-2 2zm4-6H9V3h4v4h-2V6L9 8 8 7l2-2z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_fullscreen</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon_fullscreen" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M6,11 L7,11 L7,13 L3,13 L3,9 L5,9 L5,10 L7,8 L8,9 L6,11 Z M10,5 L9,5 L9,3 L13,3 L13,7 L11,7 L11,6 L9,8 L8,7 L10,5 Z" id="Shape" fill="#293040"></path>
+    </g>
+</svg>

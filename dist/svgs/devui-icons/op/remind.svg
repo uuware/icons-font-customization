@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>remind</title>
+    <desc>Created with Sketch.</desc>
+    <g id="remind" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M7,1 L7,0 L9,0 L9,1 C11.6887547,1 13.8818181,3.12230671 13.9953805,5.78311038 L14,6 L14,12 C14,12.5128358 14.3860402,12.9355072 14.8833789,12.9932723 L15,13 L15,15 L11,15 L11,16 L5,16 L5,15 L1,15 L1,13 C1.55228475,13 2,12.5522847 2,12 L2,6 C2,3.23857625 4.23857625,1 7,1 Z" id="路径" fill="#293040"></path>
+    </g>
+</svg>

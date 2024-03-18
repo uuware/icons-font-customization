@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: IcoMoon.io -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   data-tags="remove-circle, cancel, close, remove, delete"
+   height="1200"
+   width="1200"
+   data-du=""
+   viewBox="0 0 1200 1200"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="zoom-out.svg">
+
+  <path
+     inkscape:connector-curvature="0"
+     d="M 1200,1066.3255 978.18164,844.50703 C 1038.9916,757.43812 1074.9248,651.71156 1074.9248,537.46242 1074.9248,240.62953 834.21844,0 537.46242,0 240.70641,0 0,240.62953 0,537.46242 c 0,296.83289 240.62953,537.46238 537.46242,537.46238 114.24914,0 220.05235,-35.9331 307.12149,-96.74316 L 1066.4023,1200 z M 537.38578,921.44086 c -211.99055,0 -383.9018,-171.83438 -383.9018,-383.90156 0,-212.06742 171.91125,-383.9018 383.9018,-383.9018 212.06719,0 383.9018,171.83438 383.9018,383.9018 0.0773,212.06718 -171.75774,383.90156 -383.9018,383.90156 z m -230.34094,-307.19813 460.68211,0 0,-153.56062 -460.68211,0 z"
+     id="path26704" />
+</svg>

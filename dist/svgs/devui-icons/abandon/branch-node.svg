@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>branch-node</title>
+    <desc>Created with Sketch.</desc>
+    <g id="branch-node" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(1.000000, 4.000000)" fill="#293040" fill-rule="nonzero" id="Combined-Shape">
+            <path d="M10.4645556,4.5 C10.2219407,6.19614707 8.763236,7.5 7,7.5 C5.23676405,7.5 3.77805926,6.19614707 3.53544443,4.5 L0.5,4.5 L0.5,3.5 L3.53544443,3.5 C3.77805926,1.80385293 5.23676405,0.5 7,0.5 C8.763236,0.5 10.2219407,1.80385293 10.4645556,3.5 L13.5,3.5 L13.5,4.5 L10.4645556,4.5 Z M7,6.5 C8.38071187,6.5 9.5,5.38071187 9.5,4 C9.5,2.61928813 8.38071187,1.5 7,1.5 C5.61928813,1.5 4.5,2.61928813 4.5,4 C4.5,5.38071187 5.61928813,6.5 7,6.5 Z"></path>
+        </g>
+    </g>
+</svg>

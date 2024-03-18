@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M13.31 8.896l1.226 1.225-1.415 1.415-1.225-1.226a4.5 4.5 0 111.414-1.414zM1 2h3v2H1V2zm8.5 7a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM1 7h3v2H1V7zm0 5h14v2H1v-2z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/aveicon-view</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/aveicon-view" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M13.3099521,8.89573854 L14.5355339,10.1213203 L13.1213203,11.5355339 L11.8957385,10.3099521 C11.202014,10.7470915 10.380542,11 9.5,11 C7.01471863,11 5,8.98528137 5,6.5 C5,4.01471863 7.01471863,2 9.5,2 C11.9852814,2 14,4.01471863 14,6.5 C14,7.38054196 13.7470915,8.20201398 13.3099521,8.89573854 Z M1,2 L4,2 L4,4 L1,4 L1,2 Z M9.5,9 C10.8807119,9 12,7.88071187 12,6.5 C12,5.11928813 10.8807119,4 9.5,4 C8.11928813,4 7,5.11928813 7,6.5 C7,7.88071187 8.11928813,9 9.5,9 Z M1,7 L4,7 L4,9 L1,9 L1,7 Z M1,12 L15,12 L15,14 L1,14 L1,12 Z" id="形状" fill="#293040"></path>
+    </g>
+</svg>

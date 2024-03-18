@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.9 10.95l2.5-2.5 1.5 1.5-4.95 4.95L3 9.95l1.5-1.5 2.4 2.4V1h2z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/aveIcon-arrow-down</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/aveIcon-arrow-down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="路径-copy" fill="#293040" points="8.89949494 10.9497475 11.3994949 8.44974747 12.8994949 9.94974747 7.94974747 14.8994949 3 9.94974747 4.5 8.44974747 6.89949494 10.8492424 6.89949494 1 8.89949494 1"></polygon>
+    </g>
+</svg>

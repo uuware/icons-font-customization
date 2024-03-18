@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/btn/发布答案20x20</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon/btn/发布答案20x20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M1.25,2 L18.75,2 C19.4403559,2 20,2.57083694 20,3.275 L20,17.725 C20,18.4291631 19.4403559,19 18.75,19 L1.25,19 C0.559644063,19 0,18.4291631 0,17.725 L0,3.275 C0,2.57083694 0.559644063,2 1.25,2 Z M2,4 L2,17 L18,17 L18,4 L2,4 Z M4,7 L16,7 L16,9 L4,9 L4,7 Z M4,12 L11,12 L11,14 L4,14 L4,12 Z" id="形状" fill="#293040"></path>
+    </g>
+</svg>

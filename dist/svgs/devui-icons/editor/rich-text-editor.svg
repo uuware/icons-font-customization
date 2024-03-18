@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g fill-rule="evenodd"><path fill-rule="nonzero" d="M14.192 4.412H10.62v10.096H7.484V4.412H4.977V1h9.215z"/><path d="M1.5 1h2.409v3.372H1.5z"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>rich text editor</title>
+    <desc>Created with Sketch.</desc>
+    <g id="rich-text-editor" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="T" fill="#293040" fill-rule="nonzero" points="14.1916504 4.41210938 10.619873 4.41210938 10.619873 14.5078125 7.48413086 14.5078125 7.48413086 4.41210938 4.97729492 4.41210938 4.97729492 1 14.1916504 1"></polygon>
+        <polygon id="Path-25" fill="#5170FF" points="1.5 1 3.90856934 1 3.90856934 4.37219238 1.5 4.37219238"></polygon>
+    </g>
+</svg>

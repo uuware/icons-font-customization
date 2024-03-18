@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M9 12V4.72a1 1 0 01.684-.948L12 3H6v3H5V3a1 1 0 011-1h9v11l-4.684 1.561A1 1 0 019 13.613V13H6a1 1 0 01-1-1v-2h1v2h3zM4 7h4v2H4v2L1 8l3-3v2z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/exit</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/exit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M9,12 L9,4.72075922 C9,4.29032881 9.27543009,3.90818997 9.68377223,3.77207592 L12,3 L6,3 L6,6 L5,6 L5,3 C5,2.44771525 5.44771525,2 6,2 L15,2 L15,13 L10.3162278,14.5612574 C9.79228445,14.7359052 9.22596447,14.4527452 9.0513167,13.9288019 C9.01732788,13.8268354 9,13.7200562 9,13.6125741 L9,13 L6,13 C5.44771525,13 5,12.5522847 5,12 L5,10 L6,10 L6,12 L9,12 Z M4,7 L8,7 L8,9 L4,9 L4,11 L1,8 L4,5 L4,7 Z" id="形状" fill="#293040"></path>
+    </g>
+</svg>

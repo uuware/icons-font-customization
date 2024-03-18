@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 7h8v2H4z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>status/whiteBG/initial</title>
+    <desc>Created with Sketch.</desc>
+    <g id="status/whiteBG/initial" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Mask" fill="#D3E2FC" points="4 7 12 7 12 9 4 9"></polygon>
+    </g>
+</svg>

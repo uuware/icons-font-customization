@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9 8.83V10H7V8a1 1 0 011-1 1 1 0 10-1-1H5a3 3 0 114 2.83zM8 16A8 8 0 118 0a8 8 0 010 16zm0-2A6 6 0 108 2a6 6 0 000 12zm-1-3h2v2H7v-2z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>帮助</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-197.000000, -166.000000)" fill="#293040" fill-rule="nonzero" id="帮助">
+            <g transform="translate(197.000000, 166.000000)">
+                <path d="M9,8.82929429 L9,10 L7,10 L7,8 C7,7.44771525 7.44771525,7 8,7 C8.55228475,7 9,6.55228475 9,6 C9,5.44771525 8.55228475,5 8,5 C7.44771525,5 7,5.44771525 7,6 L5,6 C5,4.34314575 6.34314575,3 8,3 C9.65685425,3 11,4.34314575 11,6 C11,7.30621883 10.1651924,8.41745788 9,8.82929429 Z M8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 Z M8,14 C11.3137085,14 14,11.3137085 14,8 C14,4.6862915 11.3137085,2 8,2 C4.6862915,2 2,4.6862915 2,8 C2,11.3137085 4.6862915,14 8,14 Z M7,11 L9,11 L9,13 L7,13 L7,11 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

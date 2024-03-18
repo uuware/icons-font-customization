@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.5 1.5V2h7v-.5h-7zm0 3V5h7v-.5h-7zm0 3V8h7v-.5h-7zm0 3v.5h7v-.5h-7zm0 3v.5h7v-.5h-7zM2.5 3v9H4l-2 2.5L0 12h1.5V3H0L2 .5 4 3H2.5z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>edit icon/line spacing copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="edit-icon/line-spacing-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M7.5,1.5 L7.5,2 L14.5,2 L14.5,1.5 L7.5,1.5 Z M7.5,4.5 L7.5,5 L14.5,5 L14.5,4.5 L7.5,4.5 Z M7.5,7.5 L7.5,8 L14.5,8 L14.5,7.5 L7.5,7.5 Z M7.5,10.5 L7.5,11 L14.5,11 L14.5,10.5 L7.5,10.5 Z M7.5,13.5 L7.5,14 L14.5,14 L14.5,13.5 L7.5,13.5 Z" id="形状结合" stroke="#293040" fill="#293040"></path>
+        <path d="M2.5,3 L2.5,12 L4,12 L2,14.5 L4.4408921e-16,12 L1.5,12 L1.5,3 L0,3 L2,0.5 L4,3 L2.5,3 Z" id="合并形状" fill="#293040"></path>
+    </g>
+</svg>

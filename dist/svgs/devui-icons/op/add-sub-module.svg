@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 7V6a4 4 0 014-4h1v2H8a2 2 0 00-2 2v4a2 2 0 002 2h1v2H8a4 4 0 01-4-4V9H1V7h3zm9-1a3 3 0 110-6 3 3 0 010 6zm0-2a1 1 0 100-2 1 1 0 000 2zm-1 8v-2h2v2h2v2h-2v2h-2v-2h-2v-2h2z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/新建子模块</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/新建子模块" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M4,7 L4,6 C4,3.790861 5.790861,2 8,2 L9,2 L9,4 L8,4 C6.8954305,4 6,4.8954305 6,6 L6,10 C6,11.1045695 6.8954305,12 8,12 L9,12 L9,14 L8,14 C5.790861,14 4,12.209139 4,10 L4,9 L1,9 L1,7 L4,7 Z M13,6 C11.3431458,6 10,4.65685425 10,3 C10,1.34314575 11.3431458,0 13,0 C14.6568542,0 16,1.34314575 16,3 C16,4.65685425 14.6568542,6 13,6 Z M13,4 C13.5522847,4 14,3.55228475 14,3 C14,2.44771525 13.5522847,2 13,2 C12.4477153,2 12,2.44771525 12,3 C12,3.55228475 12.4477153,4 13,4 Z M12,12 L12,10 L14,10 L14,12 L16,12 L16,14 L14,14 L14,16 L12,16 L12,14 L10,14 L10,12 L12,12 Z" id="形状" fill="#293040"></path>
+    </g>
+</svg>

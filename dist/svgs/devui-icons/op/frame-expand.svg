@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path d="M14 0v5h-2V2H9V0h5zm0 9v5H9v-2h3V9h2zM0 14V9h2v3h3v2H0zM0 0h5v2H2v3H0V0z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>frame_expand</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="图标" transform="translate(-1482.000000, -1285.000000)" fill="#293040" fill-rule="nonzero">
+            <g id="frame_expand" transform="translate(1481.000000, 1284.000000)">
+                <path d="M15,1 L15,6 L13,6 L13,3 L10,3 L10,1 L15,1 Z M15,10 L15,15 L10,15 L10,13 L13,13 L13,10 L15,10 Z M1,15 L1,10 L3,10 L3,13 L6,13 L6,15 L1,15 Z M1,1 L6,1 L6,3 L3,3 L3,6 L1,6 L1,1 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

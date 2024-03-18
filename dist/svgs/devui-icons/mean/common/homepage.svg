@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>homepage</title>
+    <desc>Created with Sketch.</desc>
+    <g id="homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M6.5,11.5 L6.5,16.5 L3,16.5 C2.17157288,16.5 1.5,15.8284271 1.5,15 L1.5,8.5 L-1.20710678,8.5 L8,-0.707106781 L17.2071068,8.5 L14.5,8.5 L14.5,15 C14.5,15.8284271 13.8284271,16.5 13,16.5 L9.5,16.5 L9.5,11.5 L6.5,11.5 Z M5.5,15.5 L5.5,10.5 L10.5,10.5 L10.5,15.5 L13,15.5 C13.2761424,15.5 13.5,15.2761424 13.5,15 L13.5,7.5 L14.7928932,7.5 L8,0.707106781 L1.20710678,7.5 L2.5,7.5 L2.5,15 C2.5,15.2761424 2.72385763,15.5 3,15.5 L5.5,15.5 Z" id="Combined-Shape" fill="#5E6678" fill-rule="nonzero"></path>
+    </g>
+</svg>

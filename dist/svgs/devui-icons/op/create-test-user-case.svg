@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 1h8l4 4v10H0V1zm2 2v10h8V5.828L7.172 3H2zm1 3h4v1H3V6zm0 4h3v1H3v-1zm0-2h5v1H3V8z"/><path d="M11 10V7h2v3h3v2h-3v3h-2v-3H8v-2z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>操作/create</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/create" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M14,10.5 L14,12 L15.5,12 L15.5,14 L14,14 L14,15.5 L12,15.5 L12,14 L10.5,14 L10.5,12 L12,12 L12,10.5 L14,10.5 Z M13,0 C13.5522847,0 14,0.44771525 14,1 L14,9 L12,9 L12,2 L5.2,2 L3,4.2 L3,13 L9,13 L9,15 L2,15 C1.44771525,15 1,14.5522847 1,14 L1,3.41421356 C1,3.14899707 1.10535684,2.89464316 1.29289322,2.70710678 L3.70710678,0.292893219 C3.89464316,0.10535684 4.14899707,0 4.41421356,0 L13,0 Z M9,9 L9,11 L4.5,11 L4.5,9 L9,9 Z M10.5,5 L10.5,7 L4.5,7 L4.5,5 L10.5,5 Z" id="形状" fill="#575D6C" fill-rule="nonzero"></path>
+    </g>
+</svg>

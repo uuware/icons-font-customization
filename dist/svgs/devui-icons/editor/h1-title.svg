@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 0h16v16H0V0zm1 1v14h14V1H1zm11 11h1v1h-3v-1h1V9h-1V8h2v4zM3 3h8v1H3V3z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>释义_富文本编辑/primary_title16x16</title>
+    <desc>Created with Sketch.</desc>
+    <g id="释义_富文本编辑/primary_title16x16" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,0 L16,0 L16,16 L0,16 L0,0 Z M1,1 L1,15 L15,15 L15,1 L1,1 Z M12,12 L13,12 L13,13 L10,13 L10,12 L11,12 L11,9 L10,9 L10,8 L12,8 L12,12 Z M3,3 L11,3 L11,4 L3,4 L3,3 Z" id="形状" fill="#293040"></path>
+    </g>
+</svg>

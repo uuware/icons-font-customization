@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 2h4v2H3v2L2 8l1 2v2h2v2H1v-4L0 8l1-2V2zm4 5a1 1 0 110 2 1 1 0 010-2zm3 0a1 1 0 110 2 1 1 0 010-2zm3 0a1 1 0 110 2 1 1 0 010-2zm0-3V2h4v4l1 2-1 2v4h-4v-2h2v-2l1-2-1-2V4h-2z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/json</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/json" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill-rule="nonzero">
+            <path d="M1,2 L5,2 L5,4 L3,4 L3,6 L2,8 L3,10 L3,12 L5,12 L5,14 L1,14 L1,10 L-4.54747351e-13,8 L1,6 L1,2 Z M5,7 C5.55228475,7 6,7.44771525 6,8 C6,8.55228475 5.55228475,9 5,9 C4.44771525,9 4,8.55228475 4,8 C4,7.44771525 4.44771525,7 5,7 Z M8,7 C8.55228475,7 9,7.44771525 9,8 C9,8.55228475 8.55228475,9 8,9 C7.44771525,9 7,8.55228475 7,8 C7,7.44771525 7.44771525,7 8,7 Z M11,7 C11.5522847,7 12,7.44771525 12,8 C12,8.55228475 11.5522847,9 11,9 C10.4477153,9 10,8.55228475 10,8 C10,7.44771525 10.4477153,7 11,7 Z M11,4 L11,2 L15,2 L15,6 L16,8 L15,10 L15,14 L11,14 L11,12 L13,12 L13,10 L14,8 L13,6 L13,4 L11,4 Z" id="形状" fill="#293040"></path>
+        </g>
+    </g>
+</svg>

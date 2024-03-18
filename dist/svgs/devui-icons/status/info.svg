@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7 13V6h2v7H7zm0-8V3h2v2H7z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>status/whiteBG/info</title>
+    <desc>Created with Sketch.</desc>
+    <g id="status/whiteBG/info" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M7,13 L7,6 L9,6 L9,13 L7,13 Z M7,5 L7,3 L9,3 L9,5 L7,5 Z" id="形状" fill="#5170FF"></path>
+    </g>
+</svg>

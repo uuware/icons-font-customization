@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M6 11h4V8H6v3zm0 1v3H5v-3H1v-1h4V8H1V7h14v1h-4v3h4v1h-4v3h-1v-3H6zM1 0h14a1 1 0 011 1v14a1 1 0 01-1 1H1a1 1 0 01-1-1V1a1 1 0 011-1zm0 1v14h14V1H1z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>释义_富文本编辑/表格 16x16</title>
+    <desc>Created with Sketch.</desc>
+    <g id="释义_富文本编辑/表格-16x16" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M6,11 L10,11 L10,8 L6,8 L6,11 Z M6,12 L6,15 L5,15 L5,12 L1,12 L1,11 L5,11 L5,8 L1,8 L1,7 L15,7 L15,8 L11,8 L11,11 L15,11 L15,12 L11,12 L11,15 L10,15 L10,12 L6,12 Z M1,0 L15,0 C15.5522847,0 16,0.44771525 16,1 L16,15 C16,15.5522847 15.5522847,16 15,16 L1,16 C0.44771525,16 0,15.5522847 0,15 L0,1 C0,0.44771525 0.44771525,0 1,0 Z M1,1 L1,15 L15,15 L15,1 L1,1 Z" id="形状" fill="#293040"></path>
+    </g>
+</svg>

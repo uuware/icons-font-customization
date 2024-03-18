@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3 0h10a1 1 0 011 1v14a1 1 0 01-1 1H3a1 1 0 01-1-1V1a1 1 0 011-1zm1 2v9h8V2H4zm3 11v1h2v-1H7zM9 3v4h2l-3 3-3-3h2V3h2z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/基线版本下载</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/基线版本下载" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M3,0 L13,0 C13.5522847,-1.01453063e-16 14,0.44771525 14,1 L14,15 C14,15.5522847 13.5522847,16 13,16 L3,16 C2.44771525,16 2,15.5522847 2,15 L2,1 C2,0.44771525 2.44771525,1.01453063e-16 3,0 Z M4,2 L4,11 L12,11 L12,2 L4,2 Z M7,13 L7,14 L9,14 L9,13 L7,13 Z M9,3 L9,7 L11,7 L8,10 L5,7 L7,7 L7,3 L9,3 Z" id="形状" fill="#293040"></path>
+    </g>
+</svg>

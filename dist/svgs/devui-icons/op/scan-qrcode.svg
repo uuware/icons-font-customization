@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path d="M8 8H3V6h3V3h2v5zM0 0h5v5H0V0zm2 2v1h1V2H2zm7-2h5v5H9V0zm2 2v1h1V2h-1zM0 9h5v5H0V9zm2 2v1h1v-1H2zM6 0h2v2H6V0zm5 6v2H9V6h2zM2 6v2H0V6h2zm10 6V7h2v7H9v-2h3zm-4 1H6V9h4v2H8v2z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>二维码</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="图标" transform="translate(-734.000000, -1285.000000)" fill="#293040" fill-rule="nonzero">
+            <g id="二维码" transform="translate(733.000000, 1284.000000)">
+                <path d="M9,9 L4,9 L4,7 L7,7 L7,4 L9,4 L9,9 Z M1,1 L6,1 L6,6 L1,6 L1,1 Z M3,3 L3,4 L4,4 L4,3 L3,3 Z M10,1 L15,1 L15,6 L10,6 L10,1 Z M12,3 L12,4 L13,4 L13,3 L12,3 Z M1,10 L6,10 L6,15 L1,15 L1,10 Z M3,12 L3,13 L4,13 L4,12 L3,12 Z M7,1 L9,1 L9,3 L7,3 L7,1 Z M12,7 L12,9 L10,9 L10,7 L12,7 Z M3,7 L3,9 L1,9 L1,7 L3,7 Z M13,13 L13,8 L15,8 L15,15 L10,15 L10,13 L13,13 Z M9,14 L7,14 L7,10 L11,10 L11,12 L9,12 L9,14 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M6 14v-1h1v1h1v1H7v1H6v-1H5v-1h1zM4 9H1v5h3v1H0V1.5h4V0h12v4H4V2.5H1V8h3V6.5h12v4H4V9z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>添加同级别 的树节点</title>
+    <desc>Created with Sketch.</desc>
+    <g id="添加同级别-的树节点" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="操作/添加同级别的树节点" fill="#293040">
+            <path d="M6,14 L6,13 L7,13 L7,14 L8,14 L8,15 L7,15 L7,16 L6,16 L6,15 L5,15 L5,14 L6,14 Z M4,9 L1,9 L1,14 L4,14 L4,15 L0,15 L0,1.5 L4,1.5 L4,0 L16,0 L16,4 L4,4 L4,2.5 L1,2.5 L1,8 L4,8 L4,6.5 L16,6.5 L16,10.5 L4,10.5 L4,9 Z" id="形状"></path>
+        </g>
+    </g>
+</svg>

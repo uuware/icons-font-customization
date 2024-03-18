@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zm4.936-1.27l4.563 4.557-.707.708-4.563-4.558a6.5 6.5 0 11.707-.707z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M6.5,12 C9.53756612,12 12,9.53756612 12,6.5 C12,3.46243388 9.53756612,1 6.5,1 C3.46243388,1 1,3.46243388 1,6.5 C1,9.53756612 3.46243388,12 6.5,12 Z M11.435871,10.7295043 L15.9988346,15.2874096 L15.29212,15.9949085 L10.7287073,11.4365544 C9.59199315,12.4111864 8.11475897,13 6.5,13 C2.91014913,13 -4.54747351e-13,10.0898509 -4.54747351e-13,6.5 C-4.54747351e-13,2.91014913 2.91014913,0 6.5,0 C10.0898509,0 13,2.91014913 13,6.5 C13,8.11513637 12.4109111,9.59268367 11.435871,10.7295043 Z" id="Search" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

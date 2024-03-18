@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13 6.327L9 8.633v4.492l4-2.286V6.327zm-.995-1.735L8 2.304 4.053 4.559l3.996 2.314 3.956-2.281zM7 13.125V8.577L3 6.26v4.578l4 2.286zM8 0l7 4v8l-7 4-7-4V4l7-4z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/build_With_Tool</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/build_With_Tool" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="build_With_Tool">
+            <path d="M13,6.3268753 L9,8.63272212 L9,13.1250692 L13,10.8393549 L13,6.3268753 L13,6.3268753 Z M12.004885,4.59200795 L8,2.30350221 L4.05253619,4.55919582 L8.04860931,6.87264939 L12.004885,4.59200795 L12.004885,4.59200795 Z M7,13.1250692 L7,8.57656034 L3,6.26083338 L3,10.8393549 L7,13.1250692 L7,13.1250692 Z M8,0 L15,4 L15,12 L8,16 L1,12 L1,4 L8,0 Z" id="形状" fill="#293040" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

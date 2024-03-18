@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>@1x释义图标/通知</title>
+    <desc>Created with Sketch.</desc>
+    <g id="释义图标/通知" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="通知">
+            <path d="M13,12 L15,12 L15,13 L1,13 L1,12 L3,12 L3,7 C3,4.23857625 5.23857625,2 8,2 C10.7614237,2 13,4.23857625 13,7 L13,12 Z M12,12 L12,7 C12,4.790861 10.209139,3 8,3 C5.790861,3 4,4.790861 4,7 L4,12 L12,12 Z M9,14 L10,14 C10,15.1045695 9.1045695,16 8,16 C6.8954305,16 6,15.1045695 6,14 L7,14 C7,14.5522847 7.44771525,15 8,15 C8.55228475,15 9,14.5522847 9,14 Z M7,0 L9,0 L9,1 L7,1 L7,0 Z" id="形状" fill="#293040" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

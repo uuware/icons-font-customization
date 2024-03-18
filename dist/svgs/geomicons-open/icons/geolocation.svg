@@ -1,1 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M2 18L30 2 14 30V18z"/></svg>
+<svg id="geolocation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="currentcolor">
+  <path d="M2 18 L30 2 L14 30 L14 18z"></path>
+</svg>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: IcoMoon.io -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   data-tags="remove-circle, cancel, close, remove, delete"
+   height="1200"
+   width="1200"
+   data-du=""
+   viewBox="0 0 1200 1200"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="eye-close.svg">
+  <defs
+     id="defs32" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1535"
+     inkscape:window-height="876"
+     id="namedview30"
+     showgrid="false"
+     inkscape:zoom="0.26339286"
+     inkscape:cx="455.16656"
+     inkscape:cy="64.037634"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata62">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     id="path6596"
+     d="M 669.72655,273.51615 C 646.83633,271.04067 623.57649,269.62154 600,269.26809 496.97413,269.72514 390.17672,294.78521 289.08704,342.80325 214.02914,379.92544 140.91352,432.33333 77.416869,496.97794 46.232114,529.97747 6.431251,577.75997 0,628.74075 c 0.75960468,44.16117 48.153285,98.66954 77.416869,131.76282 59.542971,62.10679 130.753841,113.0128 211.670171,154.17467 2.74945,1.33431 5.50945,2.65385 8.27624,3.95509 l -75.072,131.10097 102.00527,60.2859 551.41548,-960.03259 -98.18537,-60.007802 z m 232.83705,65.47851 -74.92688,129.85827 c 34.46931,44.78157 54.93165,100.00524 54.93165,159.88782 0,149.25656 -126.52266,270.26367 -282.64149,270.26367 -6.74954,0 -13.29025,-0.72819 -19.92188,-1.17187 l -49.58507,85.83984 c 22.86819,2.44875 45.99046,4.23329 69.58007,4.54101 103.12266,-0.46382 209.86126,-25.81265 310.83985,-73.53516 75.0579,-37.12217 148.24665,-89.53006 211.74325,-154.17467 31.185,-32.99906 70.9852,-80.78203 77.4169,-131.76282 -0.7596,-44.16117 -48.153,-98.66976 -77.4169,-131.76281 -59.5429,-62.10679 -130.82692,-113.01282 -211.74325,-154.17469 -2.73164,-1.32539 -5.5275,-2.51601 -8.27625,-3.80859 z m -302.63672,19.48241 c 6.84538,0 13.63757,0.27493 20.36109,0.73243 l -58.08093,100.56142 c -81.51399,16.52601 -142.67579,85.87967 -142.67579,168.8967 0,20.85352 3.84047,40.8197 10.91296,59.32594 0.008,0.0211 -0.008,0.0523 0,0.0734 L 372.2168,788.92152 c -34.55063,-44.82281 -54.93165,-100.2293 -54.93165,-160.18079 0,-149.25656 126.52266,-270.26367 282.64173,-270.26367 z M 768.89649,570.5131 638.01282,797.27092 C 719.08876,780.4334 779.8097,711.3959 779.8097,628.66762 c 0,-20.47359 -4.08563,-39.9382 -10.91321,-58.15452 z"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccccccccccccccsscccccccccsccscccssccsc" />
+</svg>

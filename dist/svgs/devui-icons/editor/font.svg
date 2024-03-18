@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 15.236a3 3 0 110-4.472V10h1v6h-1v-.764zM7 9L5 2 3 9h4zm.286 1H2.714L1 16H0L4.5 0h1L10 16H9l-1.714-6zM13 15a2 2 0 100-4 2 2 0 000 4z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>edit icon/font</title>
+    <desc>Created with Sketch.</desc>
+    <g id="edit-icon/font" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="释义_富文本编辑/font-16x16" fill="#293040">
+            <path d="M15,15.2361065 C14.4692435,15.7111464 13.7683544,16 13,16 C11.3431458,16 10,14.6568542 10,13 C10,11.3431458 11.3431458,10 13,10 C13.7683544,10 14.4692435,10.2888536 15,10.7638935 L15,10 L16,10 L16,16 L15,16 L15,15.2361065 L15,15.2361065 Z M7,9 L5,2 L3,9 L7,9 L7,9 Z M7.28571429,10 L2.71428571,10 L1,16 L2.30926389e-14,16 L4.5,3.90798505e-13 L5.5,3.90798505e-13 L10,16 L9,16 L7.28571429,10 Z M13,15 C14.1045695,15 15,14.1045695 15,13 C15,11.8954305 14.1045695,11 13,11 C11.8954305,11 11,11.8954305 11,13 C11,14.1045695 11.8954305,15 13,15 Z" id="形状"></path>
+        </g>
+    </g>
+</svg>

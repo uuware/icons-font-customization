@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>@1x释义图标/个人中心</title>
+    <desc>Created with Sketch.</desc>
+    <g id="释义图标/个人中心" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="个人中心" fill="#3A3E55" fill-rule="nonzero">
+            <path d="M6,9 L10,9 C13.3137085,9 16,11.6862915 16,15 L16,16 L0,16 L0,15 C-4.05812251e-16,11.6862915 2.6862915,9 6,9 Z M1,15 L15,15 C15,12.2385763 12.7614237,10 10,10 L6,10 C3.23857625,10 1,12.2385763 1,15 Z M8,8 C5.790861,8 4,6.209139 4,4 C4,1.790861 5.790861,0 8,0 C10.209139,0 12,1.790861 12,4 C12,6.209139 10.209139,8 8,8 Z M8,7 C9.65685425,7 11,5.65685425 11,4 C11,2.34314575 9.65685425,1 8,1 C6.34314575,1 5,2.34314575 5,4 C5,5.65685425 6.34314575,7 8,7 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

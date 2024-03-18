@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>超时</title>
+    <desc>Created with Sketch.</desc>
+    <g id="超时" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 Z M9,7.5 L9,4.5 C9,3.94771525 8.55228475,3.5 8,3.5 C7.44771525,3.5 7,3.94771525 7,4.5 L7,8.5 C7,9.05228475 7.44771525,9.5 8,9.5 L12,9.5 C12.5522847,9.5 13,9.05228475 13,8.5 C13,7.94771525 12.5522847,7.5 12,7.5 L9,7.5 Z" id="形状" fill="#F66F6A" fill-rule="nonzero"></path>
+    </g>
+</svg>

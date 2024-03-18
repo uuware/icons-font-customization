@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3 13.17C3 14.18 3.82 15 4.83 15h6.33A1.85 1.85 0 0013 13.16V6H3v7.17zM14 3h-2l-1-2H5L4 3H2v2h12V3z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/删除</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/删除" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M3,13.17 C3,14.1806811 3.81931891,15 4.83,15 L11.16,15 C12.1739312,14.9945339 12.9945339,14.1739312 13,13.16 L13,6 L3,6 L3,13.17 Z M14,3 L12,3 L11,1 L5,1 L4,3 L2,3 L2,5 L14,5 L14,3 Z" id="Mask" fill="#293040" fill-rule="nonzero"></path>
+    </g>
+</svg>

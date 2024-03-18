@@ -1,1 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10.975 8v6m-3.963-3.125l3.995 4.206 4.075-4.206"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/克隆&amp;下载</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 14.1689453 0 14.1689453 3.65195312 3.27070312 3.65195313 3.27070312 14.3856201 0 14.3856201"></polygon>
+        <polygon id="path-3" points="14.9986572 0.862548828 15 6.00996744 4.98320313 6.00996744 4.98320313 12 8.00117187 15 0.0167236328 15 0.0167236328 0.862548828"></polygon>
+    </defs>
+    <g id="操作/克隆&amp;下载" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-18-Copy">
+            <g id="Rectangle">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+            </g>
+            <g id="Rectangle" transform="translate(1.000000, 1.000000)">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="Mask"></g>
+            </g>
+            <path d="M10.9753418,8 L10.9753418,14" id="Path-2" stroke="#293040" stroke-width="2"></path>
+            <polyline id="Path-3" stroke="#293040" stroke-width="2" points="7.01196289 10.875 11.0073242 15.0808105 15.0817871 10.875"></polyline>
+        </g>
+    </g>
+</svg>

@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.586 12.293L6 13.707 11.707 8 6 2.293 4.586 3.707 8.879 8z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/collapse2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/collapse2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="路径" fill="#293040" fill-rule="nonzero" transform="translate(8.146447, 8.000000) scale(-1, 1) translate(-8.146447, -8.000000) " points="11.7071068 12.2928932 10.2928932 13.7071068 4.58578644 8 10.2928932 2.29289322 11.7071068 3.70710678 7.41421356 8"></polygon>
+    </g>
+</svg>

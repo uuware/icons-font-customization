@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrow up</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="14-面板-Panel-" transform="translate(-159.000000, -585.000000)">
+            <g id="arrow-up" transform="translate(159.000000, 585.000000)">
+                <path d="M12.7847714,10.8136134 C13.0627718,11.0621289 13.5134994,11.0621289 13.7914997,10.8136134 C14.0695001,10.5650979 14.0695001,10.1621748 13.7914997,9.91365932 L8.50336415,5.18638659 C8.22536381,4.93787114 7.77463619,4.93787114 7.49663585,5.18638659 L2.20850026,9.91365932 C1.93049991,10.1621748 1.93049991,10.5650979 2.20850026,10.8136134 C2.4865006,11.0621289 2.93722821,11.0621289 3.21522856,10.8136134 L8,6.53631772 L12.7847714,10.8136134 Z" id="路径复制-6" fill="#575D6C" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

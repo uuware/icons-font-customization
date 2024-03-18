@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M7 6H3v5a1 1 0 001 1h3v-1a1 1 0 011-1h6a1 1 0 011 1v4a1 1 0 01-1 1H8a1 1 0 01-1-1v-1H3a2 2 0 01-2-2V0h2v4h4V3a1 1 0 011-1h6a1 1 0 011 1v4a1 1 0 01-1 1H8a1 1 0 01-1-1V6zm2 6v2h4v-2H9z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/创建子工作项</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/创建子工作项" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M7,6 L3,6 L3,11 C3,11.5522847 3.44771525,12 4,12 L7,12 L7,11 C7,10.4477153 7.44771525,10 8,10 L14,10 C14.5522847,10 15,10.4477153 15,11 L15,15 C15,15.5522847 14.5522847,16 14,16 L8,16 C7.44771525,16 7,15.5522847 7,15 L7,14 L3,14 C1.8954305,14 1,13.1045695 1,12 L1,0 L3,0 L3,4 L7,4 L7,3 C7,2.44771525 7.44771525,2 8,2 L14,2 C14.5522847,2 15,2.44771525 15,3 L15,7 C15,7.55228475 14.5522847,8 14,8 L8,8 C7.44771525,8 7,7.55228475 7,7 L7,6 Z M9,12 L9,14 L13,14 L13,12 L9,12 Z" id="形状" fill="#293040" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

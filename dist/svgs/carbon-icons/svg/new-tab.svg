@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15"><path d="M14 2h2v1h-2v2h-1V3h-2V2h2V0h1v2zM1 3h8V2H1a1 1 0 00-1 1v11a1 1 0 001 1h12a1 1 0 001-1V7.227h-1V14H1V3z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="15px" viewBox="0 0 16 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>new tab</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="new-tab" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M14,2 L16,2 L16,3 L14,3 L14,5 L13,5 L13,3 L11,3 L11,2 L13,2 L13,0 L14,0 L14,2 Z" id="plus" fill="#000000" fill-rule="nonzero"></path>
+        <path d="M1,14 L9,14 L9,15 L1,15 C0.44771525,15 6.04600958e-16,14.5522847 -4.4408921e-16,14 L0,3 C-6.76353751e-17,2.44771525 0.44771525,2 1,2 L13,2 C13.5522847,2 14,2.44771525 14,3 L14,9.77272727 L13,9.77272727 L13,3 L1,3 L1,14 Z" id="window" fill="#000000" fill-rule="nonzero" transform="translate(7.000000, 8.500000) scale(1, -1) translate(-7.000000, -8.500000) "></path>
+    </g>
+</svg>

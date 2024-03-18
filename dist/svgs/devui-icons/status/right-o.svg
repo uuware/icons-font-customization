@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g fill-rule="evenodd"><circle cx="8" cy="8" r="8"/><path d="M6.536 9.778l5.656-5.657 1.415 1.415-7.071 7.07L3 9.072l1.414-1.414 2.122 2.121z"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>status/correct</title>
+    <desc>Created with Sketch.</desc>
+    <g id="status/correct" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval-4-Copy-5" fill="#3DCCA6" cx="8" cy="8" r="8"></circle>
+        <polygon id="Mask" fill="#FFFFFF" points="6.53553391 9.77817459 12.1923882 4.12132034 13.6066017 5.53553391 6.53553391 12.6066017 3 9.07106781 4.41421356 7.65685425 6.53553391 9.77817459"></polygon>
+    </g>
+</svg>

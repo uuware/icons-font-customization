@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M14.607 4.414l-7.779 7.778L4 9.364l7.778-7.778 2.829 2.828zm-8.364 8.414H3.414V10l2.829 2.828zM15 16H1v-2h14v2z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>操作/重命名</title>
+    <desc>Created with Sketch.</desc>
+    <g id="操作/重命名" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="添加-copy">
+            <path d="M14.6066017,4.41421356 L6.82842712,12.1923882 L4,9.36396103 L11.7781746,1.58578644 L14.6066017,4.41421356 Z M6.24264069,12.8284271 L3.41421356,12.8284271 L3.41421356,10 L6.24264069,12.8284271 Z M15,16 L1,16 L1,14 L15,14 L15,16 Z" id="Combined-Shape" fill="#293040"></path>
+        </g>
+    </g>
+</svg>

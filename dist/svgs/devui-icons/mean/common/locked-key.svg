@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>密匙</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="图标" transform="translate(-1345.000000, -1781.000000)" fill="#293040">
+            <g id="密匙" transform="translate(1344.000000, 1780.000000)">
+                <path d="M7.95852078,7.5 L9,7.5 L9,5 L10,5 L10,7.5 L11,7.5 L11,6 L12,6 L12,7.5 L14,7.5 L14,8.5 L7.95852078,8.5 C7.72048173,9.91885667 6.48649814,11 5,11 C3.34314575,11 2,9.65685425 2,8 C2,6.34314575 3.34314575,5 5,5 C6.48649814,5 7.72048173,6.08114333 7.95852078,7.5 Z M2,1 L4,1 L4,2 L2,2 L2,4 L1,4 L1,1 L2,1 Z M4,15 L1,15 L1,12 L2,12 L2,14 L4,14 L4,15 Z M12,1 L15,1 L15,4 L14,4 L14,2 L12,2 L12,1 Z M5,10 C6.1045695,10 7,9.1045695 7,8 C7,6.8954305 6.1045695,6 5,6 C3.8954305,6 3,6.8954305 3,8 C3,9.1045695 3.8954305,10 5,10 Z M15,15 L12,15 L12,14 L14,14 L14,12 L15,12 L15,15 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
