@@ -7,7 +7,8 @@ You also can download PNG, JPG, ICO and Apple ICNS image files directly from onl
 
 &#x1F536;[Desktop Application](https://github.com/uuware/icons-font-desktop) for Windows, Linux, MacOS is released, or goto [Download Releases](https://github.com/uuware/icons-font-desktop/releases) &#x1F536;
 
-（中文说明请参考后半部分）
+[中文说明请参考后半部分](#icons-font-customization图标字体定制)
+
 
 ---
 
@@ -207,16 +208,19 @@ Currently if svgs have fill-rule="evenodd" then they lose some shapes when chang
 The main contribution belongs to the elites who created these elves. Please encourage and reward them a cup of coffee!
 
 （中文说明，包含在同一个文件的原因是这种方式发布NPM的时候比较友好）
-# icons-font-customization
+# icons-font-customization（图标字体定制）
+
 一个包含超过 78,000 高品质免费 svg 图标的集合和生成自己图标字体的工具。所有图标都适合于私人或商业项目。<br>
 请打开链接 [所有图标](https://uuware.github.io/icons-font-customization/dist/), 去确认这些精灵。在这个链接，可以更改图标颜色，背景色和大小。还可以根据关键字检索，保存图标是否选中的状态，或输出选中图标的列表字符串，用于下面介绍的生成自己的图标字体。<br>
 更新：现在可以直接online下载PNG和JPG, ICON, Apple ICNS格式的图片文件了。<br>
+&#x1F536;[桌面应用程序](https://github.com/uuware/icons-font-desktop) 已发布，适用于 Windows、Linux、MacOS，或者前往 [下载发布页](https://github.com/uuware/icons-font-desktop/releases)&#x1F536;
 
 ---
 
 &#x1F536;这儿收集的所有图标都适合于私人或商业项目&#x1F536;<br>
 这个工具可以把本项目包含的不同来源的图标打包成一个字体文件，甚至可以下载任何网址的 svg 文件并进行转换打包。<br>
 各个来源图标的相关许可证信息会被自动包含在生成的 css 文件中。<br>
+
 
 # 怎么使用
 （如果电脑还没有安装 Node.js, 请去这儿下载安装： [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)）<br>
