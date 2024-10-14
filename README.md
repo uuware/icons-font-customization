@@ -1,5 +1,5 @@
 # icons-font-customization
-A collection of over 78,000 high-quality free svg icons and tools for generating customized icon font. All icons are completely free for personal or business requirements.
+A collection of over 78,000 high-quality free SVG icons and tools for generating customized icon font. All icons are completely free for personal or business requirements.
 
 Open [See all icons](https://uuware.github.io/icons-font-customization/dist/), to view all icons. You can change the icons color, size and background color, or search icons by a name, or save selected results.
 
