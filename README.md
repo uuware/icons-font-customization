@@ -1,9 +1,9 @@
 # icons-font-customization
 A collection of over 78,000 high-quality free SVG icons and tools for generating customized icon font. All icons are completely free for personal or business requirements.
 
-Open [See all icons](https://uuware.github.io/icons-font-customization/dist/), to view all icons. You can change the icons color, size and background color, or search icons by a name, or save selected results.
+Open [See all icons](https://uuware.github.io/icons-font-customization/dist/), to view all icons. You can change the icon's color, size, background color, search icons by name, or save selected results.
 
-You also can download PNG, JPG, ICO and Apple ICNS image files directly from online.
+You can also download PNG, JPG, ICO, and Apple ICNS image files directly online.
 
 &#x1F536;[Desktop Application](https://github.com/uuware/icons-font-desktop) for Windows, Linux, MacOS is released, or goto [Download Releases](https://github.com/uuware/icons-font-desktop/releases) &#x1F536;
 
