@@ -336,11 +336,11 @@ module.exports = {
 ## 如果您有一个 svg 图标项目想和其他人分享，我会非常乐意的添加它们。请联系我。<br>
 ## 如果您想为您的本地开发添加，则可以这样做：<br>
 -  1.下载或克隆此项目 https://github.com/uuware/icons-font-customization.git<br>
--  2. 根据您的项目名称在 /dist/svgs 下创建一个新文件夹。例如，这里我们称之为 new-project，所以新文件夹应该是 /dist/svgs/new project。<br>
--  3. 添加一个描述项目信息的 json 文件和一个许可文件。（请在 /dist/svgs/ 下的其他文件夹中确认json文件结构）<br>
--  4. 添加子文件夹（svgs或其他内容）并将您的图标复制到 /dist/svgs/new-project/svgs。<br>
--  5. 运行 "icons-font-command --maintain" 命令优化 svg 并创建演示页面。<br>
--  6. 然后，您可以像其他图标一样使用新的svg图标。<br>
+-  2.根据您的项目名称在 /dist/svgs 下创建一个新文件夹。例如，这里我们称之为 new-project，所以新文件夹应该是 /dist/svgs/new project。<br>
+-  3.添加一个描述项目信息的 json 文件和一个许可文件。（请在 /dist/svgs/ 下的其他文件夹中确认json文件结构）<br>
+-  4.添加子文件夹（svgs或其他内容）并将您的图标复制到 /dist/svgs/new-project/svgs。<br>
+-  5.运行 "icons-font-command --maintain" 命令优化 svg 并创建演示页面。<br>
+-  6.然后，您可以像其他图标一样使用新的svg图标。<br>
 
 # 许可证
 - 所有代码（除 svg 、字体外的所有文件）均在 CC0-1.0 许可证下分发。<br>
