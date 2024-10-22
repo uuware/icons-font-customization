@@ -270,7 +270,7 @@ IconsFontLite.generateFont(parameters);
 ```
 <br>
 
-如果一切正常，你将在输出文件夹得到结果，打开 sample.html 确认结果或包含 icon-style.css 在您的html中。<br>
+如果一切正常，您将在输出文件夹中得到结果，打开 sample.html 确认结果或包含 icon-style.css 在您的html中。<br>
 
 # 如何选择图标并获得在配置中使用的代码
 ## 1, 打开 [所有图标](https://uuware.github.io/icons-font-customization/dist/), 然后您可以确认所有图标。<br>
