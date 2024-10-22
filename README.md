@@ -224,7 +224,7 @@ The main contribution belongs to the elites who created these elves. Please enco
 
 # 怎么使用
 （如果电脑还没有安装 Node.js, 请去这儿下载安装： [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)）<br>
-有很多种使用这个工具的方法。这儿我列出三种基本的方式。<br>
+有很多种使用这个工具的方法。这儿我在下方列出三种基本的方式。<br>
 <br>
 ## 首先是一点关于这个项目（包或工具）的信息，和该具体选择哪个项目
 实际上这儿有两个项目，都可以达到相同目的。<br>
