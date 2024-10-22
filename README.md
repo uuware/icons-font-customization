@@ -256,7 +256,7 @@ The main contribution belongs to the elites who created these elves. Please enco
 <br>
 
 ## 方法3，在您的 Node.js 项目中安装。<br>
-如果想要在代码中自由的操作它，则根据您的需要，在项目的根文件夹中运行 `npm i icons-font-command --save-dev` 或 `npm i icons-font-customization --save-dev` 命令。<br>
+如果想要在代码中自由地操作它，则根据您的需要，在项目的根文件夹中运行 `npm i icons-font-command --save-dev` 或 `npm i icons-font-customization --save-dev` 命令。<br>
 然后在代码中这样调用：<br>
 ```
 var IconsFontLite = require('icons-font-command');
