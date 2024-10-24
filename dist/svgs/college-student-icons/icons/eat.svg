@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Background -->
+  <rect x="0" y="0" width="100" height="100" fill="#f0f0f0"/>
+  
+  <!-- Table -->
+  <rect x="10" y="70" width="80" height="20" fill="#8b4513"/>
+  
+  <!-- Bowl -->
+  <ellipse cx="50" cy="65" rx="15" ry="5" fill="#ffffff" stroke="#000000" stroke-width="2"/>
+  <path d="M35 65 Q50 55 65 65" fill="none" stroke="#000000" stroke-width="2"/>
+  
+  <!-- Chopsticks -->
+  <line x1="45" y1="50" x2="40" y2="65" stroke="#8b4513" stroke-width="2"/>
+  <line x1="55" y1="50" x2="60" y2="65" stroke="#8b4513" stroke-width="2"/>
+  
+  <!-- Student's body -->
+  <circle cx="50" cy="40" r="20" fill="#ffb6c1"/>
+  
+  <!-- Student's face -->
+  <circle cx="50" cy="40" r="15" fill="#ffe4b5"/>
+  
+  <!-- Eyes -->
+  <circle cx="45" cy="35" r="2" fill="#000000"/>
+  <circle cx="55" cy="35" r="2" fill="#000000"/>
+  
+  <!-- Cute blush -->
+  <circle cx="42" cy="42" r="3" fill="#ffb6c1" opacity="0.5"/>
+  <circle cx="58" cy="42" r="3" fill="#ffb6c1" opacity="0.5"/>
+  
+  <!-- Smile -->
+  <path d="M45 45 Q50 50 55 45" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Hair -->
+  <path d="M35 25 Q50 15 65 25" fill="none" stroke="#000000" stroke-width="4"/>
+  
+  <!-- Student cap -->
+  <path d="M30 25 L70 25 L65 20 L35 20 Z" fill="#4169e1"/>
+  <rect x="48" y="15" width="4" height="10" fill="#4169e1"/>
+  <circle cx="50" cy="15" r="3" fill="#ffd700"/>
+</svg>
