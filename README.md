@@ -78,10 +78,10 @@ There are a few approaches. Here I list three simple ways to run this project.<b
 <br>
 ## First of all, a little information about which project (or package) you should install
 Actually there are two projects that can do the same work for you.<br>
-- 1.1, This project (`icons-font-customization`) contains more than 26M of svgs data. You can install this project if you don't mind the size then it works locally and copies icons quickly.<br>
+- 1.1, This project (`icons-font-customization`) contains over 26M of svgs data. You can install this project if you don't mind the size then it works locally and copies icons quickly.<br>
 - 1.2, Either you can install a sub project called `icons-font-command`, which doesn't contain any icons and is very small. `icons-font-command` copies icons from Github's repository of `icons-font-customization` remotely. If you don't have too many icons to generate your font then possibly this is better approach.<br>
-    *Project `icons-font-customization` contains `icons-font-command`. So either of them uses same command to generate font.*<br>
-    *Here I use project `icons-font-command` to explain how to use it. If `icons-font-customization` suits you, you'll need to use `icons-font-customization` in installation commands.*<br>
+    *Project `icons-font-customization` contains `icons-font-command`. So both use the same commands for font generation.*<br>
+    *Here I use project `icons-font-command` to explain how to use it. If `icons-font-customization` is your preference, you'll need to use `icons-font-customization` in installation commands.*<br>
 <br>
 
 ## Approach 1, Download or clone this Repository to your local machine.<br>
@@ -90,7 +90,7 @@ Or clone it by running this command:<br>
 *git clone https://github.com/uuware/icons-font-command.git*<br>
 Either you'll get this project then cd to that folder and run command to generate icon font (`-- --` in command is correct):<br>
 `npm run generate-font -- --config config-file-path`<br>
-If you have a config file at current folder and it's name is icons-font.config.js, then run it without parameters:<br>
+If you have a config file in the current folder and it's name is icons-font.config.js, then run it without specifying parameters:<br>
 `npm run generate-font`<br>
 <br>
 
@@ -120,15 +120,15 @@ IconsFontLite.generateFont(parameters);
 ```
 <br>
 
-If all good, you'll get results at output folder, open sample.html to confirm the results or include the icon-style.css in your html to use those icons font.<br>
+If all good, you'll get results in the output folder. To verify the output, open sample.html or include the icon-style.css in your html to use those icons font.<br>
 
 # How to choose your icons and get it in configuration code
 ## 1, Open [See all icons](https://uuware.github.io/icons-font-customization/dist/), then you can view all icons.<br>
-  You can change color, background color, size for icons. Also you can search and click them to choose or cache selected states.<br>
+  You can customize the icons by changing their color, background color and size. Also you can search and click them to choose or cache selected states.<br>
   Click button "Populate Configuration" to output configuration code.<br>
 ## 2, Paste the configuration code to file "icons-font.config.js".<br>
 In Approach 2 you can run command `icons-font-command --copyconfig` to copy default "icons-font.config.js" to your current folder(where you are running this command), otherwise you need to copy if from root of `icons-font-command`.<br>
-As a sample, the final structure should be (Don't use this sample but copy original "icons-font.config.js" please):<br>
+The final structure should look like the example below. However, please don't use this sample; copy the original "icons-font.config.js" instead:<br>
 ```javascript
 module.exports = {
   fontName: 'i-font',
