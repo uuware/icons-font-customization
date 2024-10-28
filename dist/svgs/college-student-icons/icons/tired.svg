@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 60" width="120" height="60">
+  <!-- Body -->
+  <rect x="20" y="30" width="80" height="25" rx="12.5" fill="#4a90e2"/>
+  
+  <!-- Head -->
+  <circle cx="25" cy="30" r="15" fill="#f9d3a7"/>
+  
+  <!-- Face -->
+  <ellipse cx="22" cy="28" rx="2" ry="3" fill="#333"/>
+  <path d="M28 33a5 5 0 0 1 5-2" stroke="#333" fill="none" stroke-width="1.5"/>
+  
+  <!-- Hair -->
+  <path d="M10 30a15 15 0 0 1 30 0" fill="#654321"/>
+  
+  <!-- Book -->
+  <rect x="70" y="20" width="30" height="20" fill="#fff" stroke="#333" stroke-width="2"/>
+  <line x1="75" y1="25" x2="95" y2="25" stroke="#333" stroke-width="1"/>
+  <line x1="75" y1="30" x2="95" y2="30" stroke="#333" stroke-width="1"/>
+  <line x1="75" y1="35" x2="90" y2="35" stroke="#333" stroke-width="1"/>
+  
+  <!-- Feet -->
+  <ellipse cx="100" cy="55" rx="8" ry="5" fill="#654321"/>
+</svg>
