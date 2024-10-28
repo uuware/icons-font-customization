@@ -1,9 +1,9 @@
 # icons-font-customization
 A collection of over 78,000 high-quality free SVG icons and tools for generating customized icon font. All icons are completely free for personal or business requirements.
 
-Open [See all icons](https://uuware.github.io/icons-font-customization/dist/), to view all icons. You can change the icon's color, size, background color, search icons by name, or save selected results.
+Open [See all icons](https://uuware.github.io/icons-font-customization/dist/), to view all icons. You can change the icon's color, size, and background color, search for icons by name, or save the selected results.
 
-You can also download PNG, JPG, ICO, and Apple ICNS image files directly online.
+You can also directly download PNG, JPG, ICO, and Apple ICNS image files from the tool's interface.
 
 &#x1F536;[Desktop Application](https://github.com/uuware/icons-font-desktop) for Windows, Linux, MacOS is released, or goto [Download Releases](https://github.com/uuware/icons-font-desktop/releases) &#x1F536;
 
@@ -78,7 +78,7 @@ There are a few approaches. Here I list three simple ways to run this project.<b
 <br>
 ## First of all, a little information about which project (or package) you should install
 Actually there are two projects that can do the same work for you.<br>
-- 1.1, This project (`icons-font-customization`) contains over 26M of svgs data. You can install this project if you don't mind the size then it works locally and copies icons quickly.<br>
+- 1.1, This project (`icons-font-customization`) contains over 26M of svgs data. You can install this project if you don't mind the large size. Once installed, it works locally and allows for fast copying of icons.<br>
 - 1.2, Either you can install a sub project called `icons-font-command`, which doesn't contain any icons and is very small. `icons-font-command` copies icons from Github's repository of `icons-font-customization` remotely. If you don't have too many icons to generate your font then possibly this is better approach.<br>
     *Project `icons-font-customization` contains `icons-font-command`. So both use the same commands for font generation.*<br>
     *Here I use project `icons-font-command` to explain how to use it. If `icons-font-customization` is your preference, you'll need to use `icons-font-customization` in installation commands.*<br>
