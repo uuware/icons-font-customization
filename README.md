@@ -210,7 +210,7 @@ The main contribution belongs to the elites who created these elves. Please enco
 （中文说明，包含在同一个文件的原因是这种方式发布NPM的时候比较友好）
 # icons-font-customization（图标字体定制）
 
-一个包含超过 78,000 高品质免费 svg 图标的集合和生成自己图标字体的工具。所有图标都适合于私人或商业项目。<br>
+一个包含超过 78,000 个高品质免费 svg 图标的集合和生成自己图标字体的工具。所有图标都适合于私人或商业项目。<br>
 请打开链接 [所有图标](https://uuware.github.io/icons-font-customization/dist/), 去确认这些图标。这些图标在这个链接中支持颜色、大小和背景色的定制。还可以根据关键字检索，保存图标是否选中的状态，或输出选中图标的列表字符串，用于下面介绍的生成自己的图标字体。<br>
 更新：现在可以直接online下载PNG和JPG, ICON, Apple ICNS格式的图片文件了。<br>
 &#x1F536;[桌面应用程序](https://github.com/uuware/icons-font-desktop) 已发布，适用于 Windows、Linux、MacOS，或者前往 [下载发布页](https://github.com/uuware/icons-font-desktop/releases)&#x1F536;
@@ -228,7 +228,7 @@ The main contribution belongs to the elites who created these elves. Please enco
 <br>
 ## 首先是一点关于这个项目（包或工具）的信息，和该具体选择哪个项目
 实际上这儿有两个项目，都可以达到相同目的。<br>
-- 1.1, 当前这个项目（`icons-font-customization`）包含超过 26M 大小的 svg 文件。如果您不是太在意磁盘空间，那么可以安装这个项目。这样您将非常能快速的利用本地 svg 文件生成字体。<br>
+- 1.1, 当前这个项目（`icons-font-customization`）包含超过 26M 大小的 svg 文件。如果您不是太在意磁盘空间，那么可以安装这个项目。这样您将能够非常能快速的利用本地 svg 文件生成字体。<br>
 - 1.2, 或者您可以安装一个叫 `icons-font-command` 的子项目，这个子项目不包含任何 svg 图标，因此非常小。 `icons-font-command` 从 Github 的 `icons-font-customization` 仓库直接的远程拷贝图标等。如果您不会使用太多的 svg 文件，它也是很快的。<br>
     * 项目 `icons-font-customization` 包含 `icons-font-command` 项目. 因此不管您使用哪一个项目，命令方式都是一样的。*<br>
     * 这儿的例子我都是以使用 `icons-font-command` 来介绍的。如果您使用 `icons-font-customization` ，那么您需要替换安装例子中的项目为 `icons-font-customization` 。*<br>
@@ -247,7 +247,7 @@ The main contribution belongs to the elites who created these elves. Please enco
 ## 方法2，使用 NPM 全局安装 `icons-font-command` （或 `icons-font-customization`）。<br>
 运行：<br>
 `npm install -g icons-font-command`<br>
-现在您可以在任何文件夹中运行命令（无论您安装的是哪个项目，该命令都是相同的，并注意命令中的 `--`）：<br>
+现在您可以在任何文件夹中运行此命令（无论您安装的是哪个项目，该命令都是相同的，并注意命令中的 `--`）：<br>
 `icons-font-command --config config-file-path`<br>
 如果您在运行文件夹有一个叫 icons-font.config.js 的配置文件，那么可以省略配置文件路径：<br>
 `npm run generate-font`<br>
@@ -355,3 +355,4 @@ module.exports = {
 
 # 捐赠
 主要贡献属于创造这些精灵的精英们。请鼓励并奖励他们一杯咖啡！
+
