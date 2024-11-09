@@ -71,6 +71,10 @@ This relevant license information is included in generated css file autom
 - vscode-codicons&nbsp;Source:&nbsp;<a href="https://github.com/microsoft/vscode-codicons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/microsoft/vscode-codicons/blob/main/LICENSE" target="_blank">CC-BY-4.0</a>
 - weather-icons&nbsp;Source:&nbsp;<a href="https://github.com/erikflowers/weather-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;id=OFL" target="_blank">SIL OFL 1.1</a>
 - Weather Underground Icons&nbsp;Source:&nbsp;<a href="https://github.com/manifestinteractive/weather-underground-icons" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/manifestinteractive/weather-underground-icons/blob/master/LICENSE" target="_blank">MIT and GPL </a>
+- Iconfont&nbsp;Source:&nbsp;<a href="https://www.iconfont.cn/" target="_blank">visit</a>, License:&nbsp;<a href="https://www.iconfont.cn/open/license" target="_blank">Iconfont License</a>
+- Avalonia UI&nbsp;Source:&nbsp;<a href="https://github.com/avaloniaUI/Avalonia/blob/master/license.md" target="_blank">MIT</a>
+- Icons.Avalonia&nbsp;Source:&nbsp;<a href="https://github.com/projektanker/icons.avalonia" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/projektanker/icons.avalonia/blob/main/LICENSE" target="_blank">MIT</a>
+- Ursa.Avalonia&nbsp;Source:&nbsp;<a href="https://github.com/irihitech/Ursa.Avalonia" target="_blank">visit</a>, License:&nbsp;<a href="https://github.com/irihitech/Ursa.Avalonia/blob/main/LICENSE.md" target="_blank">MIT</a>
 
 # How to use
 (If you haven't install Node.js, go here: [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))<br>
