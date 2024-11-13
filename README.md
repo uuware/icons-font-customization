@@ -171,7 +171,7 @@ module.exports = {
 - SVG font: Chrome 4-37, Firefox no support, Opera 10-24, Safari 3.2-14, IE/Edge no support<br>
 	Scalable Vector Graphics font. SVG fonts are always uncompressed and the only one allowed by version 4.1 and below of Safari for iOS (iPhone, iPad).<br>
 
-## Suggestions:
+## Suggestions
 - 1, use WOFF2 for major browsers except IE;<br>
 - Or: 2, use WOFF for major browsers and IE 9~, Edge 12~<br>
 - Or: 3, combine WOFF2 with TTF for IE8~<br>
@@ -199,7 +199,7 @@ How to add an new wonderful svg icons project?<br>
 See information for credits & links to homepages in individual folders under /dist/svgs. This information is also included in generated css file.<br>
 All used trademarks, brands and/or names are the property of their respective owners. The use of these trademarks, brands and/or names does not indicate endorsement of the property holder by us, nor vice versa.<br>
 
-# Known issues:
+# Known issues
 - 1, It seems that svgs with fill-rule="evenodd" do not work correctly<br>
 Currently if svgs have fill-rule="evenodd" then they lose some shapes when change to font. I haven't found any way to do so easily. So if a icon seems weird, just skip to use it.
 - 2, Some icons are reduplicated.<br>
@@ -326,7 +326,7 @@ module.exports = {
 - 或者 2, 使用 WOFF 来支持所有主流浏览器和 IE 9及以上, Edge 12及以上<br>
 - 或者 3, 同时使用 WOFF2 和 TTF 来支持所有主流浏览器和 IE 8及以上<br>
      *所有1、2、3都需要这样的HTML代码：`<i class="ifc-icon icon_name"></i>`*<br>
- - 或者 4, 同时使用 WOFF2 和 TTF 和不同的 CSS 代码来支持IE6-7，和所有主流浏览器和 IE 8及以上。因为从IE8开始支持 '.css_class_name:before (注意不是两个冒号){ content: "" } CSS 代码。所以IE6-7需要不同CSS代码：*`<i class="icon ifc-icon">&#x66;(icons code)</i>`*<br>
+- 或者 4, 同时使用 WOFF2 和 TTF 和不同的 CSS 代码来支持IE6-7，和所有主流浏览器和 IE 8及以上。因为从IE8开始支持 '.css_class_name:before (注意不是两个冒号){ content: "" } CSS 代码。所以IE6-7需要不同CSS代码：*`<i class="icon ifc-icon">&#x66;(icons code)</i>`*<br>
 
 # 联系
 缺陷报告、问题和建议：[Issue tracker](https://github.com/uuware/icons-font-customization/issues)
@@ -348,7 +348,7 @@ module.exports = {
 请参阅/dist/svgs下各个文件夹中包含的许可证和链接的信息。此信息也包含在生成的css文件中。<br>
 所有包含的商标、品牌和/或名称都是其各自所有者的财产。<br>
 
-# 已知问题：
+# 已知问题
 - 1, 如果 svg 有 fill-rule="evenodd" 则可能不能正确显示。<br>
 当前如果 svg 有  fill-rule="evenodd" 则生成字体时，它们可能会丢失一些形状。还没有好的简单解决方案，所以如果有的图标不满足您的要求，请跳过它们。
 - 2, 有些图标是重复的。<br>
