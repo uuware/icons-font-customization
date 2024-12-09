@@ -222,7 +222,7 @@ The main contribution belongs to the elites who created these elves. Please enco
 各个来源图标的相关许可证信息会被自动包含在生成的 css 文件中。<br>
 
 
-# 怎么使用
+# 如何使用
 （如果电脑还没有安装 Node.js, 请去这儿下载安装： [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)）<br>
 有很多种使用这个工具的方法。这儿我在下方列出三种基本的方式。<br>
 <br>
