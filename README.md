@@ -209,55 +209,55 @@ The main contribution belongs to the elites who created these elves. Please enco
 
 （中文说明，包含在同一个文件的原因是这种方式发布NPM的时候比较友好）
 # icons-font-customization（图标字体定制）
-
-一个包含超过 78,000 个高品质免费 svg 图标的集合和生成自己图标字体的工具。所有图标都适合于私人或商业项目。<br>
-请打开链接 [所有图标](https://uuware.github.io/icons-font-customization/dist/), 去确认这些图标。这些图标在这个链接中支持颜色、大小和背景色的定制。还可以根据关键字检索，保存图标是否选中的状态，或输出选中图标的列表字符串，用于下面介绍的生成自己的图标字体。<br>
+一个包含超过 78,000 个高品质免费 svg 图标的集合和生成自己图标字体的工具。所有图标均适用于私人或商业项目。<br>
+请点击链接 [所有图标](https://uuware.github.io/icons-font-customization/dist/)以确认图标。此链接支持定制图标颜色、大小和背景色，支持根据关键字检索，保存图标是否选中的状态，或输出选中图标的列表字符串用于下面介绍的生成自己的图标字体。<br>
 更新：现在可以直接online下载PNG和JPG, ICON, Apple ICNS格式的图片文件了。<br>
-&#x1F536;[桌面应用程序](https://github.com/uuware/icons-font-desktop) 已发布，适用于 Windows、Linux、MacOS，或者前往 [下载发布页](https://github.com/uuware/icons-font-desktop/releases)&#x1F536;
+&#x1F536;[桌面应用程序](https://github.com/uuware/icons-font-desktop) 已发布，适用于 Windows、Linux、MacOS，或前往 [下载发布页](https://github.com/uuware/icons-font-desktop/releases)&#x1F536;
 
 ---
 
-&#x1F536;这儿收集的所有图标都适合于私人或商业项目&#x1F536;<br>
-这个工具可以将不同来源的图标打包生成一个自定义字体文件。甚至可以下载任何网址的 svg 文件并进行转换打包。<br>
-各个来源图标的相关许可证信息会被自动包含在生成的 css 文件中。<br>
+&#x1F536;这里收集的所有图标均适用于私人或商业项目&#x1F536;<br>
+此工具可将不同来源的图标打包生成一个自定义字体文件，还可以下载任何网址的 svg 文件并进行转换打包。<br>
+各来源图标的相关许可证信息将会自动包含在生成的 css 文件中。<br>
 
 
 # 怎么使用
-（如果电脑还没有安装 Node.js, 请去这儿下载安装： [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)）<br>
-有很多种使用这个工具的方法。这儿我在下方列出三种基本的方式。<br>
+（如果电脑还没有安装 Node.js, 请下载安装： [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)）<br>
+使用这个工具的方法有很多，在此列出三种基本的方式。<br>
 <br>
-## 首先是一点关于这个项目（包或工具）的信息，和该具体选择哪个项目
-实际上这儿有两个项目，都可以达到相同目的。<br>
-- 1.1, 当前这个项目（`icons-font-customization`）包含超过 26M 大小的 svg 文件。如果您不是太在意磁盘空间，那么可以安装这个项目。这样您将能够非常能快速的利用本地 svg 文件生成字体。<br>
-- 1.2, 或者您可以安装一个叫 `icons-font-command` 的子项目，这个子项目不包含任何 svg 图标，因此非常小。 `icons-font-command` 从 Github 的 `icons-font-customization` 仓库直接的远程拷贝图标等。如果您不会使用太多的 svg 文件，它也是很快的。<br>
-    * 项目 `icons-font-customization` 包含 `icons-font-command` 项目. 因此不管您使用哪一个项目，命令方式都是一样的。*<br>
-    * 这儿的例子我都是以使用 `icons-font-command` 来介绍的。如果您使用 `icons-font-customization` ，那么您需要替换安装例子中的项目为 `icons-font-customization` 。*<br>
+## 首先是关于这个项目（包或工具）的信息和该具体选择哪个项目
+实际上这里的两个项目都可以达到相同目的。<br>
+- 1.1, 当前此项目（`icons-font-customization`）包含超过 26M 大小的 svg 文件。如果您不是太在意磁盘空间，那么可以安装这个项目。这样您将能够非常能快速的利用本地 svg 文件生成字体。<br>
+- 1.2, 另一选择是安装 `icons-font-command` 子项目，它不包含 svg 图标，因此体积更小。 `icons-font-command` 从 Github 的 `icons-font-customization` 仓库远程获取图标，如果您不需要大量 SVG 文件，这个选项同样高效。<br>
+    * 无论选择哪个项目，使用命令的方式都相同。*<br>
+    * 以下示例均基于 `icons-font-command` 。如果您使用 `icons-font-customization` ，那么您需要替换安装例子中的项目为 `icons-font-customization` 。*<br>
+    
 <br>
 
-## 方法1，下载或克隆您需要的项目到本地。<br>
-点击项目主页 [home page](https://github.com/uuware/icons-font-command) 的 "Download ZIP" 并解压到本地合适的文件夹。<br>
+## 方法1，下载或克隆所需项目到本地。<br>
+访问项目主页 [home page](https://github.com/uuware/icons-font-command) 并点击 "Download ZIP"下载压缩包，解压到本地合适的文件夹。<br>
 或者使用 git 命令克隆到本地：<br>
 *git clone https://github.com/uuware/icons-font-command.git*<br>
-不管使用哪种方式，您将在本地得到这个项目，然后 cd 到这个项目的根文件夹并运行下面的命令来生成字体。（注意，命令行中的 `-- --` 是正确的）：<br>
+无论使用哪种方式，您将在本地得到这个项目，然后 cd 到这个项目的根文件夹并运行以下命令生成字体。（注意，命令行中的 `-- --` 是正确的）：<br>
 `npm run generate-font -- --config config-file-path`<br>
-如果您在运行文件夹有一个叫 icons-font.config.js 的配置文件，那么可以省略配置文件路径：<br>
+如果当前目录下有名为 icons-font.config.js 的配置文件，那么可以省略配置文件路径：<br>
 `npm run generate-font`<br>
 <br>
 
 ## 方法2，使用 NPM 全局安装 `icons-font-command` （或 `icons-font-customization`）。<br>
 运行：<br>
 `npm install -g icons-font-command`<br>
-现在您可以在任何文件夹中运行此命令（无论您安装的是哪个项目，该命令都是相同的，并注意命令中的 `--`）：<br>
+安装后，您可以在任何文件夹中使用以下命令（无论您安装哪个项目，该命令都是相同的，并注意命令中的 `--`）：<br>
 `icons-font-command --config config-file-path`<br>
-如果您在运行文件夹有一个叫 icons-font.config.js 的配置文件，那么可以省略配置文件路径：<br>
+如果当前文件夹中有 icons-font.config.js 配置文件，那么可以省略配置文件路径：<br>
 `npm run generate-font`<br>
-您还可以使用此命令在当前文件夹生成默认配置文件：<br>
+您还可以使用以下命令在当前文件夹生成默认配置文件：<br>
 `icons-font-command --copyconfig`<br>
 <br>
 
 ## 方法3，在您的 Node.js 项目中安装。<br>
-如果想要在代码中自由地操作它，则根据您的需要，在项目的根文件夹中运行 `npm i icons-font-command --save-dev` 或 `npm i icons-font-customization --save-dev` 命令。<br>
-然后在代码中这样调用：<br>
+如果需要在代码中操作，可在项目根目录运行以下命令： `npm i icons-font-command --save-dev` 或 `npm i icons-font-customization --save-dev` 命令。<br>
+然后在代码中调用：<br>
 ```
 var IconsFontLite = require('icons-font-command');
 IconsFontLite.cmd();
@@ -269,27 +269,28 @@ IconsFontLite.generateFont(parameters);
 
 ```
 <br>
-
-如果一切正常，您将在输出文件夹中得到结果，打开 sample.html 确认结果或包含 icon-style.css 在您的html中。<br>
+操作完成后，结果将保存在输出文件夹中. 打开 sample.html 查看结果，或包含 icon-style.css 在您的html中。<br>
 
 # 如何选择图标并获得在配置中使用的代码
-## 1, 打开 [所有图标](https://uuware.github.io/icons-font-customization/dist/), 然后您可以确认所有图标。<br>
-  您可以更改图标的颜色、背景色和大小。您还可以搜索并单击它们来选择或缓存选定的状态。<br>
-  点击 "Populate Configuration" 按钮输出配置代码。<br>
+## 1, 打开 [所有图标](https://uuware.github.io/icons-font-customization/dist/)页面, 查看所有可用图标。<br>
+  您可以调整图标的颜色、背景色和大小，还可以使用搜索功能快速找到所需图标，并点击图标以选择或缓存选定的状态。<br>
+  点击 "Populate Configuration" 按钮，输出配置代码。<br>
 ## 2, 将配置代码粘贴到文件 "icons-font.config.js" 。<br>
-在方法2中，您可以运行 `icons-font-command --copyconfig` 在当前文件夹生成默认的 "icons-font.config.js" 配置文件。或者您可以从项目 `icons-font-command` 的跟文件夹拷贝该文件。<br>
-作为一个示例，最终的结构应该是 （不要使用这个示例，而是复制原始的 "icons-font.config.js" 文件）：<br>
+
+在方法2中，运行 `icons-font-command --copyconfig` 可在当前文件夹生成默认的 "icons-font.config.js" 配置文件，或从项目`icons-font-command`的根目录拷贝该文件。<br>
+示例的最终结构应该是 （示例结构仅供参考，请使用原始的 "icons-font.config.js" 文件）：<br>
+
 ```javascript
 module.exports = {
   fontName: 'i-font',
   outputPath: 'dist/sample/',
-  outputName: 'i-font', /* 程序会自动添加扩展名  */
+  outputName: 'i-font', /* 输出文件名，程序将自动添加扩展名  */
   startChar: 10000, // 图标字体的内部编码
   icons: [
      /* 本地或远程 svg 的路径 */
     { path: 'font-awesome/brands/apple.svg', name: 'fa-apple' },
     ...
-     /* 甚至下载任何网址的 svg  */
+     /* 下载任何网址的 svg  */
     { path: 'https://raw.githubusercontent.com/fontello/awesome-uni.font/29d4e3ff028fc850a21b5eaafde0a83f22f59cf1/src/svg/amazon.svg', name: 'fa-amazon' },
   ],
   fontType: {
@@ -322,24 +323,27 @@ module.exports = {
 	可缩放矢量图形字体。 SVG 字体是未压缩的，唯一可以在 version 4.1 and below of Safari for iOS (iPhone, iPad) 中使用的字体。<br>
 
 ## 建议
-- 1, 如果不需要支持 IE，可以使用 WOFF2 来支持所有主流浏览器<br>
-- 或者 2, 使用 WOFF 来支持所有主流浏览器和 IE 9及以上, Edge 12及以上<br>
-- 或者 3, 同时使用 WOFF2 和 TTF 来支持所有主流浏览器和 IE 8及以上<br>
-     *所有1、2、3都需要这样的HTML代码：`<i class="ifc-icon icon_name"></i>`*<br>
-- 或者 4, 同时使用 WOFF2 和 TTF 和不同的 CSS 代码来支持IE6-7，和所有主流浏览器和 IE 8及以上。因为从IE8开始支持 '.css_class_name:before (注意不是两个冒号){ content: "" } CSS 代码。所以IE6-7需要不同CSS代码：*`<i class="icon ifc-icon">&#x66;(icons code)</i>`*<br>
+- 1, 如果不需要支持 IE，使用 WOFF2 即可支持所有主流浏览器<br>
+- 或 2, 使用 WOFF 可支持所有主流浏览器及 IE 9及以上, Edge 12及以上<br>
+- 或 3, 同时使用 WOFF2 和 TTF 可支持所有主流浏览器及 IE 8 及以上<br>
+     *所有1、2、3均需使用HTML代码：`<i class="ifc-icon icon_name"></i>`*<br>
+- 或者 4, 同时使用 WOFF2 和 TTF 和不同 CSS 代码可支持 IE 6-7 及所有主流浏览器和 IE 8 及以上。因为从IE8开始支持 '.css_class_name:before (注意不是两个冒号){ content: "" } CSS 代码。所以IE6-7需使用CSS代码：*`<i class="icon ifc-icon">&#x66;(icons code)</i>`*<br>
 
 # 联系
 缺陷报告、问题和建议：[Issue tracker](https://github.com/uuware/icons-font-customization/issues)
 
 # 贡献
+
+想分享您的 SVG 图标项目吗？欢迎联系我！本地开发时可按以下步骤操作：
+
 如何添加一个新的精彩的 svg 图标项目？<br>
 ## 如果您有一个 svg 图标项目想和其他人分享，我会非常乐意的添加它们。请联系我。<br>
 ## 如果您想为您的本地开发添加，则可以这样做：<br>
 -  1.下载或克隆此项目 https://github.com/uuware/icons-font-customization.git<br>
 -  2.根据您的项目名称在 /dist/svgs 下创建一个新文件夹。例如，这里我们称之为 new-project，所以新文件夹应该是 /dist/svgs/new project。<br>
--  3.添加一个描述项目信息的 json 文件和一个许可文件。（请在 /dist/svgs/ 下的其他文件夹中确认json文件结构）<br>
--  4.添加子文件夹（svgs或其他内容）并将您的图标复制到 /dist/svgs/new-project/svgs。<br>
--  5.运行 "icons-font-command --maintain" 命令优化 svg 并创建演示页面。<br>
+-  3.添加描述项目信息的 json 文件和许可文件。（请在 /dist/svgs/ 下的其他文件夹中确认json文件结构）<br>
+-  4.创建子文件夹（如svgs），并将图标复制到 /dist/svgs/new-project/svgss。<br>
+-  5.运行 "icons-font-command --maintain" 命令以优化 svg 并创建演示页面。<br>
 -  6.然后，您可以像其他图标一样使用新的svg图标。<br>
 
 # 许可证
@@ -349,10 +353,11 @@ module.exports = {
 所有包含的商标、品牌和/或名称都是其各自所有者的财产。<br>
 
 # 已知问题
-- 1, 如果 svg 有 fill-rule="evenodd" 则可能不能正确显示。<br>
-当前如果 svg 有  fill-rule="evenodd" 则生成字体时，它们可能会丢失一些形状。还没有好的简单解决方案，所以如果有的图标不满足您的要求，请跳过它们。
-- 2, 有些图标是重复的。<br>
+- 1, SVG 中的 fill-rule="evenodd" 可能导致显示不正确。<br>
+当前如果 svg 有  fill-rule="evenodd"， 生成字体时可能会丢失一些形状。目前暂无简单解决方案，因此如果有的图标不满足您的要求，请跳过它们。
+- 2, 部分图标重复。<br>
 
 # 捐赠
 主要贡献属于创造这些精灵的精英们。请鼓励并奖励他们一杯咖啡！
+
 
